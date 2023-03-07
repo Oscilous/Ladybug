@@ -28,6 +28,10 @@ To solve the issue, an application called "console", from zephyr/samples/subsys/
 (https://github.com/zephyrproject-rtos/zephyr/tree/main/samples/subsys/usb/console)
 After building and flashing, results were achieved as seen in the picture.
 /*Inser picture of serial monitor*/
+Another issue that arose was debugging. The Seeed XIAO nRF52840 Sense does not have any sort of built in debugging tools. 
+(https://wiki.seeedstudio.com/XIAO_BLE/)
+One can use a J-link debugging tool, but a caviet was found, which was GDB stub, which Zephyr supports, this would save budget. 
+(https://docs.zephyrproject.org/2.7.3/guides/debug_tools/gdbstub.html)
 
 After achieving a succesful development cycle, it was conducted, that the use of ZephyrRTOS is possible with our current setup.
 After further consultation with the supervisors, it was conducted, that the writers of the project have no skills in RTOS, more specifically in threading, and with the guidence of Davi, it was concluded, that acquiring such skills would be outside the scope of the project, as the main focus is control engineering.

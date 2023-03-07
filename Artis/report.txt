@@ -1,12 +1,33 @@
 29/2-7/3 Choosing how to program microcontroler
 Goal: Flash the XIAO Sense with nRF Connect via ZephyrRTOS
 
+Software shoud take care of the motor control, IMU output readings and remote control, this could create complications, as essentially they would interrupt each other. A way of multitasking should be introduced. 
+"An RTOS (Real-Time Operating System) is a software component that lets you rapidly switch between different running sections of your code. Think of it as having several loop() functions in an Arduino sketch where they all run at the same time."
+(https://www.nutsvolts.com/magazine/article/a-real-time-operating-system-for-the-arduino)
+
+As the Seeeduino XIAO nRF52840 Sense, uses the nRF52840 microcontroler, so looking to Nordic Semiconductor nRF Connect SDK for development, which uses a RTOS called ZephyrRTOS. Additionally, the SDK provides useful tools for development, such as build, flashing and debugging actions.
+(https://nrfconnect.github.io//vscode-nrf-connect/index.html)
 
 
-The Zephyr OS is based on a small-footprint kernel designed for use on resource-constrained and embedded systems: from simple embedded environmental sensors and LED wearables to sophisticated embedded controllers, smart watches, and IoT wireless applications. (https://docs.zephyrproject.org/latest/introduction/index.html)
-Seeed XIAO nRF52840 is not natively suported. Seeed made library for Arduino IDE, which supports Arduino and Mbed framework, that was implemented through Github to PlatformIO and allows non-problematic impplementation.
+Seeed XIAO nRF52840 is not natively suported on on nRF Connect SDK, but as ZephyrRTOS supports it.
+(https://docs.zephyrproject.org/latest/introduction/index.html)
+There is a caviat around this, we can fetch profiles from GitHub of the current version of Zephyr (https://github.com/zephyrproject-rtos/zephyr/tree/main/boards/arm/xiao_ble) and import the needed files into the SDK version of Zephyr we have.
+In our case the path of the files would be in ~\ncs\v2.3.0-rc1\zephyr\boards\arm.
+After doing so, following the steps in the DevAcademy, nRF Connect SDK Fundamentals, Lesson 1 can be followed for setup. Then a blinky application can be created, and built via nRF Connect.
+After a build of the application is created, a files for flashing will be created in the "build" subdirectory of the application.
+To flash the Seeed XIAO nRF52840 Sense chip, entering a bootloader is needed, as it ships with the Adafruit nRF52 Bootloader, which supports UF2 flashing.
+(https://docs.zephyrproject.org/latest/boards/arm/xiao_ble/doc/index.html)
+Further more, a zephyr.ut2 file can be found in the "build" subdirectory of the application, after building the application, as we have done.
+To access the bootloader, connect the Seeed XIAO to a PC.
+Now to enter and flash an application, the reset button on the Seeed board should be clicked two times in quick succession, this will propmt the memory of the Seeed board on your PC.
+Now find the previously mentioned zephyr.ut2 and drag it in to the memory of the Seeed board, and this will flash the board with the new application.
 
-The XIAO has library in the Zephyr Github repository, but the PlatformIO does not use most recent version. The version of Zephyr itself is altered in PlatformIO and therefore does not work even after corssreferencing with other boards already implemented in PlatformIO, such as Seeeduino (as a reference for the formfactor) or nRF52840 DK (as a reference for the chip).
+A issue accured when trying to test the "Hello World" application, when connecting to serial monitor no output is given.
+After further investigation, it was noticed that the Seeed documentation, mentiones no debugging interface, hence no USB serial exists.
+To solve the issue, an application called "console", from zephyr/samples/subsys/usb/console was cloned, in order to test a virtual USB serial connection, with the use of CDC ACM UART.
+(https://github.com/zephyrproject-rtos/zephyr/tree/main/samples/subsys/usb/console)
+After building and flashing, results were achieved as seen in the picture.
+/*Inser picture of serial monitor*/
 
-The PlatformIO does not have inbuild serial USB communication, which results in inability to reprogram the board through the VS Code and need to go through bootloader first. This poses inconvinience, which can be avoided by use of a Arduino IDE, therefore if route of MBed or Arduino framework is chosen, Arduino IDE should be chosen. If the route of Zephyr is chosen, SDK by nordic semi is the optimal route, because event though it also does not have serial USB, it uses bearbone Zephyr
-
+After achieving a succesful development cycle, it was conducted, that the use of ZephyrRTOS is possible with our current setup.
+After further consultation with the supervisors, it was conducted, that the writers of the project have no skills in RTOS, more specifically in threading, and with the guidence of Davi, it was concluded, that acquiring such skills would be outside the scope of the project, as the main focus is control engineering.

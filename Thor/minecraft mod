@@ -1,0 +1,2 @@
+if (player.block.break){spawn.item(diamond)}
+if (player.inventory.diamond(64)) {spawn.mob(herobrine)}

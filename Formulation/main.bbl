@@ -1,0 +1,60 @@
+\begin{thebibliography}{10}
+
+\bibitem{Abutalipov2016}
+Renat~N. Abutalipov, Yuriy~V. Bolgov, and Hamisha~M. Senov.
+\newblock Flowering plants pollination robotic system for greenhouses by means
+  of nano copter (drone aircraft).
+\newblock {\em 2016 IEEE Conference on Quality Management, Transport and
+  Information Security, Information Technologies, IT and MQ and IS 2016}, pages
+  7--9, 11 2016.
+
+\bibitem{Euasa}
+European Union Aviation~Safety Agency.
+\newblock Open category - civil drones | easa, 2023.
+
+\bibitem{Ann2012}
+Cavoukian Ann.
+\newblock Privacy and drones: Unmanned aerial vehicles.
+\newblock 2012.
+
+\bibitem{Droner}
+Trafikstyrelsen Droner.
+\newblock Flying drones in denmark, 2022.
+
+\bibitem{Hassanalian2017}
+M.~Hassanalian and A.~Abdelkefi.
+\newblock Classifications, applications, and design challenges of drones: A
+  review.
+\newblock {\em Progress in Aerospace Sciences}, 91:99--131, 5 2017.
+
+\bibitem{Joe2019}
+Joe Jaworski.
+\newblock A real-time operating system for the arduino | nuts and volts
+  magazine, 2019.
+
+\bibitem{Niculescu2021}
+Vlad Niculescu, Lorenzo Lamberti, Francesco Conti, Luca Benini, and Daniele
+  Palossi.
+\newblock Improving autonomous nano-drones performance via automated end-to-end
+  optimization and deployment of dnns.
+\newblock {\em IEEE Journal on Emerging and Selected Topics in Circuits and
+  Systems}, 11:548--562, 12 2021.
+
+\bibitem{docsZephyr}
+Zephyr Project.
+\newblock Introduction — zephyr project documentation, 2022.
+
+\bibitem{gitZephyr}
+Zephyr Project.
+\newblock Zephyr project github repository, 2023.
+
+\bibitem{nRF}
+Nordic Semiconductor.
+\newblock nrf connect for vs code - nrf connect for vs code, 2022.
+
+\bibitem{Vyas2020}
+Kashyap Vyas.
+\newblock A brief history of drones: The remote controlled unmanned aerial
+  vehicles (uavs), 2020.
+
+\end{thebibliography}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.3.8)  21 MAR 2023 11:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.3.8)  21 MAR 2023 11:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -286,41 +286,128 @@ Overfull \hbox (82.15707pt too wide) in paragraph at lines 39--49
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `Vyas2020' on page 1 undefined on input line 59.
+
+
+LaTeX Warning: Citation `Droner' on page 1 undefined on input line 60.
+
+
+LaTeX Warning: Citation `Ann2012' on page 1 undefined on input line 64.
+
+
+LaTeX Warning: Citation `Hassanalian2017' on page 1 undefined on input line 65.
+
+
+LaTeX Warning: Citation `Euasa' on page 1 undefined on input line 68.
+
+
+LaTeX Warning: Citation `Euasa' on page 1 undefined on input line 70.
+
 <classification.PNG, id=12, 393.26926pt x 179.4705pt>
 File: classification.PNG Graphic file (type png)
 <use classification.PNG>
 Package pdftex.def Info: classification.PNG  used on input line 74.
 (pdftex.def)             Requested size: 353.93906pt x 161.52194pt.
- [1 <./classification.PNG>] [2] [3]
-<iot_os.PNG, id=26, 669.09975pt x 364.36125pt>
+
+LaTeX Warning: Citation `Euasa' on page 1 undefined on input line 75.
+
+
+LaTeX Warning: Citation `Euasa' on page 1 undefined on input line 75.
+
+
+LaTeX Warning: Citation `Niculescu2021' on page 1 undefined on input line 80.
+
+[1 <./classification.PNG>]
+
+LaTeX Warning: Citation `Abutalipov2016' on page 2 undefined on input line 82.
+
+[2] [3]
+
+LaTeX Warning: Citation `Joe2019' on page 4 undefined on input line 184.
+
+
+LaTeX Warning: Citation `Lemberg' on page 4 undefined on input line 186.
+
+
+LaTeX Warning: Citation `IOT' on page 4 undefined on input line 187.
+
+<iot_os.PNG, id=27, 669.09975pt x 364.36125pt>
 File: iot_os.PNG Graphic file (type png)
 <use iot_os.PNG>
 Package pdftex.def Info: iot_os.PNG  used on input line 190.
 (pdftex.def)             Requested size: 334.54906pt x 182.18018pt.
- [4] [5 <./iot_os.PNG>]
+[4]
+
+LaTeX Warning: Citation `Comparison' on page 5 undefined on input line 195.
+
+[5 <./iot_os.PNG>]
+
+LaTeX Warning: Citation `Industry' on page 6 undefined on input line 241.
+
+
+LaTeX Warning: Citation `nRF' on page 6 undefined on input line 244.
+
+
+LaTeX Warning: Citation `docsZephyr' on page 6 undefined on input line 247.
+
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 249.
- (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [6]
-<serial_monitor.png, id=39, 584.1825pt x 224.63925pt>
+)
+
+LaTeX Warning: Citation `gitZephyr' on page 6 undefined on input line 249.
+
+
+LaTeX Warning: Citation `docsZephyr' on page 6 undefined on input line 253.
+
+[6]
+
+LaTeX Warning: Citation `gitZephyr' on page 7 undefined on input line 261.
+
+<serial_monitor.png, id=40, 584.1825pt x 224.63925pt>
 File: serial_monitor.png Graphic file (type png)
 <use serial_monitor.png>
 Package pdftex.def Info: serial_monitor.png  used on input line 266.
 (pdftex.def)             Requested size: 408.92496pt x 157.24638pt.
- [7 <./serial_monitor.png>] (./main.bbl) [8] (./main.aux) ) 
+
+LaTeX Warning: Citation `wikiSeeed' on page 7 undefined on input line 271.
+
+
+LaTeX Warning: Citation `docsZephyr' on page 7 undefined on input line 272.
+
+[7 <./serial_monitor.png>] (./main.bbl
+./main.bbl:42: Misplaced alignment tab character &.
+l.42 \newblock {\em Copyright © 2023 T &
+                                          L Publications}, 2019.
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+) [8] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 5549 strings out of 478287
- 93273 string characters out of 5849290
- 405462 words of memory out of 5000000
- 23670 multiletter control sequences out of 15000+600000
- 482238 words of font info for 52 fonts, out of 8000000 for 9000
+ 5552 strings out of 478287
+ 93315 string characters out of 5849290
+ 405407 words of memory out of 5000000
+ 23672 multiletter control sequences out of 15000+600000
+ 482619 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,12n,67p,673b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf/fonts/type1/public/cm-super/sfbi1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbi2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfxc1728.pfb>
-Output written on main.pdf (9 pages, 505452 bytes).
+ 60i,12n,67p,682b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf/fonts/type1/public/cm-super/sfbi1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbi2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfxc1728.pfb>
+Output written on main.pdf (9 pages, 522500 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
+ 99 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

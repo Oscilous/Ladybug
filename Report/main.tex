@@ -141,12 +141,20 @@ The utility of smaller drones are immense, where it can be used in surveillance,
 Software shoud take care of the motor control, IMU output readings and remote control, this could create complications, as essentially they would interrupt each other. A way of multitasking should be introduced.
 "An RTOS (Real-Time Operating System) is a software component that lets you rapidly switch between different running sections of your code. Think of it as having several loop() functions in an Arduino sketch where they all run at the same time." \cite{Joe2019}
 
-Not having any experience working with RTOS, we researched the topic to identify the operating system most suitable to our needs. Taking into account the choice of microcontroller ( Seeed Studio XIAO nRF52840 Sense) we narrowed the list to two top condenders – FreeRTOS and Zephyr. Both solutions are open source, widely used and support the Microcontroller board we have chosen. \cite{Lemberg}
-According to 2018 IoT Developer Survey \cite{IOT}, FreeRTOS is one of the most popular OS used and while Zephyr only received a 2.8 \% rating in 2018, it is often described as one of the fastest growing RTOS and in 2022 has become the largest open-source RTOS project by the number of commits and developers.
-\begin{figure}
+After research, the list was narrowed to two top condenders – FreeRTOS and Zephyr. Both solutions are open source, widely used and support the Microcontroller board we have chosen. \cite{Lemberg}
+According to 2018 IoT Developer Survey \cite{IOT}, FreeRTOS is one of the most popular OS used and while Zephyr only received a 2.8 \% rating in 2018, it is often described as one of the fastest growing RTOS and in 2022 has become the largest open-source RTOS project by the number of commits and developers. (See Figure~\ref{fig:iot_os})
+\begin{figure}[H]
     \centering
     \includegraphics[scale = 0.5]{iot_os.PNG}
+    \caption{IoT Developer Survey 2018 results}
+    \label{fig:iot_os}
 \end{figure}
+
+To decide between the RTOS choice, a pros and cons table was created and evaluated.
+
+
+
+
 As the Seeeduino XIAO nRF52840 Sense, uses the nRF52840 microcontroler, so looking to Nordic Semiconductor nRF Connect SDK for development, which uses a RTOS called ZephyrRTOS.
 Additionally, the SDK provides useful tools for development, such as build, flashing and debugging actions. \cite{nRF}
 

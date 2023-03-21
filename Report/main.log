@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.3.8)  21 MAR 2023 09:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.3.8)  21 MAR 2023 09:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -90,41 +90,4 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 12.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 12.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 12.
-<classification.PNG, id=1, 393.26926pt x 179.4705pt>
-File: classification.PNG Graphic file (type png)
-<use classification.PNG>
-Package pdftex.def Info: classification.PNG  used on input line 32.
-(pdftex.def)             Requested size: 353.93906pt x 161.52194pt.
- [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./classification.PNG>] [3] [4]
-<iot_os.PNG, id=23, 669.09975pt x 364.36125pt>
-File: iot_os.PNG Graphic file (type png)
-<use iot_os.PNG>
-Package pdftex.def Info: iot_os.PNG  used on input line 148.
-(pdftex.def)             Requested size: 334.54906pt x 182.18018pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 156.
- [5 <./iot_os.PNG>] (./main.bbl [6]) [7] (./main.aux) ) 
-Here is how much of TeX's memory you used:
- 1484 strings out of 478287
- 23807 string characters out of 5849290
- 320182 words of memory out of 5000000
- 19701 multiletter control sequences out of 15000+600000
- 474977 words of font info for 47 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 55i,8n,62p,673b,230s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main.pdf (7 pages, 309899 bytes).
-PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+LaTeX Font Info:    External font `cmex10' loaded for si

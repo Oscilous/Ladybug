@@ -17,6 +17,10 @@ Cavoukian Ann.
 \newblock Privacy and drones: Unmanned aerial vehicles.
 \newblock 2012.
 
+\bibitem{IOT}
+Benjamin Cabé.
+\newblock Iot developer survey 2018, 2018.
+
 \bibitem{Droner}
 Trafikstyrelsen Droner.
 \newblock Flying drones in denmark, 2022.
@@ -61,5 +65,10 @@ Seeed Studio.
 Kashyap Vyas.
 \newblock A brief history of drones: The remote controlled unmanned aerial
   vehicles (uavs), 2020.
+
+\bibitem{Lemberg}
+Oleksandr Zozulia.
+\newblock Freertos vs. zephyr project for embedded iot projects - lemberg
+  solutions, 2022.
 
 \end{thebibliography}

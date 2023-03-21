@@ -14,8 +14,7 @@ European Union Aviation~Safety Agency.
 
 \bibitem{Ann2012}
 Cavoukian Ann.
-\newblock Privacy and drones: Unmanned aerial vehicles.
-\newblock 2012.
+\newblock Privacy and drones: Unmanned aerial vehicles, 2012.
 
 \bibitem{IOT}
 Benjamin Cabé.
@@ -31,10 +30,19 @@ M.~Hassanalian and A.~Abdelkefi.
   review.
 \newblock {\em Progress in Aerospace Sciences}, 91:99--131, 5 2017.
 
+\bibitem{Industry}
+Connected Industry.
+\newblock Freertos vs threadx vs zephyr: The fight for true open source rtos,
+  2023.
+
 \bibitem{Joe2019}
 Joe Jaworski.
 \newblock A real-time operating system for the arduino | nuts and volts
   magazine, 2019.
+
+\bibitem{Comparison}
+micro ROS.
+\newblock Comparison between rtoses.
 
 \bibitem{Niculescu2021}
 Vlad Niculescu, Lorenzo Lamberti, Francesco Conti, Luca Benini, and Daniele

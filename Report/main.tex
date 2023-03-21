@@ -15,11 +15,7 @@
     \newcommand*{\mcl}[1]{\multicolumn{1}{l|}{#1}}
 \usepackage[skip=1ex]{caption}
 \usepackage{enumitem}\usepackage{tabularx}
-
 \usepackage[utf8]{inputenc}
-
-\usepackage[ngerman]{babel}
-
 \usepackage[T1]{fontenc}
 
 \begin{document}
@@ -40,7 +36,7 @@
 
 \vskip1.4in
 
-\begin{minipage}{.4\textwidth}
+\begin{minipage}{.35\textwidth}
   \begin{flushleft}
     \bfseries\large Supervisor:\par \emph{Lars Duggen} \par \emph{Davi Goncalves Accioli} \end{flushleft}
 \end{minipage}
@@ -196,10 +192,9 @@ According to 2018 IoT Developer Survey \cite{IOT}, FreeRTOS is one of the most p
     \label{fig:iot_os}
 \end{figure}
 
-To decide between the RTOS choice, a pros and cons table was created and evaluated.
+To decide between the RTOS choice, a pros and cons table was created and evaluated. \cite{Comparison} (See Table~\ref{table.rtos})
 
-\begin{table}
-      \label{table.rtos}
+\begin{table}[H]
       \makegapedcells
   \setlist[itemize]{font=\color{black},
                     nosep,
@@ -240,8 +235,10 @@ To decide between the RTOS choice, a pros and cons table was created and evaluat
 
 \end{tabularx}
 \caption{Comparison between ZephyrRTOS and FreeRTOS}
+\label{table.rtos}
 \end{table}
 
+It was evaluated, that overall FreeRTOS seems to be a better established more simple solution to be used in case of no experience, whereas Zephyr offers more flexibility and is a fast growing popular solution well suited for our application and would be a worthwile investment to build our skillset for future projects. \cite{Industry}
 
 As the Seeeduino XIAO nRF52840 Sense, uses the nRF52840 microcontroler, so looking to Nordic Semiconductor nRF Connect SDK for development, which uses a RTOS called ZephyrRTOS.
 Additionally, the SDK provides useful tools for development, such as build, flashing and debugging actions. \cite{nRF}
@@ -262,14 +259,22 @@ Now find the previously mentioned zephyr.ut2 and drag it in to the memory of the
 A issue accured when trying to test the "Hello World" application, when connecting to serial monitor no output is given.
 After further investigation, it was noticed that the Seeed documentation, mentiones no debugging interface, hence no USB serial exists.
 To solve the issue, an application called "console", from \path{zephyr/samples/subsys/usb/console} was cloned, in order to test a virtual USB serial connection, with the use of CDC ACM UART. \cite{gitZephyr}
-After building and flashing, results were achieved as seen in the picture.
-/*Inser picture of serial monitor*/
+After building and flashing, results were achieved. (See Figure~\ref{fig:serial})
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.7]{serial_monitor.png}
+    \caption{Serial output of the XIAO MCU}
+    \label{fig:serial}
+\end{figure}
+
 Another issue that arose was debugging. The Seeed XIAO nRF52840 Sense does not have any sort of built in debugging tools. \cite{wikiSeeed}
 One can use a J-link debugging tool, but a caviet was found, which was GDB stub, which Zephyr supports, this would save budget. \cite{docsZephyr}
 
 After achieving a succesful development cycle, it was conducted, that the use of ZephyrRTOS is possible with our current setup.
 After further consultation with the supervisors, it was conducted, that the writers of the project have no skills in RTOS, more specifically in threading, and with the guidence of Davi, it was concluded, that acquiring such skills would be outside the scope of the project, as the main focus is control engineering.
 
+\pagebreak
 \bibliographystyle{plain}
 \bibliography{references}
 \end{document}

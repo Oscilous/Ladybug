@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.3.8)  21 MAR 2023 10:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.3.8)  21 MAR 2023 10:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -173,54 +173,41 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks24
 \inpenc@posthook=\toks25
-) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2022/01/26 3.70 The Babel package
-\babel@savecnt=\count273
-\U@D=\dimen178
-\l@unhyphenated=\language87
- (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@readstream=\read2
-\bbl@dirlevel=\count274
- (/usr/share/texlive/texmf-dist/tex/generic/babel-german/ngerman.ldf
-Language: ngerman 2021/02/27 v2.13 German support for babel (post-1996 orthography)
- (/usr/share/texlive/texmf-dist/tex/generic/babel-german/ngermanb.ldf
-Language: ngermanb 2021/02/27 v2.13 German support for babel (post-1996 orthography)
-Package babel Info: Making " an active character on input line 122.
-))) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count275
+\l__color_backend_stack_int=\count273
 \l__pdf_internal_box=\box55
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count276
-\scratchdimen=\dimen179
+\scratchcounter=\count274
+\scratchdimen=\dimen178
 \scratchbox=\box56
-\nofMPsegments=\count277
-\nofMParguments=\count278
+\nofMPsegments=\count275
+\nofMParguments=\count276
 \everyMPshowfont=\toks26
-\MPscratchCnt=\count279
-\MPscratchDim=\dimen180
-\MPnumerator=\count280
-\makeMPintoPDFobject=\count281
+\MPscratchCnt=\count277
+\MPscratchDim=\dimen179
+\MPnumerator=\count278
+\makeMPintoPDFobject=\count279
 \everyMPtoPDFconversion=\toks27
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -286,13 +273,13 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 46.
+(Font)              <10.95> on input line 42.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 46.
+(Font)              <8> on input line 42.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 46.
+(Font)              <6> on input line 42.
 
-Overfull \hbox (103.06465pt too wide) in paragraph at lines 43--53
+Overfull \hbox (82.15707pt too wide) in paragraph at lines 39--49
 []$[]$  $[]$ 
  []
 
@@ -302,32 +289,38 @@ Overfull \hbox (103.06465pt too wide) in paragraph at lines 43--53
 <classification.PNG, id=12, 393.26926pt x 179.4705pt>
 File: classification.PNG Graphic file (type png)
 <use classification.PNG>
-Package pdftex.def Info: classification.PNG  used on input line 78.
+Package pdftex.def Info: classification.PNG  used on input line 74.
 (pdftex.def)             Requested size: 353.93906pt x 161.52194pt.
  [1 <./classification.PNG>] [2] [3]
 <iot_os.PNG, id=26, 669.09975pt x 364.36125pt>
 File: iot_os.PNG Graphic file (type png)
 <use iot_os.PNG>
-Package pdftex.def Info: iot_os.PNG  used on input line 194.
+Package pdftex.def Info: iot_os.PNG  used on input line 190.
 (pdftex.def)             Requested size: 334.54906pt x 182.18018pt.
- [4]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 252.
+ [4] [5 <./iot_os.PNG>]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 249.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [5 <./iot_os.PNG>] [6] (./main.bbl [7]) [8] (./main.aux) ) 
+) [6]
+<serial_monitor.png, id=39, 584.1825pt x 224.63925pt>
+File: serial_monitor.png Graphic file (type png)
+<use serial_monitor.png>
+Package pdftex.def Info: serial_monitor.png  used on input line 266.
+(pdftex.def)             Requested size: 408.92496pt x 157.24638pt.
+ [7 <./serial_monitor.png>] (./main.bbl) [8] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 6546 strings out of 478287
- 110360 string characters out of 5849290
- 435309 words of memory out of 5000000
- 24652 multiletter control sequences out of 15000+600000
+ 5549 strings out of 478287
+ 93273 string characters out of 5849290
+ 405462 words of memory out of 5000000
+ 23670 multiletter control sequences out of 15000+600000
  482238 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,12n,67p,673b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,12n,67p,673b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf/fonts/type1/public/cm-super/sfbi1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbi2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfxc1728.pfb>
-Output written on main.pdf (9 pages, 412891 bytes).
+Output written on main.pdf (9 pages, 505452 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
+ 91 PDF objects out of 1000 (max. 8388607)
  54 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

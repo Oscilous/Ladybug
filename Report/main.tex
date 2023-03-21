@@ -1,5 +1,6 @@
 \documentclass[a4paper,11pt]{article}
 \usepackage{graphicx} % Required for inserting images
+\usepackage{float}
 \usepackage{url}
 
 \title{SPRO4 PROBLEM FORMULATION}
@@ -22,12 +23,17 @@ UAVs often include multirotor, radio-controlled miniature helicopters, and aerop
 As a result, there are several methods to categorize drones. The performance parameters of UAVs, such as weight, wingspan, wing load, flight range, maximum flying altitude, speed, and production cost, are typically used to categorize them \cite{Hassanalian2017}.
 According to how the lift is produced, drones may also be divided into fixed-wing and rotating-wing types.
 According to the drone code category, the European Aviation Safety Agency (EASA) categorizes unmanned aircraft by weight.
-The EASA regulations for open categories, or drones without an EASA class designation, are summarized succinctly and simply in Table I \cite{Euasa}.
+The EASA regulations for open categories, or drones without an EASA class designation, are summarized succinctly and simply in Figure~\ref{fig:Table} \cite{Euasa}.
 
-\graphicspath{{classification.png}}
-Table I Classification and restrictions for non-EASA class drones \cite{Euasa}
+Self-built drones weighing up to 250 g, as described in Figure~\ref{fig:Table}, may be used without registration if the drone is a toy or the drone is not equipped with a camera, the remaining drones must be registered, and the pilot must pass examinations \cite{Euasa}. In this paper, self-built rotary drones with four wings or propellers are the objective, making weight-based classification suitable.
 
-Self-built drones weighing up to 250 g, as described in Table 1, may be used without registration if the drone is a toy or the drone is not equipped with a camera, the remaining drones must be registered, and the pilot must pass examinations \cite{Euasa}. In this paper, self-built rotary drones with four wings or propellers are the objective, making weight-based classification suitable.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.9]{classification.PNG}
+    \caption{Classification and restrictions for non-EASA class drones \cite{Euasa}}
+    \label{fig:Table}
+\end{figure}
+
 
 When it comes to the state-of-the-art project, PULP-DroNet is a deep learning-powered visual navigation engine that enables autonomous navigation of a pocket-size quadrotor in a previously unseen environment. Thanks to PULP-DroNet the nano-drone can explore the environment, avoiding collisions also with dynamic obstacles, in complete autonomy -- no human operator, no ad-hoc external signals, and no remote laptop! This means that all the complex computations are done directly aboard the vehicle and very fast. The visual navigation engine is composed of both a software and a hardware part. \cite{Niculescu2021}
 

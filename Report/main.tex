@@ -1,15 +1,61 @@
-\documentclass[a4paper,11pt]{article}
+\documentclass[titlepage,a4paper,11pt]{article}
 \usepackage{graphicx} % Required for inserting images
 \usepackage{float}
 \usepackage{url}
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{ragged2e}
+\usepackage[svgnames]{xcolor}
+\usepackage{makecell, tabularx}
+    \setcellgapes{2pt}
+    \makeatletter
+    \newcommand*{\compress}{\@minipagetrue}
+    \makeatother
+    \newcolumntype{I}{ >{\RaggedRight\compress\itemize}X<{\enditemize}}
+    \newcommand*{\mcl}[1]{\multicolumn{1}{l|}{#1}}
+\usepackage[skip=1ex]{caption}
+\usepackage{enumitem}\usepackage{tabularx}
 
-\title{SPRO4 PROBLEM FORMULATION}
-\author{Group 7}
-\date{March 2023}
+\usepackage[utf8]{inputenc}
+
+\usepackage[ngerman]{babel}
+
+\usepackage[T1]{fontenc}
 
 \begin{document}
 
-\maketitle
+\begin{titlepage}
+\begin{center}
+  \bfseries
+  \huge UNIVERSITY OF SOUTHERN DENMARK
+  \vskip.2in
+  \textsc{\LARGE Faculty of engineering}
+  \vskip.2in
+  \large BEng Mechatronics
+  \vskip1in
+  \Large Mechatronics Semester Project 4
+  \vskip1.5in
+  \emph{\huge Ladybug}
+\end{center}
+
+\vskip1.4in
+
+\begin{minipage}{.4\textwidth}
+  \begin{flushleft}
+    \bfseries\large Supervisor:\par \emph{Lars Duggen} \par \emph{Davi Goncalves Accioli} \end{flushleft}
+\end{minipage}
+\hskip.4\textwidth
+\begin{minipage}{.4\textwidth}
+  \begin{flushleft}
+    \bfseries\large Group: 7 \par \emph{Tobias Blaabjerg Karlsen} \par \emph{Artis Fils} \par \emph{Thor Uerkvitz} \par \emph{Choyon Mainul Hasan} \par \emph{Johan Paul} \par \emph{Ruta Miglava}
+  \end{flushleft}
+\end{minipage}
+
+\vfill
+\centering
+\bfseries
+\Large Year \the\year
+\end{titlepage}
 
 \section{Background}
 
@@ -152,7 +198,49 @@ According to 2018 IoT Developer Survey \cite{IOT}, FreeRTOS is one of the most p
 
 To decide between the RTOS choice, a pros and cons table was created and evaluated.
 
+\begin{table}
+      \label{table.rtos}
+      \makegapedcells
+  \setlist[itemize]{font=\color{black},
+                    nosep,
+                    leftmargin=*,
+                    after=\vspace*{-\baselineskip}}
+      \setlength{\tabcolsep}{3pt}
+  \begin{tabularx}{\linewidth}{|>{\RaggedRight}p{25mm}|*{2}{I |}}
+      \hline
+  RTOS
+      &   \mcl{Advantages}    &   \mcl{Disadvantages}        \\
+      \hline
+  FreeRTOS 
+      &   \item Suitable for begginers
+          \item Open source – online comunity support available 
+          \item Libraries for Seeed XIAO Sense available
+          \item Constantly improved
+          \item Fast code execution
+          \item Low memory consuption
+          &   \item Not event-driven (scheduler will only be called once in a certain period of time)
+              \item Less flexible
+              \\
+      \hline
+  ZephyrRTOS
+      &   \item Open source – online comunity support available
+          \item Libraries for Seeed XIAO Sense available
+          \item Constantly improved
+          \item Designed to ensure energy efficiency
+          \item Highly configurable
+          \item Event-driven
+          \item Kernel can create additional system threads
+          \item Possible to exclude multithreading
+          \item Additional debugging features
+          \item Supported by Nordic Semiconductor
+          &   \item More difficult to set-up
+              \item Potentially complicated to use with no experience
+              \\
+      \hline
 
+\end{tabularx}
+\caption{Comparison between ZephyrRTOS and FreeRTOS}
+\end{table}
 
 
 As the Seeeduino XIAO nRF52840 Sense, uses the nRF52840 microcontroler, so looking to Nordic Semiconductor nRF Connect SDK for development, which uses a RTOS called ZephyrRTOS.

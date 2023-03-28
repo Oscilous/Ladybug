@@ -11,18 +11,23 @@ Renat~N. Abutalipov, Yuriy~V. Bolgov, and Hamisha~M. Senov.
 \bibitem{Euasa}
 European Union Aviation~Safety Agency.
 \newblock Open category - civil drones | easa, 2023.
+\newblock
+  \url{https://www.easa.europa.eu/en/domains/civil-drones/drones-regulatory-framework-background/open-category-civil-drones}.
 
 \bibitem{Ann2012}
 Cavoukian Ann.
 \newblock Privacy and drones: Unmanned aerial vehicles, 2012.
+\newblock \url{http://www.ipc.on.ca/English/Resources/Discussion-Papers/}.
 
 \bibitem{IOT}
 Benjamin Cabé.
 \newblock Iot developer survey 2018, 2018.
+\newblock \url{https://www.slideshare.net/kartben/iot-developer-survey-2018}.
 
 \bibitem{Droner}
 Trafikstyrelsen Droner.
 \newblock Flying drones in denmark, 2022.
+\newblock \url{https://www.droneregler.dk/english}.
 
 \bibitem{Hassanalian2017}
 M.~Hassanalian and A.~Abdelkefi.
@@ -34,16 +39,27 @@ M.~Hassanalian and A.~Abdelkefi.
 Connected Industry.
 \newblock Freertos vs threadx vs zephyr: The fight for true open source rtos,
   2023.
+\newblock
+  \url{https://www.iiot-world.com/industrial-iot/connected-industry/freertos-vs-threadx-vs-zephyr-the-fight-for-true-open-source-rtos/}.
 
 \bibitem{Joe2019}
 Joe Jaworski.
 \newblock A real-time operating system for the arduino - nuts and volts
   magazine.
 \newblock {\em Copyright © 2023 T and L Publications}, 2019.
+\newblock
+  \url{https://www.nutsvolts.com/magazine/article/a-real-time-operating-system-for-the-arduino}.
+
+\bibitem{Platform}
+PlatformIO Labs.
+\newblock A professional collaborative platform for embedded development ·
+  platformio.
+\newblock \url{https://platformio.org/}.
 
 \bibitem{Comparison}
 micro ROS.
 \newblock Comparison between rtoses.
+\newblock \url{https://micro.ros.org/docs/concepts/rtos/comparison/}.
 
 \bibitem{Niculescu2021}
 Vlad Niculescu, Lorenzo Lamberti, Francesco Conti, Luca Benini, and Daniele
@@ -56,28 +72,36 @@ Vlad Niculescu, Lorenzo Lamberti, Francesco Conti, Luca Benini, and Daniele
 \bibitem{docsZephyr}
 Zephyr Project.
 \newblock Introduction — zephyr project documentation, 2022.
+\newblock \url{https://docs.zephyrproject.org/latest/introduction/index.html}.
 
 \bibitem{gitZephyr}
 Zephyr Project.
 \newblock Zephyr project github repository, 2023.
+\newblock \url{https://github.com/zephyrproject-rtos/zephyr/}.
 
 \bibitem{nRF}
 Nordic Semiconductor.
 \newblock nrf connect for vs code - nrf connect for vs code, 2022.
+\newblock \url{https://nrfconnect.github.io//vscode-nrf-connect/index.html}.
 
 \bibitem{wikiSeeed}
 Seeed Studio.
 \newblock Getting started with seeed studio xiao nrf52840 (sense) | seeed
   studio wiki, 2023.
+\newblock \url{https://wiki.seeedstudio.com/XIAO_BLE/}.
 
 \bibitem{Vyas2020}
 Kashyap Vyas.
 \newblock A brief history of drones: The remote controlled unmanned aerial
   vehicles (uavs), 2020.
+\newblock
+  \url{https://interestingengineering.com/innovation/a-brief-history-of-drones-the-remote-controlled-unmanned-aerial-vehicles-uavs}.
 
 \bibitem{Lemberg}
 Oleksandr Zozulia.
 \newblock Freertos vs. zephyr project for embedded iot projects - lemberg
   solutions, 2022.
+\newblock
+  \url{https://lembergsolutions.com/blog/freertos-vs-zephyr-project-embedded-iot-projects}.
 
 \end{thebibliography}

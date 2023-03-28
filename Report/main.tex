@@ -241,7 +241,11 @@ To decide between the RTOS choice, a pros and cons table was created and evaluat
 
 It was evaluated, that overall FreeRTOS seems to be a better established more simple solution to be used in case of no experience, whereas Zephyr offers more flexibility and is a fast growing popular solution well suited for our application and would be a worthwile investment to build our skillset for future projects. \cite{Industry}
 
-As the Seeeduino XIAO nRF52840 Sense, uses the nRF52840 microcontroler, so looking to Nordic Semiconductor nRF Connect SDK for development, which uses a RTOS called ZephyrRTOS.
+PlatformIO is an open-source extension of Visual studio code, which supports hundreds of boards with different frameworks. \cite{Platform} Seeed XIAO nRF52840 is not natively suported. Seeed made library for Arduino IDE, which supports Arduino and Mbed framework, that was implemented through Github to PlatformIO and allows non-problematic implementation.
+The XIAO has library in the Zephyr Github repository, but the PlatformIO does not use most recent version. The version of Zephyr itself is altered in PlatformIO and therefore does not work even after corssreferencing with other boards already implemented in PlatformIO, such as Seeeduino (as a reference for the formfactor) or nRF52840 DK (as a reference for the chip).
+The PlatformIO does not have inbuild serial USB communication, which results in inability to reprogram the board through the VS Code and need to go through bootloader first. This poses inconvinience, which can be avoided by use of a Arduino IDE, therefore if route of MBed or Arduino framework is chosen, Arduino IDE should be chosen. If the route of Zephyr is chosen, SDK by nordic semi is the optimal route, because event though it also does not have serial USB, it uses barebone Zephyr.
+
+Opon further research, the Seeeduino XIAO nRF52840 Sense uses the nRF52840 microcontroler, so looking to Nordic Semiconductor nRF Connect SDK for development, which uses a RTOS called ZephyrRTOS.
 Additionally, the SDK provides useful tools for development, such as build, flashing and debugging actions. \cite{nRF}
 
 

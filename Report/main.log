@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.3.8)  28 MAR 2023 11:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.3.8)  28 MAR 2023 12:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/oscilous/Ladybug/Report/main
+**/home/oscilous/Ladybug/Report/main.tex
 (/home/oscilous/Ladybug/Report/main.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -301,30 +301,75 @@ File: iot_os.PNG Graphic file (type png)
 <use iot_os.PNG>
 Package pdftex.def Info: iot_os.PNG  used on input line 191.
 (pdftex.def)             Requested size: 334.54906pt x 182.18018pt.
- [4] [5 <./iot_os.PNG>]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 250.
+ [4] [5 <./iot_os.PNG>] [6]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 254.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [6]
-<serial_monitor.png, id=39, 584.1825pt x 224.63925pt>
+)
+<serial_monitor.png, id=38, 584.1825pt x 224.63925pt>
 File: serial_monitor.png Graphic file (type png)
 <use serial_monitor.png>
-Package pdftex.def Info: serial_monitor.png  used on input line 267.
+Package pdftex.def Info: serial_monitor.png  used on input line 271.
 (pdftex.def)             Requested size: 408.92496pt x 157.24638pt.
- [7 <./serial_monitor.png>] (./main.bbl) [8] (./main.aux) ) 
+ [7] [8 <./serial_monitor.png>] (./main.bbl
+Underfull \hbox (badness 2846) in paragraph at lines 12--16
+[]\T1/cmr/m/n/10.95 European Union Avi-a-tion Safety Agency.  Open cat-e-gory - civil drones
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--16
+\T1/cmr/m/n/10.95 | easa, 2023.  $\T1/cmtt/m/n/10.95 https : / / www . easa . europa . eu / en / domains / civil-[]drones /
+ []
+
+
+Underfull \hbox (badness 1939) in paragraph at lines 28--31
+[]\T1/cmr/m/n/10.95 Trafikstyrelsen Droner.  Fly-ing drones in den-mark, 2022.  $\T1/cmtt/m/n/10.95 https : / / www .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--44
+[]\T1/cmr/m/n/10.95 Connected In-dus-try.  Freer-tos vs threadx vs zephyr:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--44
+\T1/cmr/m/n/10.95 The fight for true open source rtos, 2023.  $\T1/cmtt/m/n/10.95 https : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--44
+\T1/cmtt/m/n/10.95 www . iiot-[]world . com / industrial-[]iot / connected-[]industry /
+ []
+
+[9]
+Overfull \hbox (48.38205pt too wide) in paragraph at lines 94--99
+\T1/cmtt/m/n/10.95 a-[]brief-[]history-[]of-[]drones-[]the-[]remote-[]controlled-[]unmanned-[]aerial-[]vehicles-[]uavs$\T1/cmr/m/n/10.95 . 
+ []
+
+
+Underfull \hbox (badness 1442) in paragraph at lines 101--106
+[]\T1/cmr/m/n/10.95 Oleksandr Zozu-lia.  Freer-tos vs. zephyr project for em-bed-ded iot projects
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--106
+\T1/cmr/m/n/10.95 - lem-berg so-lu-tions, 2022.  $\T1/cmtt/m/n/10.95 https : / / lembergsolutions . com / blog /
+ []
+
+) [10] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 5656 strings out of 478287
- 94905 string characters out of 5849290
- 406391 words of memory out of 5000000
- 23773 multiletter control sequences out of 15000+600000
+ 5658 strings out of 478287
+ 94936 string characters out of 5849290
+ 405397 words of memory out of 5000000
+ 23775 multiletter control sequences out of 15000+600000
  482619 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,12n,67p,671b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,12n,67p,675b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf/fonts/type1/public/cm-super/sfbi1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbi2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfxc1728.pfb>
-Output written on main.pdf (9 pages, 507456 bytes).
+Output written on main.pdf (11 pages, 514524 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
+ 100 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

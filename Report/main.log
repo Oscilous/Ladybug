@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.3.8)  21 MAR 2023 13:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.3.8)  28 MAR 2023 11:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/oscilous/SPRO4/Report/main.tex
-(/home/oscilous/SPRO4/Report/main.tex
+**/home/oscilous/Ladybug/Report/main
+(/home/oscilous/Ladybug/Report/main.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -104,6 +104,10 @@ Package: ragged2e 2021/12/15 v3.1 ragged2e Package
 \RaggedLeftParindent=\skip60
 \RaggedRightParindent=\skip61
 \JustifyingParindent=\skip62
+) (/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
 ) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
  (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -182,20 +186,20 @@ File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count274
@@ -273,141 +277,54 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 42.
+(Font)              <10.95> on input line 43.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 42.
+(Font)              <8> on input line 43.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 42.
+(Font)              <6> on input line 43.
 
-Overfull \hbox (82.15707pt too wide) in paragraph at lines 39--49
+Overfull \hbox (82.15707pt too wide) in paragraph at lines 40--50
 []$[]$  $[]$ 
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Warning: Citation `Vyas2020' on page 1 undefined on input line 59.
-
-
-LaTeX Warning: Citation `Droner' on page 1 undefined on input line 60.
-
-
-LaTeX Warning: Citation `Ann2012' on page 1 undefined on input line 64.
-
-
-LaTeX Warning: Citation `Hassanalian2017' on page 1 undefined on input line 65.
-
-
-LaTeX Warning: Citation `Euasa' on page 1 undefined on input line 68.
-
-
-LaTeX Warning: Citation `Euasa' on page 1 undefined on input line 70.
-
 <classification.PNG, id=12, 393.26926pt x 179.4705pt>
 File: classification.PNG Graphic file (type png)
 <use classification.PNG>
-Package pdftex.def Info: classification.PNG  used on input line 74.
+Package pdftex.def Info: classification.PNG  used on input line 75.
 (pdftex.def)             Requested size: 353.93906pt x 161.52194pt.
-
-LaTeX Warning: Citation `Euasa' on page 1 undefined on input line 75.
-
-
-LaTeX Warning: Citation `Euasa' on page 1 undefined on input line 75.
-
-
-LaTeX Warning: Citation `Niculescu2021' on page 1 undefined on input line 80.
-
-[1 <./classification.PNG>]
-
-LaTeX Warning: Citation `Abutalipov2016' on page 2 undefined on input line 82.
-
-[2] [3]
-
-LaTeX Warning: Citation `Joe2019' on page 4 undefined on input line 184.
-
-
-LaTeX Warning: Citation `Lemberg' on page 4 undefined on input line 186.
-
-
-LaTeX Warning: Citation `IOT' on page 4 undefined on input line 187.
-
-<iot_os.PNG, id=27, 669.09975pt x 364.36125pt>
+ [1 <./classification.PNG>] [2] [3]
+<iot_os.PNG, id=26, 669.09975pt x 364.36125pt>
 File: iot_os.PNG Graphic file (type png)
 <use iot_os.PNG>
-Package pdftex.def Info: iot_os.PNG  used on input line 190.
+Package pdftex.def Info: iot_os.PNG  used on input line 191.
 (pdftex.def)             Requested size: 334.54906pt x 182.18018pt.
-[4]
-
-LaTeX Warning: Citation `Comparison' on page 5 undefined on input line 195.
-
-[5 <./iot_os.PNG>]
-
-LaTeX Warning: Citation `Industry' on page 6 undefined on input line 241.
-
-
-LaTeX Warning: Citation `nRF' on page 6 undefined on input line 244.
-
-
-LaTeX Warning: Citation `docsZephyr' on page 6 undefined on input line 247.
-
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 249.
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+ [4] [5 <./iot_os.PNG>]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 250.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-
-LaTeX Warning: Citation `gitZephyr' on page 6 undefined on input line 249.
-
-
-LaTeX Warning: Citation `docsZephyr' on page 6 undefined on input line 253.
-
-[6]
-
-LaTeX Warning: Citation `gitZephyr' on page 7 undefined on input line 261.
-
-<serial_monitor.png, id=40, 584.1825pt x 224.63925pt>
+) [6]
+<serial_monitor.png, id=39, 584.1825pt x 224.63925pt>
 File: serial_monitor.png Graphic file (type png)
 <use serial_monitor.png>
-Package pdftex.def Info: serial_monitor.png  used on input line 266.
+Package pdftex.def Info: serial_monitor.png  used on input line 267.
 (pdftex.def)             Requested size: 408.92496pt x 157.24638pt.
-
-LaTeX Warning: Citation `wikiSeeed' on page 7 undefined on input line 271.
-
-
-LaTeX Warning: Citation `docsZephyr' on page 7 undefined on input line 272.
-
-[7 <./serial_monitor.png>] (./main.bbl
-./main.bbl:42: Misplaced alignment tab character &.
-l.42 \newblock {\em Copyright © 2023 T &
-                                          L Publications}, 2019.
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-) [8] (./main.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+ [7 <./serial_monitor.png>] (./main.bbl) [8] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 5552 strings out of 478287
- 93315 string characters out of 5849290
- 405407 words of memory out of 5000000
- 23672 multiletter control sequences out of 15000+600000
+ 5656 strings out of 478287
+ 94905 string characters out of 5849290
+ 406391 words of memory out of 5000000
+ 23773 multiletter control sequences out of 15000+600000
  482619 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,12n,67p,682b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf/fonts/type1/public/cm-super/sfbi1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbi2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfxc1728.pfb>
-Output written on main.pdf (9 pages, 522500 bytes).
+ 60i,12n,67p,671b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf/fonts/type1/public/cm-super/sfbi1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbi2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfxc1728.pfb>
+Output written on main.pdf (9 pages, 507456 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
+ 94 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

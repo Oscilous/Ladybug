@@ -1,9 +1,9 @@
-PWD /home/oscilous/SPRO4/Report
+PWD /home/oscilous/Ladybug/Report
 INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/oscilous/SPRO4/Report/main.tex
+INPUT /home/oscilous/Ladybug/Report/main.tex
 OUTPUT main.log
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -152,6 +152,17 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/ragged2e/ragged2e.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/ragged2e/ragged2e.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/ragged2e/ragged2e.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
@@ -431,7 +442,6 @@ INPUT /usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc
 INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfbi1200.pfb
 INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfbi2074.pfb
-INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfbx1095.pfb
 INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb
 INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb
 INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb

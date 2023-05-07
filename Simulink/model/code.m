@@ -1,21 +1,14 @@
 %Constants to be set
-m = 10; % Mass of the drone
-b = 1; % Thrust constant of one motor
-d = 1; % Torque constant of one motor
-Ixx = 1; % Drone inertia around the xx axis
-Iyy = 1; % Drone inertia around the yy axis
-Izz = 1; % Drone inertia around the zz axis
-l = 1; % Lenght from the motor to the mid point
-Jr = 1; % Rotor inertia
-Ax = 1; % Air resistance from axis X
-Ay = 1; % Air resistance from axis Y
-Az = 1; % Air resistance from axis Z
-g = 9.81; % The accelaration from gravity
+m = 0.05; % Mass of the drone (kg)
+d = 2.980*1e-6; % Torque constant of one motor (N / s^2)
+b = 1.14*1e-7; % Thrust constant of one motor (N*m / s^2)
+Ixx = 4.856*1e-3; % Drone inertia around the xx axis (Kg * m^2)
+Iyy = 4.856*1e-3; % Drone inertia around the yy axis (Kg * m^2)
+Izz = 8.801*1e-3; % Drone inertia around the zz axis (Kg * m^2)
+l = 0.116 / 2; % Lenght from the motor to the mid point (m)
+Jr = 1; % Rotor inertia (Kg * m^2)
+Ax = 0; % Air resistance from axis X (kg / s)
+Ay = 0; % Air resistance from axis Y (kg / s)
+Az = 0; % Air resistance from axis Z (kg / s)
+g = 0; % The accelaration from gravity (m / s^2)
 
-
-%Outputs from simulink
-x = out.X;
-y = out.Y;
-z = out.Z;
-
-plot3(x, y, z)

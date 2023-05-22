@@ -1,6 +1,7 @@
 #include <Arduino.h>
 #include <NanoBLEFlashPrefs.h>
 #include <QuickPID.h>
+#include <LSM6DS3.h>
 
 #define ARRAY_SIZE 15
 #define motor_4 7
@@ -26,8 +27,8 @@ class DegreeOfFreedom
     float P = 0;
     float I = 0;
     float D = 0;
-    DegreeOfFreedom(float p, float i, float d) : setpoint(0), input(0), output(0), P(p), I(i), D(d) {}
-    DegreeOfFreedom(float set, float p, float i, float d) : setpoint(set), input(0), output(0), P(p), I(i), D(d) {}
+    DegreeOfFreedom(float p, float i, float d) : P(p), I(i), D(d) {}
+    DegreeOfFreedom(float set, float p, float i, float d) : setpoint(set), P(p), I(i), D(d) {}
 };
 
 // Access to the library
@@ -48,7 +49,8 @@ const float pi = 3.14159;
 
 //Declearing of degrees of freedom for collective variables
 //Check constructors for proper use
-DegreeOfFreedom Z(0.5, 1.02, 0.38, 0.2825);
+DegreeOfFreedom Z(-ARRAY_SIZE, 1.02, 0.38, 0.2825);
+//DegreeOfFreedom Z(0.5, 1.02, 0.38, 0.2825);
 DegreeOfFreedom Phi(-2.29551125806385e-05, -1.42052143562565e-06, -5.90349375287184e-05);
 DegreeOfFreedom Theta(-2.34228279252575e-05, -1.44946486469699e-06, -6.02377870487898e-05);
 QuickPID Z_PID(&Z.input, &Z.output, &Z.setpoint);
@@ -70,7 +72,7 @@ void setup()
   Z_PID.SetTunings(Z.P, Z.I, Z.D);
   Phi_PID.SetTunings(Phi.P, Phi.I, Phi.D);
   Theta_PID.SetTunings(Theta.P, Theta.I, Theta.D);
-
+  Z_PID.SetOutputLimits(-0x7FFFFFFF, 0);
   //Turn the PID on
   Z_PID.SetMode(Z_PID.Control::automatic);
   Phi_PID.SetMode(Phi_PID.Control::automatic);
@@ -115,7 +117,7 @@ void setup()
 
 void loop()
 {
-  while (Z.input < 15){
+  while (Z.input > (-ARRAY_SIZE) - 1){
     Phi_PID.Compute();
     Phi.output /= 4 * thrust_const * sin(pi/4) * motor_distance;
     Theta_PID.Compute();
@@ -159,7 +161,7 @@ void loop()
       analogWrite(10 - i, motor_speed[i]);
     }
     delay(100);
-    Z.input += 0.1;
+    Z.input--;
   }
   //When done send the logs
   myFlashPrefs.writePrefs(&globalPrefs, sizeof(globalPrefs));

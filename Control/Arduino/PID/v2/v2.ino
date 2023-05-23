@@ -72,13 +72,26 @@ const float pi = 3.14159;
 
 //Declearing of degrees of freedom for collective variables
 //Check constructors for proper use
-DegreeOfFreedom Z(0, 1.02, 0.38, 0.2825);
-//DegreeOfFreedom Z(0.5, 1.02, 0.38, 0.2825);
-DegreeOfFreedom Phi(-2.29551125806385e-05, -1.42052143562565e-06, -5.90349375287184e-05);
-DegreeOfFreedom Theta(-2.34228279252575e-05, -1.44946486469699e-06, -6.02377870487898e-05);
-QuickPID Z_PID(&Z.input, &Z.output, &Z.setpoint);
-QuickPID Phi_PID(&Phi.input, &Phi.output, &Phi.setpoint);
-QuickPID Theta_PID(&Theta.input, &Theta.output, &Theta.setpoint);
+DegreeOfFreedom Z(0.8, 0.6 * 1.7, 1.2*1.7/3-0.3, 0.075*1.7*3 - 0.1);
+//DegreeOfFreedom Phi(-2.29551125806385e-05, -1.42052143562565e-06, -5.90349375287184e-05);
+DegreeOfFreedom Phi(0.1 , 0.1 , 0.005);
+//DegreeOfFreedom Theta(-2.34228279252575e-05, -1.44946486469699e-06, -6.02377870487898e-05);
+DegreeOfFreedom Theta(0.1 , 0.1 , 0.005);
+QuickPID Z_PID(&Z.input, &Z.output, &Z.setpoint, Z.P, Z.I, Z.D,  /* OPTIONS */
+               Z_PID.pMode::pOnError,                   /* pOnError, pOnMeas, pOnErrorMeas */
+               Z_PID.dMode::dOnError,                    /* dOnError, dOnMeas */
+               Z_PID.iAwMode::iAwCondition,             /* iAwCondition, iAwClamp, iAwOff */
+               Z_PID.Action::direct);                   /* direct, reverse */
+QuickPID Phi_PID(&Phi.input, &Phi.output, &Phi.setpoint, Phi.P, Phi.I, Phi.D,  /* OPTIONS */
+               Phi_PID.pMode::pOnError,                   /* pOnError, pOnMeas, pOnErrorMeas */
+               Phi_PID.dMode::dOnError,                    /* dOnError, dOnMeas */
+               Phi_PID.iAwMode::iAwCondition,             /* iAwCondition, iAwClamp, iAwOff */
+               Phi_PID.Action::direct);                   /* direct, reverse */
+QuickPID Theta_PID(&Theta.input, &Theta.output, &Theta.setpoint, Theta.P, Theta.I, Theta.D,  /* OPTIONS */
+               Theta_PID.pMode::pOnError,                   /* pOnError, pOnMeas, pOnErrorMeas */
+               Theta_PID.dMode::dOnError,                    /* dOnError, dOnMeas */
+               Theta_PID.iAwMode::iAwCondition,             /* iAwCondition, iAwClamp, iAwOff */
+               Theta_PID.Action::direct);                   /* direct, reverse */
 LSM6DS3 myIMU(I2C_MODE, 0x6A);    //I2C device address 0x6A
 Adafruit_VL53L0X lox = Adafruit_VL53L0X();                                    // create object lox from Adafruit_VL53L0X
 VL53L0X_RangingMeasurementData_t measure; 
@@ -218,8 +231,8 @@ void LPF_acc_angle_f()
 
 void Complimentary_f()
 {
-  Complimentary[0] = LPF_acc_angle[0] + HPF_gyro_angle[0];
-  Complimentary[1] = LPF_acc_angle[1] + HPF_gyro_angle[1];
+  Complimentary[0] = (LPF_acc_angle[0] + HPF_gyro_angle[0]) * pi / 180;
+  Complimentary[1] = (LPF_acc_angle[1] + HPF_gyro_angle[1]) * pi / 180;
 }
 
 //--------------------------------------------------------------
@@ -254,6 +267,16 @@ void calc_Z_f(float AccZ)
   Z_position = Z_position + (AccZ-1)/10*dt*dt;
 }
 
+float saturize(float value, float max){
+  if (value > max){
+    return max;
+  }
+  else if (value < 0){
+    return 0;
+  }
+  return value;
+}
+
 void setup()
 {
   // Toggle LED for indication of on/off state
@@ -278,7 +301,10 @@ void setup()
   Z_PID.SetTunings(Z.P, Z.I, Z.D);
   Phi_PID.SetTunings(Phi.P, Phi.I, Phi.D);
   Theta_PID.SetTunings(Theta.P, Theta.I, Theta.D);
-  Z_PID.SetOutputLimits(-0x7FFFFFFF, 0);
+  Z_PID.SetOutputLimits(-255.0, 255.0);
+  Theta_PID.SetOutputLimits(-255.0, 255.0);
+  Phi_PID.SetOutputLimits(-255.0, 255.0);
+
   //Turn the PID on
   Z_PID.SetMode(Z_PID.Control::automatic);
   Phi_PID.SetMode(Phi_PID.Control::automatic);
@@ -326,8 +352,6 @@ void setup()
 
 void loop()
 {
-  
-  while(j < 100){
     time_f();
 
     readgyro_f(); //read gyro
@@ -340,68 +364,66 @@ void loop()
     Complimentary_f();
 
     lox.rangingTest(&measure, false);                                           // set lox.rangingTest to false
-    Z_actual = measure.RangeMilliMeter*cos((3.142/180)*Complimentary[0])*cos((3.142/180)*Complimentary[1]); // distance to ground in mm
-
+    Z_actual = measure.RangeMilliMeter*cos(Complimentary[0])*cos(Complimentary[1]); // distance to ground in mm
+    Z_actual = ((Z_actual - 60) / 1000);
     //PID
-    Z.input = (Z_actual / 100);
-    Phi.input = Complimentary[0] * pi / 180;
-    Theta.input = Complimentary[1] * pi / 180;  
+    Z.input = Z_actual;
+    Phi.input = Complimentary[0];
+    Theta.input = Complimentary[1];  
     Phi_PID.Compute();
-    Phi.output /= 4 * thrust_const * sin(pi/4) * motor_distance;
     Theta_PID.Compute();
-    Theta.output /= 4 * thrust_const * sin(pi/4) * motor_distance;
     Z_PID.Compute(); //After this line Z.output gets updated
     //Z.output /= cos(Theta.input) * cos(Phi.input);
-    //Z.output /= -4 * thrust_const;
-    Z.output = 0;
+    Serial.print("Raw Z PID output");
     Serial.print(Z.output);
-    Serial.print(",");
-    Serial.print(Complimentary[0]);
-    Serial.print(",");
-    Serial.println(Complimentary[1]);
+    Serial.print("           ,");
+        Serial.print("PHI PID");
+    Serial.print(Phi.output);
+    Serial.print("           ,");
+        Serial.print("THETA PID output");
+    Serial.print(Theta.output);
+    Serial.print("           ,");
     // We calculate angular velocities
-    motor_speed[0] = Z.output + Phi.output + Theta.output;
-    motor_speed[1] = Z.output - Phi.output + Theta.output;
-    motor_speed[2] = Z.output - Phi.output - Theta.output;
-    motor_speed[3] = Z.output + Phi.output - Theta.output;
-    for (int i = 0; i < 4; i++){
-      if (motor_speed[i] > 3500){
-        motor_speed[i] = 3500;
-      }
-      else if(motor_speed[i] < 0){
-        motor_speed[i] = 0;
-      }
-    }
+    float z_out = Z.output / (4 * thrust_const);
+    float phi_out = Phi.output / (4 * thrust_const * sin(pi/4) * motor_distance);
+    float theta_out = Theta.output / (4 * thrust_const * sin(pi/4) * motor_distance);
+    z_out = saturize(z_out, 3500);
+    phi_out = saturize(phi_out, 3500);
+    theta_out = saturize(theta_out, 3500);
+
+    motor_speed[0] = (z_out * cos(Phi.input) * cos(Theta.input)) + phi_out + theta_out;
+    motor_speed[1] = (z_out * cos(Phi.input) * cos(Theta.input)) - phi_out + theta_out;
+    motor_speed[2] = (z_out * cos(Phi.input) * cos(Theta.input)) - phi_out - theta_out;
+    motor_speed[3] = (z_out * cos(Phi.input) * cos(Theta.input)) + phi_out - theta_out;
+    
 
     //We convert to pwm
     for (int i = 0; i < 4; i++){
       motor_speed[i] = motor_speed[i] * 0.0795;
       motor_speed[i] -= 21.961;
-      if (motor_speed[i] > 255){
-        motor_speed[i] = 255;
-      }
-      else if(motor_speed[i] < 0){
-        motor_speed[i] = 0;
-      }
+      motor_speed[i] = saturize(motor_speed[i], 255);
     }
 
+    for (int i = 0; i < 4; i++){
+      Serial.print((unsigned char)motor_speed[i]);
+      Serial.print(",");
+    }
+    Serial.print(Complimentary[0]);
+    Serial.print(",");
+    Serial.print(Complimentary[1]);
+    Serial.print(",");
+    Serial.println(" ");
     /*
     globalPrefs.pwm_motor_1[j] = motor_speed[0]; 
     globalPrefs.pwm_motor_2[j] = motor_speed[1];
     globalPrefs.pwm_motor_3[j] = motor_speed[2];
     globalPrefs.pwm_motor_4[j] = motor_speed[3];
-
-    analogWrite(8, motor_speed[0] * 0.1);
-    analogWrite(7, motor_speed[1] * 0.1);
-    analogWrite(9, motor_speed[2] * 0.1);
-    analogWrite(10, motor_speed[3] * 0.1);
     */
 
     //When done send the logs
-    if (j % 10 == 0){
-      myFlashPrefs.writePrefs(&globalPrefs, sizeof(globalPrefs));
-      Serial.println("LOG!");
-    }
-    j++;
-  }
+    //if (j % 10 == 0){
+    //  myFlashPrefs.writePrefs(&globalPrefs, sizeof(globalPrefs));
+    //  Serial.println("LOG!");
+    //}
+    //j++;
 }

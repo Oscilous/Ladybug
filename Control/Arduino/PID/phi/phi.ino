@@ -68,7 +68,8 @@ const float motor_distance = 0.116 / 2;
 const float pi = 3.14159;
 
 
-DegreeOfFreedom Phi(0.0045 , 0 , 0);
+//DegreeOfFreedom Phi(0.0045 , 0 , 0);
+DegreeOfFreedom Phi(0.0045 * 0.6 , 1.2 * 0.0045 /  1.5 , 0.075 * 1.5 * 0.0045);
 
 QuickPID Phi_PID(&Phi.input, &Phi.output, &Phi.setpoint, Phi.P, Phi.I, Phi.D,  /* OPTIONS */
                Phi_PID.pMode::pOnError,                   /* pOnError, pOnMeas, pOnErrorMeas */
@@ -337,8 +338,9 @@ void loop()
 
     //We convert to pwm
     for (int i = 0; i < 4; i++){
-      motor_speed[i] = motor_speed[i] * 0.0795;
-      motor_speed[i] -= 21.961;
+      //motor_speed[i] = motor_speed[i] * 0.0795;
+      //motor_speed[i] -= 21.961;
+      motor_speed[i] = 0.07285714286 * motor_speed[i]; 
       motor_speed[i] = saturize(motor_speed[i], 0, 255);
     }
 

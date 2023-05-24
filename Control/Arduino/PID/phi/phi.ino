@@ -6,7 +6,8 @@
 #include <math.h>
 #include <Adafruit_VL53L0X.h>
 
-#define ARRAY_SIZE 500
+#define ARRAY_SIZE 2500
+#define SAMPLING_PERIOD 5
 #define motor_4 7
 #define motor_3 8
 #define motor_2 9
@@ -28,12 +29,9 @@ class DegreeOfFreedom
 
 typedef struct flashStruct
 {
-  char pwm_motor_1[ARRAY_SIZE];
-  char pwm_motor_2[ARRAY_SIZE];
-  char pwm_motor_3[ARRAY_SIZE];
-  char pwm_motor_4[ARRAY_SIZE];
-  char angle[ARRAY_SIZE];
-  int time[ARRAY_SIZE];
+  signed char phi_pid[ARRAY_SIZE / SAMPLING_PERIOD];
+  signed char angle[ARRAY_SIZE / SAMPLING_PERIOD];
+  int time[ARRAY_SIZE / SAMPLING_PERIOD];
 } flashPrefs;
 
 // Access to the library
@@ -228,18 +226,13 @@ void motor_ramp_up(unsigned char value){
 
 void printPreferences(flashPrefs thePrefs)
 {
-  for (int i = 0; i < ARRAY_SIZE; i++){
-    Serial.print(thePrefs.angle[i]);
-    Serial.print("  ");
+  Serial.println("t, phi ,pid");
+  for (int i = 0; i < ARRAY_SIZE / SAMPLING_PERIOD; i++){
     Serial.print(thePrefs.time[i]);
     Serial.print("  ");
-    Serial.print(thePrefs.pwm_motor_1[i]);
+    Serial.print(thePrefs.angle[i], DEC);
     Serial.print("  ");
-    Serial.print(thePrefs.pwm_motor_2[i]);
-    Serial.print("  ");
-    Serial.print(thePrefs.pwm_motor_3[i]);
-    Serial.print("  ");
-    Serial.println(thePrefs.pwm_motor_4[i]);
+    Serial.println(thePrefs.phi_pid[i], DEC);
   }
 }
 
@@ -333,8 +326,6 @@ void loop()
 
     Phi.input = Complimentary[0]; 
     Phi_PID.Compute();
-    Serial.print(Complimentary[0]);
-    Serial.print("           ,");
 
     float phi_out = Phi.output / (4 * thrust_const * sin(pi/4) * motor_distance);
     phi_out = saturize(phi_out, -3500, 3500);
@@ -343,7 +334,7 @@ void loop()
     motor_speed[1] = 3041 + phi_out;
     motor_speed[2] = 3041 - phi_out;
     motor_speed[3] = 3041 + phi_out;
-  
+
     //We convert to pwm
     for (int i = 0; i < 4; i++){
       motor_speed[i] = motor_speed[i] * 0.0795;
@@ -351,20 +342,15 @@ void loop()
       motor_speed[i] = saturize(motor_speed[i], 0, 255);
     }
 
-    for (int i = 0; i < 4; i++){
-      Serial.print(motor_speed[i]);
-      Serial.print(",");
-    }
     Serial.println(" ");
     for (int i = 0; i < 4; i++){
       analogWrite(10 - i, (unsigned char)motor_speed[i]);
     }
-    globalPrefs.pwm_motor_1[j] = motor_speed[0]; 
-    globalPrefs.pwm_motor_2[j] = motor_speed[1];
-    globalPrefs.pwm_motor_3[j] = motor_speed[2];
-    globalPrefs.pwm_motor_4[j] = motor_speed[3];
-    globalPrefs.time[j] = (int)millis();
-    globalPrefs.angle[j] = (char)Complimentary[0] * 100;
+  if (j % 5 == 0){
+      globalPrefs.phi_pid[j/SAMPLING_PERIOD] = (signed char)(phi_out * 0.0795 - 21.961); 
+      globalPrefs.time[j/SAMPLING_PERIOD] = (int)(millis() - 5000);
+      globalPrefs.angle[j/SAMPLING_PERIOD] = (signed char)((Complimentary[0] * 180 ) / pi);
+    }
     j++;
   }
   //When done send the logs

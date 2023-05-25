@@ -194,7 +194,5 @@ void loop()
   Serial.print(acc_bias[2], 3);*/
   Serial.println();
   delay(500);
-
- 
 }
 

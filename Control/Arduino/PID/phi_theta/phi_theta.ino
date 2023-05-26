@@ -29,8 +29,8 @@ class DegreeOfFreedom
 
 typedef struct flashStruct
 {
-  signed char Theta_pid[DURATION / LOG_PERIOD];
-  signed char angle[DURATION / LOG_PERIOD];
+  signed char phi[DURATION / LOG_PERIOD];
+  signed char theta[DURATION / LOG_PERIOD];
   int time[DURATION / LOG_PERIOD];
 } flashPrefs;
 
@@ -43,7 +43,6 @@ flashPrefs globalPrefs;
 
 // Structure of preferences. You determine the fields.
 // Must not exeed 1019 words (4076 byte).
-
 
 int i=0;
 float dt=0, time_last = 0;
@@ -69,17 +68,36 @@ const float motor_distance = 0.116 / 2;
 const float pi = 3.14159;
 
 //255
-DegreeOfFreedom Theta((0.01 * 0.6) + 0.004, (1.2 * 0.01 / 1), (0.075 * 0.01 * 1));
+//DegreeOfFreedom Phi((0.01 * 0.6) + 0.004, (1.2 * 0.01 / 1), (0.075 * 0.01 * 1));
+//DegreeOfFreedom Theta((0.01 * 0.6) + 0.004, (1.2 * 0.01 / 1), (0.075 * 0.01 * 1));
 
 //225
-//DegreeOfFreedom Theta((0.0065 * 0.6) + 0.004, (1.2 * 0.0065 /  1), (0.075 * 1 * 0.0065));
+DegreeOfFreedom Phi( 0.05, 0, 0);
+DegreeOfFreedom Theta( 0.05, 0, 0);
 
+//DegreeOfFreedom Phi((0.01 * 0.6) + 0.01, (1.2 * 0.01 / 1), (0.075 * 0.01 * 1) + 0.01);
+//DegreeOfFreedom Theta((0.01 * 0.6) + 0.01, (1.2 * 0.01 / 1), (0.075 * 0.01 * 1) + 0.01);
+//DegreeOfFreedom Phi((0.0065 * 0.6) - 0.01, (1.2 * 0.0065 /  1), (0.075 * 1 * 0.0065));
+//DegreeOfFreedom Theta((0.0065 * 0.6)  - 0.01 , (1.2 * 0.0065 /  1), (0.075 * 1 * 0.0065));
+
+
+QuickPID Phi_PID(&Phi.input, &Phi.output, &Phi.setpoint, Phi.P, Phi.I, Phi.D,  /* OPTIONS */
+               Phi_PID.pMode::pOnError,                   /* pOnError, pOnMeas, pOnErrorMeas */
+               Phi_PID.dMode::dOnError,                    /* dOnError, dOnMeas */
+               Phi_PID.iAwMode::iAwCondition,             /* iAwCondition, iAwClamp, iAwOff */
+               Phi_PID.Action::direct);                   /* direct, reverse */
 
 QuickPID Theta_PID(&Theta.input, &Theta.output, &Theta.setpoint, Theta.P, Theta.I, Theta.D,  /* OPTIONS */
                Theta_PID.pMode::pOnError,                   /* pOnError, pOnMeas, pOnErrorMeas */
                Theta_PID.dMode::dOnError,                    /* dOnError, dOnMeas */
                Theta_PID.iAwMode::iAwCondition,             /* iAwCondition, iAwClamp, iAwOff */
                Theta_PID.Action::direct);                   /* direct, reverse */
+
+//QuickPID Psi_PID(&Psi.input, &Psi.output, &Psi.setpoint, Psi.P, Psi.I, Psi.D,  /* OPTIONS */
+//               Psi_PID.pMode::pOnError,                   /* pOnError, pOnMeas, pOnErrorMeas */
+//               Psi_PID.dMode::dOnError,                    /* dOnError, dOnMeas */
+//               Psi_PID.iAwMode::iAwCondition,             /* iAwCondition, iAwClamp, iAwOff */
+//               Psi_PID.Action::direct);                   /* direct, reverse */
 
 LSM6DS3 myIMU(I2C_MODE, 0x6A);    //I2C device address 0x6A
 float motor_speed[4];
@@ -94,7 +112,7 @@ void  time_f()
 
 float calc_angle_gyro_f(float angle, float speed)
 {
-  float calculated = 0;  //calculated = Theta_unfiltered;
+  float calculated = 0;  //calculated = Phi_unfiltered;
   calculated = angle - dt * speed*0.001;
   return(calculated);
 }
@@ -119,47 +137,47 @@ void Unfilt_angle_gyro_prev_f()
   Unfilt_angle_gyro_prev[1] = Unfilt_angle_gyro[1];
   //Unfilt_angle_gyro_prev[2] = Unfilt_angle_gyro[2];
 }
-/////////////////////////----------ACCEL Theta-----------------//////////////////////////
+/////////////////////////----------ACCEL PHI-----------------//////////////////////////
 
 float calc_Theta_acc_f(float AccX, float AccY, float AccZ)
 {
   float calculated;
   if  (AccZ>0)
   {
-    calculated = atan(AccX/sqrt(AccY*AccY+AccZ*AccZ))*1/(3.142/180);//degrees roll / Theta
+    calculated = atan(AccX/sqrt(AccY*AccY+AccZ*AccZ))*1/(3.142/180);//degrees roll / phi
   }
 
   if  (AccZ<=0)
   {
     if (AccX>=0)
     {
-      calculated = 180-atan(AccX/sqrt(AccY*AccY+AccZ*AccZ))*1/(3.142/180);//degrees pitch / Theta
+      calculated = 180-atan(AccX/sqrt(AccY*AccY+AccZ*AccZ))*1/(3.142/180);//degrees pitch / phi
     }
     if (AccX<0)
     {
-      calculated = -180-atan(AccX/sqrt(AccY*AccY+AccZ*AccZ))*1/(3.142/180);//degrees pitch / Theta
+      calculated = -180-atan(AccX/sqrt(AccY*AccY+AccZ*AccZ))*1/(3.142/180);//degrees pitch / phi
     }
   }
   return(calculated);
 }
 
-float calc_Theta_acc_f(float AccY, float AccZ)
+float calc_Phi_acc_f(float AccY, float AccZ)
 {
   float calculated;
 
   if  (AccZ>0)
   {
-    calculated = atan(AccY/AccZ)*1/(3.142/180);//degrees roll / Theta
+    calculated = atan(AccY/AccZ)*1/(3.142/180);//degrees roll / phi
   }
   if (AccZ<=0)
   {
     if (AccY>=0)
     {
-      calculated = 180 - atan((AccY)/abs(AccZ))*1/(3.142/180);//degrees roll / Theta
+      calculated = 180 - atan((AccY)/abs(AccZ))*1/(3.142/180);//degrees roll / phi
     }
     if (AccY<0)
     {
-      calculated = -180 - atan((AccY)/abs(AccZ))*1/(3.142/180);//degrees roll / Theta
+      calculated = -180 - atan((AccY)/abs(AccZ))*1/(3.142/180);//degrees roll / phi
     }
   }
   return(calculated);
@@ -167,7 +185,7 @@ float calc_Theta_acc_f(float AccY, float AccZ)
 
 void LPF_acc_angle_f()
 {
-  LPF_acc_angle[0] = coefacc_LPF[0] * LPF_acc_angle[0] + coefacc_LPF[1] * calc_Theta_acc_f(acc[1], acc[2]) + coefacc_LPF[2]* calc_Theta_acc_f(acc_prev[1], acc_prev[2]);
+  LPF_acc_angle[0] = coefacc_LPF[0] * LPF_acc_angle[0] + coefacc_LPF[1] * calc_Phi_acc_f(acc[1], acc[2]) + coefacc_LPF[2]* calc_Phi_acc_f(acc_prev[1], acc_prev[2]);
   LPF_acc_angle[1] = coefacc_LPF[0] * LPF_acc_angle[1] + coefacc_LPF[1] * calc_Theta_acc_f(acc[0], acc[1], acc[2]) + coefacc_LPF[2]* calc_Theta_acc_f(acc_prev[0], acc_prev[1], acc_prev[2]);
   //LPF_acc_angle[2] = coefacc_LPF[0] * LPF_acc_angle[2] + coefacc_LPF[1] * gyro[2] + coefacc_LPF[2]* gyro_prev[2];
 }
@@ -231,13 +249,13 @@ void motor_ramp_up(unsigned char value){
 
 void printPreferences(flashPrefs thePrefs)
 {
-  Serial.println("t, Theta ,pid");
+  Serial.println("t, phi , theta");
   for (int i = 0; i < DURATION / LOG_PERIOD; i++){
     Serial.print(thePrefs.time[i]);
     Serial.print("  ");
-    Serial.print(thePrefs.angle[i], DEC);
+    Serial.print(thePrefs.phi[i], DEC);
     Serial.print("  ");
-    Serial.println(thePrefs.Theta_pid[i], DEC);
+    Serial.println(thePrefs.theta[i], DEC);
   }
 }
 
@@ -276,10 +294,15 @@ void setup()
   } 
   //Apply PID gains
 
-  Theta_PID.SetTunings(Theta.P, Theta.I, Theta.D);
+  Phi_PID.SetTunings(Phi.P, Phi.I, Phi.D);
+  Theta_PID.SetTunings(Phi.P, Phi.I, Phi.D);
+  Phi_PID.SetOutputLimits(-255.0, 255.0);
   Theta_PID.SetOutputLimits(-255.0, 255.0);
+  Phi_PID.SetSampleTimeUs(2500);
   Theta_PID.SetSampleTimeUs(2500);
-  Theta_PID.SetMode(Theta_PID.Control::automatic);
+  Phi_PID.SetMode(Phi_PID.Control::automatic);
+  Theta_PID.SetMode(Phi_PID.Control::automatic);
+
   dt=millis();
   time_last=millis();
   if (Serial)
@@ -313,12 +336,11 @@ void setup()
       }
     }
   }
-  BLE();
   motor_ramp_up(225);
 }
 
 void loop()
-{ 
+{
   while (j < DURATION){
     time_f();
 
@@ -331,16 +353,20 @@ void loop()
     LPF_acc_angle_f();  //filter calculated acc angle
     Complimentary_f();
 
+    Phi.input = Complimentary[0]; 
+    Phi_PID.Compute();
     Theta.input = Complimentary[1]; 
     Theta_PID.Compute();
 
     float Theta_out = Theta.output / (4 * thrust_const * sin(pi/4) * motor_distance);
     Theta_out = saturize(Theta_out, -3500, 3500);
+    float Phi_out = Phi.output / (4 * thrust_const * sin(pi/4) * motor_distance);
+    Phi_out = saturize(Phi_out, -3500, 3500);
 
-    motor_speed[0] = 3500 + Theta_out; // - Phi_out;
-    motor_speed[1] = 3500 + Theta_out;// + Phi_out;
-    motor_speed[2] = 3500 - Theta_out;// - Phi_out;
-    motor_speed[3] = 3500 - Theta_out; // + Phi_out;
+    motor_speed[1] = 3200 + Phi_out + Theta_out;// + Psi_out;
+    motor_speed[0] = 3200 - Phi_out + Theta_out;// - Psi_out;
+    motor_speed[2] = 3200 - Phi_out - Theta_out;// + Psi_out;
+    motor_speed[3] = 3200 + Phi_out - Theta_out;// - Psi_out;
 
     //We convert to pwm
     for (int i = 0; i < 4; i++){
@@ -355,9 +381,9 @@ void loop()
       analogWrite(10 - i, (unsigned char)motor_speed[i]);
     }
   if (j % LOG_PERIOD == 0){
-      globalPrefs.Theta_pid[j/LOG_PERIOD] = (signed char)(saturize((Theta_out * 0.0795 - 21.961), -127, 128)); 
+      globalPrefs.phi[j/LOG_PERIOD] = (signed char)(saturize(((Complimentary[1] * 180 ) / pi),  -127, 128));
       globalPrefs.time[j/LOG_PERIOD] = (int)(millis() - 5000);
-      globalPrefs.angle[j/LOG_PERIOD] = (signed char)(saturize(((Complimentary[1] * 180 ) / pi),  -127, 128));
+      globalPrefs.theta[j/LOG_PERIOD] = (signed char)(saturize(((Complimentary[0] * 180 ) / pi),  -127, 128));
     }
     j++;
   }

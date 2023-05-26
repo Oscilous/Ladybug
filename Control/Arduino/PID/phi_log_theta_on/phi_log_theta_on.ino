@@ -8,10 +8,10 @@
 
 #define DURATION 2500
 #define LOG_PERIOD 5
-#define motor_4 10
-#define motor_3 9
-#define motor_2 7
-#define motor_1 8
+#define motor_4 7
+#define motor_3 8
+#define motor_2 9
+#define motor_1 10
 
 
 class DegreeOfFreedom
@@ -29,9 +29,9 @@ class DegreeOfFreedom
 
 typedef struct flashStruct
 {
+  signed char phi_pid[DURATION / LOG_PERIOD];
+  signed char angle[DURATION / LOG_PERIOD];
   int time[DURATION / LOG_PERIOD];
-  signed char phi[DURATION / LOG_PERIOD];
-  signed char theta[DURATION / LOG_PERIOD];
 } flashPrefs;
 
 // Access to the library
@@ -71,17 +71,10 @@ const float torque_const = 0.00116;
 const float motor_distance = 0.116 / 2;
 const float pi = 3.14159;
 
-//255
-//DegreeOfFreedom Phi((0.01 * 0.6) + 0.004, (1.2 * 0.01 / 1), (0.075 * 0.01 * 1));
-//DegreeOfFreedom Theta((0.01 * 0.6) + 0.004, (1.2 * 0.01 / 1), (0.075 * 0.01 * 1));
-
-//225
-//DegreeOfFreedom Phi((0.01 * 0.6) + 0.01, (1.2 * 0.01 / 1), (0.075 * 0.01 * 1) + 0.01);
-//DegreeOfFreedom Theta((0.01 * 0.6) + 0.01, (1.2 * 0.01 / 1), (0.075 * 0.01 * 1) + 0.01);
-//DegreeOfFreedom Phi((0.0065 * 0.6), (1.2 * 0.0065 /  1), (0.075 * 1 * 0.0065));
-//DegreeOfFreedom Theta((0.0065 * 0.6), (1.2 * 0.0065 /  1), (0.075 * 1 * 0.0065));
-DegreeOfFreedom Phi( (0.004 * 0.6), 0, (1.2 * 0.005 * 0.766) + 0.001);
-DegreeOfFreedom Theta( (0.005 * 0.6), 0, (1.2 * 0.005 * 0.766) + 0.001);
+DegreeOfFreedom Phi(0.01, 0, 0);
+//DegreeOfFreedom Phi((0.0065 * 0.6) + 0.002, (1.2 * 0.0065 /  1), (0.075 * 1 * 0.0065));
+//DegreeOfFreedom Phi(0.0045 * 0.6 , 1.2 * 0.0045 /  1.5 , 0.075 * 1.5 * 0.0045);
+DegreeOfFreedom Theta(0.01, 0, 0);
 
 QuickPID Phi_PID(&Phi.input, &Phi.output, &Phi.setpoint, Phi.P, Phi.I, Phi.D,  /* OPTIONS */
                Phi_PID.pMode::pOnError,                   /* pOnError, pOnMeas, pOnErrorMeas */
@@ -95,11 +88,6 @@ QuickPID Theta_PID(&Theta.input, &Theta.output, &Theta.setpoint, Theta.P, Theta.
                Theta_PID.iAwMode::iAwCondition,             /* iAwCondition, iAwClamp, iAwOff */
                Theta_PID.Action::direct);                   /* direct, reverse */
 
-//QuickPID Psi_PID(&Psi.input, &Psi.output, &Psi.setpoint, Psi.P, Psi.I, Psi.D,  /* OPTIONS */
-//               Psi_PID.pMode::pOnError,                   /* pOnError, pOnMeas, pOnErrorMeas */
-//               Psi_PID.dMode::dOnError,                    /* dOnError, dOnMeas */
-//               Psi_PID.iAwMode::iAwCondition,             /* iAwCondition, iAwClamp, iAwOff */
-//               Psi_PID.Action::direct);                   /* direct, reverse */
 
 LSM6DS3 myIMU(I2C_MODE, 0x6A);    //I2C device address 0x6A
 float motor_speed[4];
@@ -251,13 +239,13 @@ void motor_ramp_up(unsigned char value){
 
 void printPreferences(flashPrefs thePrefs)
 {
-  Serial.println("t, phi , theta");
+  Serial.println("t, phi ,pid");
   for (int i = 0; i < DURATION / LOG_PERIOD; i++){
     Serial.print(thePrefs.time[i]);
     Serial.print("  ");
-    Serial.print(thePrefs.phi[i], DEC);
+    Serial.print(thePrefs.angle[i], DEC);
     Serial.print("  ");
-    Serial.println(thePrefs.theta[i], DEC);
+    Serial.println(thePrefs.phi_pid[i], DEC);
   }
 }
 
@@ -365,8 +353,8 @@ void loop()
     float Phi_out = Phi.output / (4 * thrust_const * sin(pi/4) * motor_distance);
     Phi_out = saturize(Phi_out, -3500, 3500);
 
-    motor_speed[0] = 3080 + Phi_out + Theta_out;// + Psi_out;
-    motor_speed[1] = 3080 - Phi_out + Theta_out;// - Psi_out;
+    motor_speed[1] = 3080 + Phi_out + Theta_out;// + Psi_out;
+    motor_speed[0] = 3080 - Phi_out + Theta_out;// - Psi_out;
     motor_speed[2] = 3080 - Phi_out - Theta_out;// + Psi_out;
     motor_speed[3] = 3080 + Phi_out - Theta_out;// - Psi_out;
 
@@ -377,15 +365,15 @@ void loop()
       motor_speed[i] = 0.07285714286 * motor_speed[i]; 
       motor_speed[i] = saturize(motor_speed[i], 0, 255);
     }
-    analogWrite(motor_1, (unsigned char)motor_speed[0]);
-    analogWrite(motor_2, (unsigned char)motor_speed[1]);
-    analogWrite(motor_3, (unsigned char)motor_speed[2]);
-    analogWrite(motor_4, (unsigned char)motor_speed[3]);
-    
-    if (j % LOG_PERIOD == 0){
-      globalPrefs.phi[j/LOG_PERIOD] = (signed char)(saturize(((Complimentary[0] * 180 ) / pi),  -127, 128));
+
+    Serial.println(" ");
+    for (int i = 0; i < 4; i++){
+      analogWrite(10 - i, (unsigned char)motor_speed[i]);
+    }
+  if (j % LOG_PERIOD == 0){
+      globalPrefs.phi_pid[j/LOG_PERIOD] = (signed char)(saturize((Phi_out * 0.0795 - 21.961), -127, 128)); 
       globalPrefs.time[j/LOG_PERIOD] = (int)(millis() - 5000);
-      globalPrefs.theta[j/LOG_PERIOD] = (signed char)(saturize(((Complimentary[1] * 180 ) / pi),  -127, 128));
+      globalPrefs.angle[j/LOG_PERIOD] = (signed char)(saturize(((Complimentary[0] * 180 ) / pi),  -127, 128));
     }
     j++;
   }

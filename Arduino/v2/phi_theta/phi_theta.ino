@@ -76,12 +76,9 @@ const float pi = 3.14159;
 //DegreeOfFreedom Theta((0.01 * 0.6) + 0.004, (1.2 * 0.01 / 1), (0.075 * 0.01 * 1));
 
 //225
-//DegreeOfFreedom Phi((0.01 * 0.6) + 0.01, (1.2 * 0.01 / 1), (0.075 * 0.01 * 1) + 0.01);
-//DegreeOfFreedom Theta((0.01 * 0.6) + 0.01, (1.2 * 0.01 / 1), (0.075 * 0.01 * 1) + 0.01);
-//DegreeOfFreedom Phi((0.0065 * 0.6), (1.2 * 0.0065 /  1), (0.075 * 1 * 0.0065));
-//DegreeOfFreedom Theta((0.0065 * 0.6), (1.2 * 0.0065 /  1), (0.075 * 1 * 0.0065));
-DegreeOfFreedom Phi( (0.004 * 0.6), 0, (1.2 * 0.005 * 0.766) + 0.001);
-DegreeOfFreedom Theta( (0.005 * 0.6), 0, (1.2 * 0.005 * 0.766) + 0.001);
+DegreeOfFreedom Phi((0.0065 * 0.6), (1.2 * 0.0065 /  1), (0.075 * 1 * 0.0065));
+DegreeOfFreedom Theta((0.0065 * 0.6), (1.2 * 0.0065 /  1), (0.075 * 1 * 0.0065));
+
 
 QuickPID Phi_PID(&Phi.input, &Phi.output, &Phi.setpoint, Phi.P, Phi.I, Phi.D,  /* OPTIONS */
                Phi_PID.pMode::pOnError,                   /* pOnError, pOnMeas, pOnErrorMeas */
@@ -94,12 +91,6 @@ QuickPID Theta_PID(&Theta.input, &Theta.output, &Theta.setpoint, Theta.P, Theta.
                Theta_PID.dMode::dOnError,                    /* dOnError, dOnMeas */
                Theta_PID.iAwMode::iAwCondition,             /* iAwCondition, iAwClamp, iAwOff */
                Theta_PID.Action::direct);                   /* direct, reverse */
-
-//QuickPID Psi_PID(&Psi.input, &Psi.output, &Psi.setpoint, Psi.P, Psi.I, Psi.D,  /* OPTIONS */
-//               Psi_PID.pMode::pOnError,                   /* pOnError, pOnMeas, pOnErrorMeas */
-//               Psi_PID.dMode::dOnError,                    /* dOnError, dOnMeas */
-//               Psi_PID.iAwMode::iAwCondition,             /* iAwCondition, iAwClamp, iAwOff */
-//               Psi_PID.Action::direct);                   /* direct, reverse */
 
 LSM6DS3 myIMU(I2C_MODE, 0x6A);    //I2C device address 0x6A
 float motor_speed[4];
@@ -372,8 +363,6 @@ void loop()
 
     //We convert to pwm
     for (int i = 0; i < 4; i++){
-      //motor_speed[i] = motor_speed[i] * 0.0795;
-      //motor_speed[i] -= 21.961;
       motor_speed[i] = 0.07285714286 * motor_speed[i]; 
       motor_speed[i] = saturize(motor_speed[i], 0, 255);
     }

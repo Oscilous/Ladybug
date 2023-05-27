@@ -8,10 +8,10 @@
 
 #define DURATION 2500
 #define LOG_PERIOD 5
-#define motor_4 7
-#define motor_3 8
-#define motor_2 9
-#define motor_1 10
+#define motor_4 10
+#define motor_3 9
+#define motor_2 7
+#define motor_1 8
 
 
 class DegreeOfFreedom
@@ -29,9 +29,9 @@ class DegreeOfFreedom
 
 typedef struct flashStruct
 {
-  signed char phi_pid[DURATION / LOG_PERIOD];
-  signed char angle[DURATION / LOG_PERIOD];
   int time[DURATION / LOG_PERIOD];
+  signed char phi[DURATION / LOG_PERIOD];
+  signed char theta[DURATION / LOG_PERIOD];
 } flashPrefs;
 
 // Access to the library
@@ -52,17 +52,14 @@ float gyro_prev[3] = {0.001, 0.001, 0.001};
 float HPF_gyro_angle[3] = {0.0, 0.0, 0.0};//FILTERED GYRO ANGLE VALUES
 float Unfilt_angle_gyro[3] = {0.0, 0.0, 0.0};//UNFILTERED GYRO ANGLE VALUES
 float Unfilt_angle_gyro_prev[3] = {0.0, 0.0, 0.0};//UNFILTERED GYRO ANGLE VALUES (previous iteration)
-
-float coefgyro_HPF[3] = {0.9802, 0.9901, -0.9901}; // HPF coefficients
-
 float acc[3] = {0.001, 0.001, 0.001};  // unfiltered acc readings
 float acc_prev[3] = {0.001, 0.001, 0.001};
 float LPF_acc_angle[3] = {0.0, 0.0, 0.0};//FILTERED ACC ANGLE VALUES
-
-float coefacc_LPF[3] = {0.9802, 0.009901, 0.009901}; // LPF coefficients
-
 float Complimentary[3] = {0.0, 0.0, 0.0};//UNFILTERED GYRO ANGLE VALUE
 float Z_position=0, Z_actual = 0;
+
+float coefgyro_HPF[3] = {0.9273, 0.9637, -0.9637}; // HPF coefficients
+float coefacc_LPF[3] = {0.5983, 0.2008, 0.2008}; // LPF coefficients
 
 
 //Constants
@@ -71,10 +68,13 @@ const float torque_const = 0.00116;
 const float motor_distance = 0.116 / 2;
 const float pi = 3.14159;
 
-DegreeOfFreedom Phi(0.01, 0, 0);
-//DegreeOfFreedom Phi((0.0065 * 0.6) + 0.002, (1.2 * 0.0065 /  1), (0.075 * 1 * 0.0065));
-//DegreeOfFreedom Phi(0.0045 * 0.6 , 1.2 * 0.0045 /  1.5 , 0.075 * 1.5 * 0.0045);
-DegreeOfFreedom Theta(0.01, 0, 0);
+//255
+//DegreeOfFreedom Phi((0.01 * 0.6) + 0.004, (1.2 * 0.01 / 1), (0.075 * 0.01 * 1));
+//DegreeOfFreedom Theta((0.01 * 0.6) + 0.004, (1.2 * 0.01 / 1), (0.075 * 0.01 * 1));
+
+//225
+DegreeOfFreedom Phi((0.0065 * 0.6), (1.2 * 0.0065 /  1), (0.075 * 1 * 0.0065));
+DegreeOfFreedom Theta((0.0065 * 0.6), (1.2 * 0.0065 /  1), (0.075 * 1 * 0.0065));
 
 QuickPID Phi_PID(&Phi.input, &Phi.output, &Phi.setpoint, Phi.P, Phi.I, Phi.D,  /* OPTIONS */
                Phi_PID.pMode::pOnError,                   /* pOnError, pOnMeas, pOnErrorMeas */
@@ -103,7 +103,7 @@ void  time_f()
 float calc_angle_gyro_f(float angle, float speed)
 {
   float calculated = 0;  //calculated = Phi_unfiltered;
-  calculated = angle - dt * speed*0.001;
+  calculated = angle + dt * speed*0.001;
   return(calculated);
 }
 
@@ -182,7 +182,7 @@ void LPF_acc_angle_f()
 
 void Complimentary_f()
 {
-  Complimentary[0] = (LPF_acc_angle[0] + HPF_gyro_angle[0]) * pi / 180;
+  Complimentary[0] = -(LPF_acc_angle[0] + HPF_gyro_angle[0])* pi / 180;
   Complimentary[1] = (LPF_acc_angle[1] + HPF_gyro_angle[1]) * pi / 180;
 }
 
@@ -195,7 +195,7 @@ void readgyro_f()
   }
 
   gyro[0] = myIMU.readFloatGyroX()-gyro_calib[0];
-  gyro[1] = myIMU.readFloatGyroY()-gyro_calib[1];
+  gyro[1] = -(myIMU.readFloatGyroY()-gyro_calib[1]);
   gyro[2] = myIMU.readFloatGyroZ()-gyro_calib[2];
 }
 
@@ -239,13 +239,13 @@ void motor_ramp_up(unsigned char value){
 
 void printPreferences(flashPrefs thePrefs)
 {
-  Serial.println("t, phi ,pid");
+  Serial.println("t, phi , theta");
   for (int i = 0; i < DURATION / LOG_PERIOD; i++){
     Serial.print(thePrefs.time[i]);
     Serial.print("  ");
-    Serial.print(thePrefs.angle[i], DEC);
+    Serial.print(thePrefs.phi[i], DEC);
     Serial.print("  ");
-    Serial.println(thePrefs.phi_pid[i], DEC);
+    Serial.println(thePrefs.theta[i], DEC);
   }
 }
 
@@ -336,12 +336,14 @@ void loop()
 
     readgyro_f(); //read gyro
     readacc_f(); // read acc
-    Unfilt_angle_gyro_f(); //calculate gyro angle from unfiltered measurements
     Unfilt_angle_gyro_prev_f(); // shift unfiltered values
-
+    Unfilt_angle_gyro_f(); //calculate gyro angle from unfiltered measurements
+    
     HPF_gyro_angle_f(); //filter calculated gyro angle
     LPF_acc_angle_f();  //filter calculated acc angle
     Complimentary_f();
+
+    
 
     Phi.input = Complimentary[0]; 
     Phi_PID.Compute();
@@ -353,27 +355,26 @@ void loop()
     float Phi_out = Phi.output / (4 * thrust_const * sin(pi/4) * motor_distance);
     Phi_out = saturize(Phi_out, -3500, 3500);
 
-    motor_speed[1] = 3080 + Phi_out + Theta_out;// + Psi_out;
-    motor_speed[0] = 3080 - Phi_out + Theta_out;// - Psi_out;
+    motor_speed[0] = 3080 + Phi_out + Theta_out;// + Psi_out;
+    motor_speed[1] = 3080 - Phi_out + Theta_out;// - Psi_out;
     motor_speed[2] = 3080 - Phi_out - Theta_out;// + Psi_out;
     motor_speed[3] = 3080 + Phi_out - Theta_out;// - Psi_out;
 
     //We convert to pwm
     for (int i = 0; i < 4; i++){
-      //motor_speed[i] = motor_speed[i] * 0.0795;
-      //motor_speed[i] -= 21.961;
       motor_speed[i] = 0.07285714286 * motor_speed[i]; 
       motor_speed[i] = saturize(motor_speed[i], 0, 255);
     }
+    analogWrite(motor_1, (unsigned char)motor_speed[0]);
+    analogWrite(motor_2, (unsigned char)motor_speed[1]);
+    analogWrite(motor_3, (unsigned char)motor_speed[2]);
+    analogWrite(motor_4, (unsigned char)motor_speed[3]);
 
-    Serial.println(" ");
-    for (int i = 0; i < 4; i++){
-      analogWrite(10 - i, (unsigned char)motor_speed[i]);
-    }
+    
   if (j % LOG_PERIOD == 0){
-      globalPrefs.phi_pid[j/LOG_PERIOD] = (signed char)(saturize((Phi_out * 0.0795 - 21.961), -127, 128)); 
+      globalPrefs.phi[j/LOG_PERIOD] = (signed char)(saturize(((Complimentary[0] * 180 ) / pi),  -127, 128));
       globalPrefs.time[j/LOG_PERIOD] = (int)(millis() - 5000);
-      globalPrefs.angle[j/LOG_PERIOD] = (signed char)(saturize(((Complimentary[0] * 180 ) / pi),  -127, 128));
+      globalPrefs.theta[j/LOG_PERIOD] = (signed char)(saturize(((Complimentary[1] * 180 ) / pi),  -127, 128));
     }
     j++;
   }

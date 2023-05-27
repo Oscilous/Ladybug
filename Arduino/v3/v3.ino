@@ -58,7 +58,7 @@ float LPF_acc_angle[3] = {0.0, 0.0, 0.0};//FILTERED ACC ANGLE VALUES
 float Complimentary[3] = {0.0, 0.0, 0.0};//UNFILTERED GYRO ANGLE VALUE
 float Z_position=0, Z_actual = 0;
 
-float coefgyro_HPF[3] = {0.9273, 0.9637, -0.9637}; // HPF coefficients
+float coefgyro_HPF[3] = {0.7767, 0.8884, -0.8884}; // HPF coefficients
 float coefacc_LPF[3] = {0.5983, 0.2008, 0.2008}; // LPF coefficients
 
 
@@ -75,6 +75,7 @@ const float pi = 3.14159;
 //225
 DegreeOfFreedom Phi((0.0065 * 0.6), (1.2 * 0.0065 /  1), (0.075 * 1 * 0.0065));
 DegreeOfFreedom Theta((0.0065 * 0.6), (1.2 * 0.0065 /  1), (0.075 * 1 * 0.0065));
+
 
 QuickPID Phi_PID(&Phi.input, &Phi.output, &Phi.setpoint, Phi.P, Phi.I, Phi.D,  /* OPTIONS */
                Phi_PID.pMode::pOnError,                   /* pOnError, pOnMeas, pOnErrorMeas */
@@ -334,17 +335,16 @@ void loop()
   while (j < DURATION){
     time_f();
 
+    //IMUG
     readgyro_f(); //read gyro
     readacc_f(); // read acc
     Unfilt_angle_gyro_prev_f(); // shift unfiltered values
     Unfilt_angle_gyro_f(); //calculate gyro angle from unfiltered measurements
-    
     HPF_gyro_angle_f(); //filter calculated gyro angle
     LPF_acc_angle_f();  //filter calculated acc angle
     Complimentary_f();
 
-    
-
+    //PID
     Phi.input = Complimentary[0]; 
     Phi_PID.Compute();
     Theta.input = Complimentary[1]; 
@@ -355,22 +355,23 @@ void loop()
     float Phi_out = Phi.output / (4 * thrust_const * sin(pi/4) * motor_distance);
     Phi_out = saturize(Phi_out, -3500, 3500);
 
-    motor_speed[0] = 3080 + Phi_out + Theta_out;// + Psi_out;
-    motor_speed[1] = 3080 - Phi_out + Theta_out;// - Psi_out;
-    motor_speed[2] = 3080 - Phi_out - Theta_out;// + Psi_out;
-    motor_speed[3] = 3080 + Phi_out - Theta_out;// - Psi_out;
+    // Motor calculations
+    motor_speed[0] = 3500 + Phi_out + Theta_out;// + Psi_out;
+    motor_speed[1] = 3500 - Phi_out + Theta_out;// - Psi_out;
+    motor_speed[2] = 3500 - Phi_out - Theta_out;// + Psi_out;
+    motor_speed[3] = 3500 + Phi_out - Theta_out;// - Psi_out;
 
-    //We convert to pwm
+    //Angular velocity to PWM
     for (int i = 0; i < 4; i++){
       motor_speed[i] = 0.07285714286 * motor_speed[i]; 
       motor_speed[i] = saturize(motor_speed[i], 0, 255);
     }
+    //Toggle motors
     analogWrite(motor_1, (unsigned char)motor_speed[0]);
     analogWrite(motor_2, (unsigned char)motor_speed[1]);
     analogWrite(motor_3, (unsigned char)motor_speed[2]);
     analogWrite(motor_4, (unsigned char)motor_speed[3]);
 
-    
   if (j % LOG_PERIOD == 0){
       globalPrefs.phi[j/LOG_PERIOD] = (signed char)(saturize(((Complimentary[0] * 180 ) / pi),  -127, 128));
       globalPrefs.time[j/LOG_PERIOD] = (int)(millis() - 5000);

@@ -1,6 +1,6 @@
 \section{Control}
 \subsection{Plant Model Equations}
-This section of the report will explain how the plant model equations are obtained. Followed by how these equations are implemented in MATLAB/Simulink \\
+This section of the report will explain how the plant model equations are obtained. Followed by how these equations are implemented in MATLAB/Simulink.
 
 The plant model is a series of equations with multiple variables, which uses inputs, states, and parameters to get a certain output. 
 For this project, the plant model is designed to take a height input the drone should hover at, paired with the inputs from the sensors, to achieve the desired hover height and stability.
@@ -55,7 +55,7 @@ For the approximation smaller electrical components were not considered, such as
 \caption{Top view of quadcoptor}
 \end{figure}
 
-A mathematical document can be found in the appendix as “SPRO4math”. Which shows the detailed process of calculation. The mathematical equations are set up in maple, allowing quick changes to values in case a part is changed or removed. This feature proved useful since the weight estimate of the drone has changed rapidly over the course of the project period, as well as new components being added, which could then easily be integrated in the calculations.\\
+A mathematical document can be found in the appendix as “SPRO4math”. Which shows the detailed process of calculation. The mathematical equations are set up in maple, allowing quick changes to values in case a part is changed or removed. This feature proved useful since the weight estimate of the drone has changed rapidly over the course of the project period, as well as new components being added, which could then easily be integrated in the calculations.
 
 \begin{figure}[H]
 \begin{center}
@@ -169,7 +169,7 @@ To make the Simulink model the thrust equations must be transferred into the pro
 \caption{Thrust equations in SIMULINK}
 \end{figure}
 
-The rest of plant equations are then also transferred to SIMULINK using the same process, using blocks to represent the math. The next part of the plant takes the thrust equations as an input to calculate theta, phi, and psi, for position, velocity, and acceleration. \\
+The rest of plant equations are then also transferred to SIMULINK using the same process, using blocks to represent the math. The next part of the plant takes the thrust equations as an input to calculate theta, phi, and psi, for position, velocity, and acceleration.
 
 Below is an example for the equation of phi double dot. We use the thrust equations and feedback together with the drone parameters to get the result. Since all the equations need feedback from the other plant equations, an initial value must be set. It makes sense to make the initial value 0 since we haven’t moved yet and there has been no change in any direction or angle. Throughout the flight the drone will then fill out the theta, phi, and psi values using the censors to determine the change in position. For example, if the drone is slanted a bit in the direction of motor 4 and 1, the drone will have a change in the roll aka phi value. The censor will detect the magnitude of this change, and U2 will increase to give more thrust to those motors to stabilize. Thrust is increased proportionally to smoothing the stabilization. 
 

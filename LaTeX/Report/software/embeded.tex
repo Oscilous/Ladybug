@@ -1,25 +1,3 @@
-\documentclass[titlepage,a4paper,11pt]{article}
-\usepackage{graphicx} % Required for inserting images
-\usepackage{float}
-\usepackage{url}
-\usepackage{booktabs}
-\usepackage{geometry}
-\usepackage{ragged2e}
-\usepackage{cite}
-\usepackage[svgnames]{xcolor}
-\usepackage{makecell, tabularx}
-    \setcellgapes{2pt}
-    \makeatletter
-    \newcommand*{\compress}{\@minipagetrue}
-    \makeatother
-    \newcolumntype{I}{ >{\RaggedRight\compress\itemize}X<{\enditemize}}
-    \newcommand*{\mcl}[1]{\multicolumn{1}{l|}{#1}}
-\usepackage[skip=1ex]{caption}
-\usepackage{enumitem}\usepackage{tabularx}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-
-\begin{document}
 \subsection{Embedded development environment}
 
 Software shoud take care of the motor control, IMU output readings and remote control, this could create complications, as essentially they would interrupt each other. A way of multitasking should be introduced.
@@ -29,7 +7,7 @@ After research, the list was narrowed to two top condenders – FreeRTOS and Zep
 According to 2018 IoT Developer Survey \cite{IOT}, FreeRTOS is one of the most popular OS used and while Zephyr only received a 2.8 \% rating in 2018, it is often described as one of the fastest growing RTOS and in 2022 has become the largest open-source RTOS project by the number of commits and developers. (See Figure~\ref{fig:iot_os})
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.5]{iot_os.PNG}
+    \includegraphics[scale = 0.5]{pictures/iot_os.PNG}
     \caption{IoT Developer Survey 2018 results}
     \label{fig:iot_os}
 \end{figure}
@@ -109,7 +87,7 @@ After building and flashing, results were achieved. (See Figure~\ref{fig:serial}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.7]{serial_monitor.png}
+    \includegraphics[scale = 0.7]{pictures/serial_monitor.png}
     \caption{Serial output of the XIAO MCU}
     \label{fig:serial}
 \end{figure}
@@ -119,4 +97,3 @@ One can use a J-link debugging tool, but a caviet was found, which was GDB stub,
 
 After achieving a succesful development cycle, it was conducted, that the use of ZephyrRTOS is possible with our current setup.
 After further consultation with the supervisors, it was conducted, that the writers of the project have no skills in RTOS, more specifically in threading, and with the guidence of Davi, it was concluded, that acquiring such skills would be outside the scope of the project, as the main focus is control engineering.
-\end{document}

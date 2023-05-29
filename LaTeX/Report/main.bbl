@@ -1,10 +1,14 @@
 \begin{thebibliography}{10}
 
 \bibitem{Nano33}
-Arduino® nano 33 ble sense.
+Arduino® nano 33 ble sense, product reference manual, sku: Abx00031.
 
 \bibitem{FlashPrefs}
 Dirk-/nanobleflashprefs: Substitute for the missing eeprom storage on arduino nano 33 ble and ble sense.
+
+\bibitem{MotorConstants}
+Wikipedia motor constants.
+\newblock \url{https://en.wikipedia.org/wiki/Motor_constants}.
 
 \bibitem{Abutalipov2016}
 Renat~N. Abutalipov, Yuriy~V. Bolgov, and Hamisha~M. Senov.
@@ -20,6 +24,11 @@ European Union Aviation~Safety Agency.
 Cavoukian Ann.
 \newblock Privacy and drones: Unmanned aerial vehicles, 2012.
 \newblock \url{http://www.ipc.on.ca/English/Resources/Discussion-Papers/}.
+
+\bibitem{Ferry}
+Vadim~A. Budnyaev, Ivan~F. Filippov, Valeriy~V. Vertegel, and Sergey~Yu Dudnikov.
+\newblock Simulink-based quadcopter control system model.
+\newblock {\em 2020 1st International Conference Problems of Informatics, Electronics, and Radio Engineering, PIERE 2020}, pages 246--250, 12 2020.
 
 \bibitem{IOT}
 Benjamin Cabé.

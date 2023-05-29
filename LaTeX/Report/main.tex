@@ -1,8 +1,9 @@
-\documentclass[titlepage,a4paper,11pt]{article}
+\documentclass[titlepage,a4paper,12pt,]{article}
 \usepackage{graphicx} % Required for inserting images
 \usepackage{float}
+\usepackage{setspace}
 \usepackage{url}
-\usepackage{minted}
+%\usepackage{minted}
 \usepackage{booktabs}
 \usepackage{geometry}
 \usepackage{ragged2e}
@@ -19,6 +20,7 @@
 \usepackage{enumitem}\usepackage{tabularx}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\onehalfspacing
 
 \begin{document}
 
@@ -58,13 +60,10 @@
 
 \include{introduction/background.tex}
 \include{introduction/problem_statement.tex}
-
 \section{Design and manufacturing of quadrotor}
 %\insert{design/}
-
 \section{Control prototyping}
-\include{control/thrust_experiments.tex}
-
+\include{control/plant_equations.tex}
 \section{Software prototyping}
 \include{software/embeded.tex}
 \include{software/quickpid.tex}
@@ -73,5 +72,5 @@
 \bibliographystyle{plain}
 \bibliography{references}
 \appendix
-
+\include{control/thrust_experiments.tex}
 \end{document}

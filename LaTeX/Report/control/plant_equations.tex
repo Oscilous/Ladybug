@@ -1,9 +1,3 @@
-\documentclass{article}
-\usepackage{graphicx} % Required for inserting images
-\usepackage{float}
-
-\begin{document}
-\linespread{1.5}
 \section{Control}
 \subsection{Plant Model Equations}
 This section of the report will explain how the plant model equations are obtained. Followed by how these equations are implemented in MATLAB/Simulink \\
@@ -17,7 +11,7 @@ The drone possesses 6 degrees of freedom, enabling it to navigate in various dir
 
 \begin{figure}[H]
 \begin{center}
-    \includegraphics[scale =0.7]{images/drone directionals.png}
+    \includegraphics[scale =0.7]{pictures/control/drone directionals.png}
 \end{center}
 \caption{Quadcopter 'x' configuration}
 \end{figure}
@@ -26,7 +20,7 @@ The drone's states include critical physical properties like as acceleration, ve
 
 \begin{figure}[H]
 \begin{center}
-    \includegraphics[scale =1]{images/State table.png}
+    \includegraphics[scale =1]{pictures/control/State table.png}
 \end{center}
 \caption{State table}
 \end{figure}
@@ -36,7 +30,7 @@ The parameters needed can be seen in the table below:\cite{Ferry}
 
 \begin{figure}[H]
 \begin{center}
-    \includegraphics[scale =0.9]{images/parameter table.png}
+    \includegraphics[scale =0.9]{pictures/control/parameter table.png}
 \end{center}
 \caption{State table}
 \end{figure}
@@ -49,14 +43,14 @@ For the approximation smaller electrical components were not considered, such as
 
 \begin{figure}[H]
 \begin{center}
-   \includegraphics[scale =0.87]{images/inertia tables table.png}
+   \includegraphics[scale =0.87]{pictures/control/inertia tables table.png}
 \end{center}
 \caption{Inertia moments equations}
 \end{figure}
 
 \begin{figure}[H]
 \begin{center}
-   \includegraphics[scale =1]{images/Drone view inertiacalc.png}
+   \includegraphics[scale =1]{pictures/control/Drone view inertiacalc.png}
 \end{center}
 \caption{Top view of quadcoptor}
 \end{figure}
@@ -65,7 +59,7 @@ A mathematical document can be found in the appendix as “SPRO4math”. Which s
 
 \begin{figure}[H]
 \begin{center}
-   \includegraphics[scale =1]{images/Inertia moments.png}
+   \includegraphics[scale =1]{pictures/control/Inertia moments.png}
 \end{center}
 \caption{Moments of inertia in the x, y, z axis, in $g*mm^2$ as calculated from equations, used in the final version of the quadcopter}
 \end{figure}
@@ -80,7 +74,7 @@ The next part of the report is a small summary of the tests done to determine th
 
 \begin{figure}[H]
 \begin{center}
-   \includegraphics[scale =1]{images/Motor thrust 2.JPG}
+   \includegraphics[scale =1]{pictures/control/Motor thrust 2.JPG}
 \end{center}
 \caption{Thrust testing setup}
 \end{figure}
@@ -93,7 +87,7 @@ At maximum voltage level of the battery, a single motor produces 22.2 grams of t
 
 \begin{figure}[H]
 \begin{center}
-   \includegraphics[scale =1]{images/Graph thrust.JPG}
+   \includegraphics[scale =1]{pictures/control/Graph thrust.JPG}
 \end{center}
 \caption{Thrust test data graphed}
 \end{figure}
@@ -104,14 +98,14 @@ With a simple setup the motor's RPM can be tested proportionally to PWM. The mot
 
 \begin{figure}[H]
 \begin{center}
-   \includegraphics[scale =1]{images/Motor constants theory.png}
+   \includegraphics[scale =1]{pictures/control/Motor constants theory.png}
 \end{center}
 \caption{Equations used for calculating thrust- and velocity constants}
 \end{figure}
 
 \begin{figure}[H]
 \begin{center}
-   \includegraphics[scale =1.5]{images/Motor constants calc.png}
+   \includegraphics[scale =1.5]{pictures/control/Motor constants calc.png}
 \end{center}
 \caption{Motor Constants}
 \end{figure}
@@ -130,7 +124,7 @@ First, we will look at how the motors should operate together to move the quadco
 
 \begin{figure}[H]
 \begin{center}
-   \includegraphics[scale =1]{images/thrust equations results.png}
+   \includegraphics[scale =1]{pictures/control/thrust equations results.png}
 \end{center}
 \caption{Visual representation of thrust equations \cite{Ferry}}
 \end{figure}
@@ -141,7 +135,7 @@ Each motors thrust is then defined as angular rotational speed to acquire the fo
 
 \begin{figure}[H]
 \begin{center}
-   \includegraphics[scale =1]{images/thrust equations.png}
+   \includegraphics[scale =1]{pictures/control/thrust equations.png}
 \end{center}
 \caption{Thrust equations \cite{Ferry}}
 \end{figure}
@@ -149,14 +143,14 @@ Each motors thrust is then defined as angular rotational speed to acquire the fo
 The plant equations for this project were gotten from one of the sources. For a more in depth description of how the plant equations are found see \cite{Ferry}
 \begin{figure}[H]
 \begin{center}
-   \includegraphics[scale =1]{images/plant equations.png}
+   \includegraphics[scale =1]{pictures/control/plant equations.png}
 \end{center}
 \caption{Summary of plant equations \cite{Ferry}}
 \end{figure}
 
 \begin{figure}[H]
 \begin{center}
-   \includegraphics[scale =1]{images/plant equation example.png}
+   \includegraphics[scale =1]{pictures/control/plant equation example.png}
 \end{center}
 \caption{Example of plant equation for phi. \cite{Ferry}}
 \end{figure}
@@ -170,7 +164,7 @@ To make the Simulink model the thrust equations must be transferred into the pro
 
 \begin{figure}[H]
 \begin{center}
-   \includegraphics[scale =1]{images/thrust equation in simulink.png}
+   \includegraphics[scale =1]{pictures/control/thrust equation in simulink.png}
 \end{center}
 \caption{Thrust equations in SIMULINK}
 \end{figure}
@@ -181,14 +175,14 @@ Below is an example for the equation of phi double dot. We use the thrust equati
 
 \begin{figure}[H]
 \begin{center}
-   \includegraphics[scale =0.7]{images/plant equation phi example.png}
+   \includegraphics[scale =0.7]{pictures/control/plant equation phi example.png}
 \end{center}
 \caption{Plant equation for phi double dot}
 \end{figure}
 
 \begin{figure}[H]
 \begin{center}
-   \includegraphics[scale =0.6]{images/plant pic1.png}
+   \includegraphics[scale =0.6]{pictures/control/plant pic1.png}
 \end{center}
 \caption{Angular equations overview example}
 \end{figure}
@@ -196,10 +190,6 @@ Below is an example for the equation of phi double dot. We use the thrust equati
 To finish out the plant, the X, Y, and Z values for acceleration, velocity, and position are calculated using the values from theta, phi, and psi, these equations rely on feedback from each other in the same way that angles do, and use the same principles when it comes to determining the initial value. 
 
 \begin{figure}[H]
-   \includegraphics[scale =0.6]{images/Plant overview.png}
+   \includegraphics[scale =0.6]{pictures/control/Plant overview.png}
 \caption{Plant overview in SIMULINK}
 \end{figure}
-
-\bibliographystyle{plain}
-\bibliography{sources}
-\end{document}

@@ -1,0 +1,18 @@
+\begin{thebibliography}{1}
+
+\bibitem{DecouplingCap}
+{Autodesk} what are decoupling capacitors?
+\newblock
+  \url{https://www.autodesk.com/products/fusion-360/blog/what-are-decoupling-capacitors/}.
+
+\bibitem{FDD8896}
+{Fairchild Semiconductor} fdd8896 datasheet.
+\newblock
+  \url{https://pdf1.alldatasheet.com/datasheet-pdf/view/85382/FAIRCHILD/FDD8896.html}.
+
+\bibitem{1N5818}
+{Motorola} 1n5818 datasheet.
+\newblock
+  \url{https://pdf1.alldatasheet.com/datasheet-pdf/view/2817/MOTOROLA/1N5818.html}.
+
+\end{thebibliography}

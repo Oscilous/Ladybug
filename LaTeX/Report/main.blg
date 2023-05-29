@@ -3,6 +3,7 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 A level-1 auxiliary file: introduction/background.aux
 A level-1 auxiliary file: introduction/problem_statement.aux
+A level-1 auxiliary file: introduction/risk_assesment.aux
 A level-1 auxiliary file: software/github.aux
 A level-1 auxiliary file: design/Drone_body.aux
 A level-1 auxiliary file: control/plant_equations.aux
@@ -24,45 +25,45 @@ Warning--empty author in Nano33
 Warning--empty journal in Nano33
 Warning--empty year in Nano33
 Warning--empty journal in loggingProof
-You've used 33 entries,
+You've used 34 entries,
             2118 wiz_defined-function locations,
-            693 strings with 10477 characters,
-and the built_in function-call counts, 7220 in all, are:
-= -- 669
-> -- 243
+            701 strings with 10787 characters,
+and the built_in function-call counts, 7573 in all, are:
+= -- 702
+> -- 266
 < -- 2
-+ -- 108
-- -- 72
-* -- 300
-:= -- 1130
-add.period$ -- 92
-call.type$ -- 33
-change.case$ -- 135
++ -- 117
+- -- 80
+* -- 328
+:= -- 1193
+add.period$ -- 95
+call.type$ -- 34
+change.case$ -- 142
 chr.to.int$ -- 0
-cite$ -- 45
-duplicate$ -- 270
-empty$ -- 741
-format.name$ -- 72
-if$ -- 1588
+cite$ -- 46
+duplicate$ -- 281
+empty$ -- 764
+format.name$ -- 80
+if$ -- 1659
 int.to.chr$ -- 0
-int.to.str$ -- 33
-missing$ -- 7
-newline$ -- 161
-num.names$ -- 50
-pop$ -- 286
+int.to.str$ -- 34
+missing$ -- 8
+newline$ -- 166
+num.names$ -- 52
+pop$ -- 291
 preamble$ -- 1
-purify$ -- 102
+purify$ -- 108
 quote$ -- 0
-skip$ -- 245
+skip$ -- 252
 stack$ -- 0
-substring$ -- 247
-swap$ -- 45
+substring$ -- 264
+swap$ -- 46
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 132
+type$ -- 136
 warning$ -- 12
-while$ -- 56
-width$ -- 35
-write$ -- 306
+while$ -- 59
+width$ -- 36
+write$ -- 317
 (There were 12 warnings)

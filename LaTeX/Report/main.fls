@@ -1,8 +1,8 @@
-PWD c:/Users/thoru/Documents/GitHub/Ladybug/LaTeX/Report
+PWD c:/Users/Artis/Desktop/Ladybug/LaTeX/Report
 INPUT c:/texlive/2023/texmf.cnf
 INPUT c:/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/thoru/Documents/GitHub/Ladybug/LaTeX/Report/main.tex
+INPUT c:/Users/Artis/Desktop/Ladybug/LaTeX/Report/main.tex
 OUTPUT main.log
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
@@ -160,6 +160,9 @@ INPUT introduction/background.aux
 INPUT ./introduction/problem_statement.aux
 INPUT introduction/problem_statement.aux
 INPUT introduction/problem_statement.aux
+INPUT ./introduction/risk_assesment.aux
+INPUT introduction/risk_assesment.aux
+INPUT introduction/risk_assesment.aux
 INPUT ./software/github.aux
 INPUT software/github.aux
 INPUT software/github.aux
@@ -251,6 +254,17 @@ INPUT introduction/problem_statement.tex
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+INPUT ./introduction/risk_assesment.tex
+OUTPUT introduction/risk_assesment.aux
+INPUT ./introduction/risk_assesment.tex
+INPUT ./introduction/risk_assesment.tex
+INPUT introduction/risk_assesment.tex
+INPUT introduction/risk_assesment.tex
+INPUT ./pictures/Risk assesment table.png
+INPUT ./pictures/Risk assesment table.png
+INPUT pictures/Risk assesment table.png
+INPUT ./pictures/Risk assesment table.png
+INPUT ./pictures/Risk assesment table.png
 INPUT ./software/github.tex
 OUTPUT software/github.aux
 INPUT ./software/github.tex
@@ -483,6 +497,9 @@ INPUT introduction/background.aux
 INPUT ./introduction/problem_statement.aux
 INPUT introduction/problem_statement.aux
 INPUT introduction/problem_statement.aux
+INPUT ./introduction/risk_assesment.aux
+INPUT introduction/risk_assesment.aux
+INPUT introduction/risk_assesment.aux
 INPUT ./software/github.aux
 INPUT software/github.aux
 INPUT software/github.aux

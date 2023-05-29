@@ -23,45 +23,45 @@ Warning--empty author in Nano33
 Warning--empty journal in Nano33
 Warning--empty year in Nano33
 Warning--empty journal in loggingProof
-You've used 29 entries,
+You've used 30 entries,
             2118 wiz_defined-function locations,
-            670 strings with 9729 characters,
-and the built_in function-call counts, 6406 in all, are:
-= -- 596
-> -- 215
+            676 strings with 9935 characters,
+and the built_in function-call counts, 6608 in all, are:
+= -- 614
+> -- 222
 < -- 2
-+ -- 96
-- -- 64
-* -- 277
-:= -- 997
-add.period$ -- 80
-call.type$ -- 29
-change.case$ -- 119
++ -- 99
+- -- 66
+* -- 282
+:= -- 1030
+add.period$ -- 83
+call.type$ -- 30
+change.case$ -- 123
 chr.to.int$ -- 0
-cite$ -- 41
-duplicate$ -- 242
-empty$ -- 653
-format.name$ -- 64
-if$ -- 1411
+cite$ -- 42
+duplicate$ -- 249
+empty$ -- 675
+format.name$ -- 66
+if$ -- 1455
 int.to.chr$ -- 0
-int.to.str$ -- 29
+int.to.str$ -- 30
 missing$ -- 7
-newline$ -- 141
-num.names$ -- 42
-pop$ -- 244
+newline$ -- 146
+num.names$ -- 44
+pop$ -- 255
 preamble$ -- 1
-purify$ -- 90
+purify$ -- 93
 quote$ -- 0
-skip$ -- 220
+skip$ -- 226
 stack$ -- 0
-substring$ -- 227
-swap$ -- 41
+substring$ -- 232
+swap$ -- 42
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 116
+type$ -- 120
 warning$ -- 12
-while$ -- 48
-width$ -- 31
-write$ -- 269
+while$ -- 50
+width$ -- 32
+write$ -- 278
 (There were 12 warnings)

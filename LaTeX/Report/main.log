@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.29)  29 MAY 2023 16:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.29)  29 MAY 2023 17:30
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Artis/Desktop/Ladybug/LaTeX/Report/main.tex
-(c:/Users/Artis/Desktop/Ladybug/LaTeX/Report/main.tex
+**c:/Users/thoru/Documents/GitHub/Ladybug/LaTeX/Report/main.tex
+(c:/Users/thoru/Documents/GitHub/Ladybug/LaTeX/Report/main.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-05-22> (c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -214,7 +214,7 @@ Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count281
 \l__pdf_internal_box=\box56
-) (./main.aux (./introduction/background.aux) (./introduction/problem_statement.aux) (./design/Drone_body.aux
+) (./main.aux (./introduction/background.aux) (./introduction/problem_statement.aux) (./software/github.aux) (./design/Drone_body.aux
 
 LaTeX Warning: Label `fig:example' multiply defined.
 
@@ -351,239 +351,246 @@ Package pdftex.def Info: pictures/classification.PNG  used on input line 19.
 
 
 {c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [4]) [5]
+\openout2 = `software/github.aux'.
+
+ (./software/github.tex [6
+
+
+
+]) [7]
 \openout2 = `design/Drone_body.aux'.
 
  (./design/Drone_body.tex
-<./pictures/design/DroneCAD.png, id=32, 232.4685pt x 149.358pt>
+<./pictures/design/DroneCAD.png, id=39, 232.4685pt x 149.358pt>
 File: ./pictures/design/DroneCAD.png Graphic file (type png)
 <use ./pictures/design/DroneCAD.png>
 Package pdftex.def Info: ./pictures/design/DroneCAD.png  used on input line 7.
 (pdftex.def)             Requested size: 142.26378pt x 91.40678pt.
-<./pictures/design/PCBpicture.png, id=33, 149.05687pt x 148.30406pt>
+<./pictures/design/PCBpicture.png, id=40, 149.05687pt x 148.30406pt>
 File: ./pictures/design/PCBpicture.png Graphic file (type png)
 <use ./pictures/design/PCBpicture.png>
 Package pdftex.def Info: ./pictures/design/PCBpicture.png  used on input line 9.
 (pdftex.def)             Requested size: 142.26378pt x 141.55334pt.
-<./pictures/design/Mosfet_Control.png, id=34, 163.812pt x 269.20575pt>
+<./pictures/design/Mosfet_Control.png, id=41, 163.812pt x 269.20575pt>
 File: ./pictures/design/Mosfet_Control.png Graphic file (type png)
 <use ./pictures/design/Mosfet_Control.png>
 Package pdftex.def Info: ./pictures/design/Mosfet_Control.png  used on input line 20.
 (pdftex.def)             Requested size: 114.6676pt x 188.44272pt.
- [6
+ [8
 
 
 
  <./pictures/design/DroneCAD.png> <./pictures/design/PCBpicture.png>]
-<./pictures/design/Continuous_Current.png, id=45, 290.58563pt x 215.30438pt>
+<./pictures/design/Continuous_Current.png, id=51, 290.58563pt x 215.30438pt>
 File: ./pictures/design/Continuous_Current.png Graphic file (type png)
 <use ./pictures/design/Continuous_Current.png>
 Package pdftex.def Info: ./pictures/design/Continuous_Current.png  used on input line 43.
 (pdftex.def)             Requested size: 203.40854pt x 150.71204pt.
- [7 <./pictures/design/Mosfet_Control.png>]
-<./pictures/design/Surge_Current.png, id=50, 315.42844pt x 224.33812pt>
+ [9 <./pictures/design/Mosfet_Control.png>]
+<./pictures/design/Surge_Current.png, id=56, 315.42844pt x 224.33812pt>
 File: ./pictures/design/Surge_Current.png Graphic file (type png)
 <use ./pictures/design/Surge_Current.png>
 Package pdftex.def Info: ./pictures/design/Surge_Current.png  used on input line 51.
 (pdftex.def)             Requested size: 220.79839pt x 157.03561pt.
-<./pictures/design/Diode_Protection.png, id=51, 316.93407pt x 233.37187pt>
+<./pictures/design/Diode_Protection.png, id=57, 316.93407pt x 233.37187pt>
 File: ./pictures/design/Diode_Protection.png Graphic file (type png)
 <use ./pictures/design/Diode_Protection.png>
 Package pdftex.def Info: ./pictures/design/Diode_Protection.png  used on input line 63.
 (pdftex.def)             Requested size: 221.85233pt x 163.35919pt.
- [8 <./pictures/design/Continuous_Current.png> <./pictures/design/Surge_Current.png>]
-<./pictures/design/Diode_Protection_&_decoupling_capacitors.png, id=55, 316.93407pt x 233.37187pt>
+ [10 <./pictures/design/Continuous_Current.png> <./pictures/design/Surge_Current.png>]
+<./pictures/design/Diode_Protection_&_decoupling_capacitors.png, id=61, 316.93407pt x 233.37187pt>
 File: ./pictures/design/Diode_Protection_&_decoupling_capacitors.png Graphic file (type png)
 <use ./pictures/design/Diode_Protection_&_decoupling_capacitors.png>
 Package pdftex.def Info: ./pictures/design/Diode_Protection_&_decoupling_capacitors.png  used on input line 75.
 (pdftex.def)             Requested size: 221.85233pt x 163.35919pt.
- [9 <./pictures/design/Diode_Protection.png> <./pictures/design/Diode_Protection_&_decoupling_capacitors.png>]
-<./pictures/design/Droneleg.png, id=59, 108.405pt x 115.02975pt>
+ [11 <./pictures/design/Diode_Protection.png> <./pictures/design/Diode_Protection_&_decoupling_capacitors.png>]
+<./pictures/design/Droneleg.png, id=65, 108.405pt x 115.02975pt>
 File: ./pictures/design/Droneleg.png Graphic file (type png)
 <use ./pictures/design/Droneleg.png>
 Package pdftex.def Info: ./pictures/design/Droneleg.png  used on input line 93.
 (pdftex.def)             Requested size: 85.35826pt x 90.57938pt.
-<./pictures/design/Dronepressfit.png, id=60, 109.6095pt x 127.07475pt>
+<./pictures/design/Dronepressfit.png, id=66, 109.6095pt x 127.07475pt>
 File: ./pictures/design/Dronepressfit.png Graphic file (type png)
 <use ./pictures/design/Dronepressfit.png>
 Package pdftex.def Info: ./pictures/design/Dronepressfit.png  used on input line 95.
 (pdftex.def)             Requested size: 85.35826pt x 98.9647pt.
-<./pictures/design/Dronepropguard.png, id=61, 145.14224pt x 119.84775pt>
+<./pictures/design/Dronepropguard.png, id=67, 145.14224pt x 119.84775pt>
 File: ./pictures/design/Dronepropguard.png Graphic file (type png)
 <use ./pictures/design/Dronepropguard.png>
 Package pdftex.def Info: ./pictures/design/Dronepropguard.png  used on input line 97.
 (pdftex.def)             Requested size: 85.35826pt x 70.48279pt.
-<./pictures/design/Ansys1.png, id=62, 297.5115pt x 142.131pt>
+<./pictures/design/Ansys1.png, id=68, 297.5115pt x 142.131pt>
 File: ./pictures/design/Ansys1.png Graphic file (type png)
 <use ./pictures/design/Ansys1.png>
 Package pdftex.def Info: ./pictures/design/Ansys1.png  used on input line 106.
 (pdftex.def)             Requested size: 284.52756pt x 135.93236pt.
- [10 <./pictures/design/Droneleg.png> <./pictures/design/Dronepressfit.png> <./pictures/design/Dronepropguard.png>]
-<./pictures/design/Ansys2.png, id=69, 296.307pt x 168.02776pt>
+ [12 <./pictures/design/Droneleg.png> <./pictures/design/Dronepressfit.png> <./pictures/design/Dronepropguard.png>]
+<./pictures/design/Ansys2.png, id=76, 296.307pt x 168.02776pt>
 File: ./pictures/design/Ansys2.png Graphic file (type png)
 <use ./pictures/design/Ansys2.png>
 Package pdftex.def Info: ./pictures/design/Ansys2.png  used on input line 115.
 (pdftex.def)             Requested size: 284.52756pt x 161.3612pt.
- [11 <./pictures/design/Ansys1.png> <./pictures/design/Ansys2.png>]
-<./pictures/design/battery.jpeg, id=75, 1606.0pt x 1334.9875pt>
+ [13 <./pictures/design/Ansys1.png> <./pictures/design/Ansys2.png>]
+<./pictures/design/battery.jpeg, id=82, 1606.0pt x 1334.9875pt>
 File: ./pictures/design/battery.jpeg Graphic file (type jpg)
 <use ./pictures/design/battery.jpeg>
 Package pdftex.def Info: ./pictures/design/battery.jpeg  used on input line 124.
 (pdftex.def)             Requested size: 142.26378pt x 118.24925pt.
-<./pictures/design/8520.jpg, id=76, 529.98pt x 361.35pt>
+<./pictures/design/8520.jpg, id=83, 529.98pt x 361.35pt>
 File: ./pictures/design/8520.jpg Graphic file (type jpg)
 <use ./pictures/design/8520.jpg>
 Package pdftex.def Info: ./pictures/design/8520.jpg  used on input line 126.
 (pdftex.def)             Requested size: 142.26378pt x 96.99788pt.
-) [12 <./pictures/design/battery.jpeg> <./pictures/design/8520.jpg>]
+) [14 <./pictures/design/battery.jpeg> <./pictures/design/8520.jpg>]
 \openout2 = `control/plant_equations.aux'.
 
  (./control/plant_equations.tex
-<pictures/control/drone directionals.png, id=82, 373.395pt x 307.1475pt>
+<pictures/control/drone directionals.png, id=88, 373.395pt x 307.1475pt>
 File: pictures/control/drone directionals.png Graphic file (type png)
 <use pictures/control/drone directionals.png>
 Package pdftex.def Info: pictures/control/drone directionals.png  used on input line 14.
 (pdftex.def)             Requested size: 261.37471pt x 215.00177pt.
- [13
+ [15
 
 
 
  <./pictures/control/drone directionals.png>]
-<pictures/control/State table.png, id=87, 373.395pt x 421.575pt>
+<pictures/control/State table.png, id=93, 373.395pt x 421.575pt>
 File: pictures/control/State table.png Graphic file (type png)
 <use pictures/control/State table.png>
 Package pdftex.def Info: pictures/control/State table.png  used on input line 23.
 (pdftex.def)             Requested size: 373.39409pt x 421.57396pt.
- [14 <./pictures/control/State table.png>]
-<pictures/control/parameter table.png, id=91, 416.15475pt x 121.6545pt>
+ [16 <./pictures/control/State table.png>]
+<pictures/control/parameter table.png, id=97, 416.15475pt x 121.6545pt>
 File: pictures/control/parameter table.png Graphic file (type png)
 <use pictures/control/parameter table.png>
 Package pdftex.def Info: pictures/control/parameter table.png  used on input line 33.
 (pdftex.def)             Requested size: 374.53581pt x 109.48802pt.
-<pictures/control/inertia tables table.png, id=92, 387.849pt x 402.303pt>
+<pictures/control/inertia tables table.png, id=98, 387.849pt x 402.303pt>
 File: pictures/control/inertia tables table.png Graphic file (type png)
 <use pictures/control/inertia tables table.png>
 Package pdftex.def Info: pictures/control/inertia tables table.png  used on input line 46.
 (pdftex.def)             Requested size: 337.42589pt x 350.00076pt.
- [15 <./pictures/control/parameter table.png>]
-<pictures/control/Drone view inertiacalc.png, id=96, 373.99725pt x 305.943pt>
+ [17 <./pictures/control/parameter table.png>]
+<pictures/control/Drone view inertiacalc.png, id=102, 373.99725pt x 305.943pt>
 File: pictures/control/Drone view inertiacalc.png Graphic file (type png)
 <use pictures/control/Drone view inertiacalc.png>
 Package pdftex.def Info: pictures/control/Drone view inertiacalc.png  used on input line 53.
 (pdftex.def)             Requested size: 373.99632pt x 305.94223pt.
- [16 <./pictures/control/inertia tables table.png>]
-<pictures/control/Inertia moments.png, id=100, 126.4725pt x 175.857pt>
+ [18 <./pictures/control/inertia tables table.png>]
+<pictures/control/Inertia moments.png, id=107, 126.4725pt x 175.857pt>
 File: pictures/control/Inertia moments.png Graphic file (type png)
 <use pictures/control/Inertia moments.png>
 Package pdftex.def Info: pictures/control/Inertia moments.png  used on input line 62.
 (pdftex.def)             Requested size: 126.47218pt x 175.85657pt.
- [17 <./pictures/control/Drone view inertiacalc.png>]
-<pictures/control/Motor thrust 2.JPG, id=104, 284.262pt x 288.47775pt>
+ [19 <./pictures/control/Drone view inertiacalc.png>]
+<pictures/control/Motor thrust 2.JPG, id=111, 284.262pt x 288.47775pt>
 File: pictures/control/Motor thrust 2.JPG Graphic file (type jpg)
 <use pictures/control/Motor thrust 2.JPG>
 Package pdftex.def Info: pictures/control/Motor thrust 2.JPG  used on input line 77.
 (pdftex.def)             Requested size: 284.26129pt x 288.47704pt.
- [18 <./pictures/control/Inertia moments.png>]
-<pictures/control/Graph thrust.JPG, id=110, 317.988pt x 251.13824pt>
+ [20 <./pictures/control/Inertia moments.png>]
+<pictures/control/Graph thrust.JPG, id=116, 317.988pt x 251.13824pt>
 File: pictures/control/Graph thrust.JPG Graphic file (type jpg)
 <use pictures/control/Graph thrust.JPG>
 Package pdftex.def Info: pictures/control/Graph thrust.JPG  used on input line 90.
 (pdftex.def)             Requested size: 317.98721pt x 251.13763pt.
- [19 <./pictures/control/Motor thrust 2.JPG>]
-<pictures/control/Motor constants theory.png, id=114, 343.88475pt x 65.043pt>
+ [21 <./pictures/control/Motor thrust 2.JPG>]
+<pictures/control/Motor constants theory.png, id=120, 343.88475pt x 65.043pt>
 File: pictures/control/Motor constants theory.png Graphic file (type png)
 <use pictures/control/Motor constants theory.png>
 Package pdftex.def Info: pictures/control/Motor constants theory.png  used on input line 101.
 (pdftex.def)             Requested size: 343.88391pt x 65.04283pt.
-<pictures/control/Motor constants calc.png, id=115, 198.14024pt x 65.043pt>
+<pictures/control/Motor constants calc.png, id=121, 198.14024pt x 65.043pt>
 File: pictures/control/Motor constants calc.png Graphic file (type png)
 <use pictures/control/Motor constants calc.png>
 Package pdftex.def Info: pictures/control/Motor constants calc.png  used on input line 108.
 (pdftex.def)             Requested size: 297.20961pt x 97.56424pt.
- [20 <./pictures/control/Graph Thrust.JPG> <./pictures/control/Motor constants theory.png>]
-<pictures/control/thrust equations results.png, id=120, 280.04625pt x 227.04825pt>
+ [22 <./pictures/control/Graph Thrust.JPG> <./pictures/control/Motor constants theory.png>]
+<pictures/control/thrust equations results.png, id=126, 280.04625pt x 227.04825pt>
 File: pictures/control/thrust equations results.png Graphic file (type png)
 <use pictures/control/thrust equations results.png>
 Package pdftex.def Info: pictures/control/thrust equations results.png  used on input line 127.
 (pdftex.def)             Requested size: 280.04555pt x 227.04768pt.
- [21 <./pictures/control/Motor constants calc.png>]
-<pictures/control/thrust equations.png, id=124, 339.06676pt x 102.98476pt>
+ [23 <./pictures/control/Motor constants calc.png>]
+<pictures/control/thrust equations.png, id=130, 339.06676pt x 102.98476pt>
 File: pictures/control/thrust equations.png Graphic file (type png)
 <use pictures/control/thrust equations.png>
 Package pdftex.def Info: pictures/control/thrust equations.png  used on input line 138.
 (pdftex.def)             Requested size: 339.06592pt x 102.98448pt.
-<pictures/control/plant equations.png, id=125, 325.81725pt x 413.1435pt>
+<pictures/control/plant equations.png, id=131, 325.81725pt x 413.1435pt>
 File: pictures/control/plant equations.png Graphic file (type png)
 <use pictures/control/plant equations.png>
 Package pdftex.def Info: pictures/control/plant equations.png  used on input line 146.
 (pdftex.def)             Requested size: 325.81644pt x 413.14247pt.
- [22 <./pictures/control/thrust equations results.png> <./pictures/control/thrust equations.png>]
-<pictures/control/plant equation example.png, id=131, 350.5095pt x 168.02776pt>
+ [24 <./pictures/control/thrust equations results.png> <./pictures/control/thrust equations.png>]
+<pictures/control/plant equation example.png, id=138, 350.5095pt x 168.02776pt>
 File: pictures/control/plant equation example.png Graphic file (type png)
 <use pictures/control/plant equation example.png>
 Package pdftex.def Info: pictures/control/plant equation example.png  used on input line 153.
 (pdftex.def)             Requested size: 350.50865pt x 168.02734pt.
- [23 <./pictures/control/plant equations.png>]
-<pictures/control/thrust equation in simulink.png, id=135, 367.3725pt x 292.09125pt>
+ [25 <./pictures/control/plant equations.png>]
+<pictures/control/thrust equation in simulink.png, id=142, 367.3725pt x 292.09125pt>
 File: pictures/control/thrust equation in simulink.png Graphic file (type png)
 <use pictures/control/thrust equation in simulink.png>
 Package pdftex.def Info: pictures/control/thrust equation in simulink.png  used on input line 167.
 (pdftex.def)             Requested size: 367.37158pt x 292.09052pt.
- [24 <./pictures/control/plant equation example.png>]
-<pictures/control/plant equation phi example.png, id=141, 592.614pt x 377.0085pt>
+ [26 <./pictures/control/plant equation example.png>]
+<pictures/control/plant equation phi example.png, id=147, 592.614pt x 377.0085pt>
 File: pictures/control/plant equation phi example.png Graphic file (type png)
 <use pictures/control/plant equation phi example.png>
 Package pdftex.def Info: pictures/control/plant equation phi example.png  used on input line 178.
 (pdftex.def)             Requested size: 414.82697pt x 263.90414pt.
- [25 <./pictures/control/thrust equation in simulink.png>]
-<pictures/control/plant pic1.png, id=145, 638.98724pt x 370.38374pt>
+ [27 <./pictures/control/thrust equation in simulink.png>]
+<pictures/control/plant pic1.png, id=151, 638.98724pt x 370.38374pt>
 File: pictures/control/plant pic1.png Graphic file (type png)
 <use pictures/control/plant pic1.png>
 Package pdftex.def Info: pictures/control/plant pic1.png  used on input line 185.
 (pdftex.def)             Requested size: 383.39531pt x 222.23195pt.
- [26 <./pictures/control/plant equation phi example.png> <./pictures/control/plant pic1.png>]
-<pictures/control/Plant overview.png, id=149, 664.884pt x 377.0085pt>
+ [28 <./pictures/control/plant equation phi example.png> <./pictures/control/plant pic1.png>]
+<pictures/control/Plant overview.png, id=155, 664.884pt x 377.0085pt>
 File: pictures/control/Plant overview.png Graphic file (type png)
 <use pictures/control/Plant overview.png>
 Package pdftex.def Info: pictures/control/Plant overview.png  used on input line 193.
 (pdftex.def)             Requested size: 398.93349pt x 226.20683pt.
-) [27 <./pictures/control/Plant overview.png>]
+) [29 <./pictures/control/Plant overview.png>]
 \openout2 = `software/embeded.aux'.
 
  (./software/embeded.tex
-<pictures/iot_os.PNG, id=153, 669.09975pt x 364.36125pt>
+<pictures/iot_os.PNG, id=159, 669.09975pt x 364.36125pt>
 File: pictures/iot_os.PNG Graphic file (type png)
 <use pictures/iot_os.PNG>
 Package pdftex.def Info: pictures/iot_os.PNG  used on input line 11.
 (pdftex.def)             Requested size: 334.54906pt x 182.18018pt.
- [28
+ [30
 
 
 
- <./pictures/iot_os.PNG>] [29]
+ <./pictures/iot_os.PNG>] [31]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 74.
  (c:/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
-) [30]
-<pictures/serial_monitor.png, id=166, 584.1825pt x 224.63925pt>
+) [32]
+<pictures/serial_monitor.png, id=172, 584.1825pt x 224.63925pt>
 File: pictures/serial_monitor.png Graphic file (type png)
 <use pictures/serial_monitor.png>
 Package pdftex.def Info: pictures/serial_monitor.png  used on input line 91.
 (pdftex.def)             Requested size: 408.92496pt x 157.24638pt.
-) [31 <./pictures/serial_monitor.png>] [32]
+) [33 <./pictures/serial_monitor.png>] [34]
 \openout2 = `software/quickpid.aux'.
 
- (./software/quickpid.tex) [33
+ (./software/quickpid.tex) [35
 
 
 
 ]
 \openout2 = `software/logging.aux'.
 
- (./software/logging.tex) [34
+ (./software/logging.tex) [36
 
 
 
-] [35] (./main.bbl
+] [37] (./main.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--6
 []\T1/cmr/m/n/12 Arduino\TS1/cmr/m/n/12 ® \T1/cmr/m/n/12 nano 33 ble sense, prod-uct ref-er-ence man-
  []
@@ -633,7 +640,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--44
 \T1/cmtt/m/n/12 domains / civil-[]drones / drones-[]regulatory-[]framework-[]background /
  []
 
-[36
+[38
 
 
 ]
@@ -652,128 +659,143 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--54
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--84
+Underfull \hbox (badness 10000) in paragraph at lines 86--89
 []\T1/cmr/m/n/12 Connected In-dus-try.  Freer-tos vs threadx vs zephyr:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--84
+Underfull \hbox (badness 10000) in paragraph at lines 86--89
 \T1/cmr/m/n/12 The fight for true open source rtos, 2023.  $\T1/cmtt/m/n/12 https : / /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--84
+Underfull \hbox (badness 10000) in paragraph at lines 86--89
 \T1/cmtt/m/n/12 www . iiot-[]world . com / industrial-[]iot / connected-[]industry /
  []
 
 
-Overfull \hbox (22.10812pt too wide) in paragraph at lines 81--84
+Overfull \hbox (22.10812pt too wide) in paragraph at lines 86--89
 \T1/cmtt/m/n/12 freertos-[]vs-[]threadx-[]vs-[]zephyr-[]the-[]fight-[]for-[]true-[]open-[]source-[]rtos/$\T1/cmr/m/n/12 . 
  []
 
 
-Underfull \hbox (badness 5345) in paragraph at lines 86--90
+Underfull \hbox (badness 5345) in paragraph at lines 91--95
 []\T1/cmr/m/n/12 Joe Ja-worski.  A real-time op-er-at-ing sys-tem for the ar-duino -
  []
 
 
-Underfull \hbox (badness 5316) in paragraph at lines 86--90
+Underfull \hbox (badness 5316) in paragraph at lines 91--95
 \T1/cmr/m/n/12 nuts and volts mag-a-zine.  \T1/cmr/m/it/12 Copy-right \TS1/cmr/m/it/12 © \T1/cmr/m/it/12 2023 T and L Pub-li-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--90
+Underfull \hbox (badness 10000) in paragraph at lines 91--95
 \T1/cmr/m/it/12 ca-tions\T1/cmr/m/n/12 , 2019.  $\T1/cmtt/m/n/12 https : / / www . nutsvolts . com / magazine / article /
  []
 
-[37]
-Underfull \hbox (badness 10000) in paragraph at lines 102--105
+[39]
+Underfull \hbox (badness 10000) in paragraph at lines 107--110
 []\T1/cmr/m/n/12 Dennis Nash.  How to ac-cess data for op-ti-mal con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--105
+Underfull \hbox (badness 10000) in paragraph at lines 107--110
 \T1/cmr/m/n/12 troller tun-ing | rock-well au-toma-tion.  $\T1/cmtt/m/n/12 https : / / www .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--105
+Underfull \hbox (badness 10000) in paragraph at lines 107--110
 \T1/cmtt/m/n/12 rockwellautomation . com / en-[]us / company / news / the-[]journal /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--105
+Underfull \hbox (badness 10000) in paragraph at lines 107--110
 \T1/cmtt/m/n/12 access-[]live-[]historical-[]data-[]for-[]optimal-[]PID-[]controller-[]tuning .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--140
+Underfull \hbox (badness 1394) in paragraph at lines 112--115
+[]\T1/cmr/m/n/12 Chris Red-ding-ton Clay Nel-son.  How github ac-cel-er-ates de-vel-op-ment
+ []
+
+
+Underfull \hbox (badness 3838) in paragraph at lines 112--115
+\T1/cmr/m/n/12 for em-bed-ded sys-tems | the github blog.  $\T1/cmtt/m/n/12 https : / / github . blog /
+ []
+
+
+Overfull \hbox (27.28162pt too wide) in paragraph at lines 112--115
+\T1/cmtt/m/n/12 2023-[]03-[]09-[]how-[]github-[]accelerates-[]development-[]for-[]embedded-[]systems/$\T1/cmr/m/n/12 . 
+ []
+
+[40]
+Underfull \hbox (badness 10000) in paragraph at lines 152--155
 []\T1/cmr/m/n/12 Kashyap Vyas.  A brief his-tory of drones: The re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--140
+Underfull \hbox (badness 10000) in paragraph at lines 152--155
 \T1/cmr/m/n/12 mote con-trolled un-manned aerial ve-hi-cles (uavs),
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--140
+Underfull \hbox (badness 10000) in paragraph at lines 152--155
 \T1/cmr/m/n/12 2020.  $\T1/cmtt/m/n/12 https : / / interestingengineering . com / innovation /
  []
 
 
-Overfull \hbox (90.01654pt too wide) in paragraph at lines 137--140
+Overfull \hbox (90.01654pt too wide) in paragraph at lines 152--155
 \T1/cmtt/m/n/12 a-[]brief-[]history-[]of-[]drones-[]the-[]remote-[]controlled-[]unmanned-[]aerial-[]vehicles-[]uavs$\T1/cmr/m/n/12 . 
  []
 
 
-Underfull \hbox (badness 3536) in paragraph at lines 142--145
+Underfull \hbox (badness 3536) in paragraph at lines 157--160
 []\T1/cmr/m/n/12 Oleksandr Zozu-lia.  Freer-tos vs. zephyr project for em-bed-ded iot
  []
 
-[38]) [39]
+) [41]
 \openout2 = `control/thrust_experiments.aux'.
 
  (./control/thrust_experiments.tex
-<pictures/control/Motor thrust 1.jpg, id=198, 312.56775pt x 239.09325pt>
+<pictures/control/Motor thrust 1.jpg, id=204, 312.56775pt x 239.09325pt>
 File: pictures/control/Motor thrust 1.jpg Graphic file (type jpg)
 <use pictures/control/Motor thrust 1.jpg>
 Package pdftex.def Info: pictures/control/Motor thrust 1.jpg  used on input line 22.
 (pdftex.def)             Requested size: 418.25368pt x 319.93819pt.
- [40
+ [42
 
-] [41 <./pictures/control/Motor thrust 1.JPG>]
-<pictures/control/Motor thrust 2.jpg, id=205, 284.262pt x 288.47775pt>
+] [43 <./pictures/control/Motor thrust 1.JPG>]
+<pictures/control/Motor thrust 2.jpg, id=212, 284.262pt x 288.47775pt>
 File: pictures/control/Motor thrust 2.jpg Graphic file (type jpg)
 <use pictures/control/Motor thrust 2.jpg>
 Package pdftex.def Info: pictures/control/Motor thrust 2.jpg  used on input line 35.
 (pdftex.def)             Requested size: 418.25368pt x 424.47096pt.
-<pictures/control/Graph Thrust.jpg, id=206, 317.988pt x 251.13824pt>
+<pictures/control/Graph Thrust.jpg, id=213, 317.988pt x 251.13824pt>
 File: pictures/control/Graph Thrust.jpg Graphic file (type jpg)
 <use pictures/control/Graph Thrust.jpg>
 Package pdftex.def Info: pictures/control/Graph Thrust.jpg  used on input line 47.
 (pdftex.def)             Requested size: 418.25368pt x 330.34239pt.
- [42] [43 <./pictures/control/Motor thrust 2.JPG>] [44 <./pictures/control/Graph Thrust.JPG>] (./main.aux (./introduction/background.aux) (./introduction/problem_statement.aux) (./design/Drone_body.aux) (./control/plant_equations.aux) (./software/embeded.aux) (./software/quickpid.aux) (./software/logging.aux) (./control/thrust_experiments.aux))
+ [44] [45 <./pictures/control/Motor thrust 2.JPG>] [46 <./pictures/control/Graph Thrust.JPG>] (./main.aux (./introduction/background.aux) (./introduction/problem_statement.aux) (./software/github.aux) (./design/Drone_body.aux) (./control/plant_equations.aux) (./software/embeded.aux) (./software/quickpid.aux) (./software/logging.aux) (./control/thrust_experiments.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) )
-(\end occurred when \iftrue on line 75 was incomplete)
-(\end occurred when \ifx on line 75 was incomplete)
-(\end occurred when \ifnum on line 75 was incomplete) 
+(\end occurred when \iftrue on line 76 was incomplete)
+(\end occurred when \ifx on line 76 was incomplete)
+(\end occurred when \ifnum on line 76 was incomplete) 
 Here is how much of TeX's memory you used:
- 7002 strings out of 476037
- 129555 string characters out of 5794152
+ 7036 strings out of 476038
+ 130640 string characters out of 5794173
  1864779 words of memory out of 5000000
- 27241 multiletter control sequences out of 15000+600000
+ 27267 multiletter control sequences out of 15000+600000
  526381 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,12n,79p,1311b,431s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 69i,12n,79p,1320b,431s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbi1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbi2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfxc2074.pfb>
-Output written on main.pdf (45 pages, 2218482 bytes).
+Output written on main.pdf (47 pages, 2222444 bytes).
 PDF statistics:
- 293 PDF objects out of 1000 (max. 8388607)
- 157 compressed objects within 2 object streams
+ 299 PDF objects out of 1000 (max. 8388607)
+ 161 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  191 words of extra memory for PDF output out of 10000 (max. 10000000)
 

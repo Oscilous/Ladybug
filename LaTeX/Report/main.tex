@@ -1,11 +1,14 @@
-\documentclass[titlepage,a4paper,11pt]{article}
+\documentclass[titlepage,a4paper,12pt,]{article}
 \usepackage{graphicx} % Required for inserting images
 \usepackage{float}
+\usepackage{setspace}
 \usepackage{url}
-\usepackage{tkzexample}
+%\usepackage{minted}
 \usepackage{booktabs}
 \usepackage{geometry}
+\usepackage{parskip}
 \usepackage{ragged2e}
+\usepackage{subfig}
 \usepackage{cite}
 \usepackage[svgnames]{xcolor}
 \usepackage{makecell, tabularx}
@@ -19,6 +22,8 @@
 \usepackage{enumitem}\usepackage{tabularx}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\graphicspath{ {./pictures/} }
+\onehalfspacing
 
 \begin{document}
 
@@ -26,19 +31,19 @@
 \begin{center}
   \bfseries
   \huge UNIVERSITY OF SOUTHERN DENMARK
-  \vskip.2in
+  \vskip.1in
   \textsc{\LARGE Faculty of engineering}
-  \vskip.2in
+  \vskip.1in
   \large BEng Mechatronics
-  \vskip1in
+  \vskip.1in
   \Large Mechatronics Semester Project 4
-  \vskip1.5in
+  \vskip0.1in
   \emph{\huge Ladybug}
 \end{center}
 
-\vskip1.4in
+\vskip0.7in
 
-\begin{minipage}{.35\textwidth}
+\begin{minipage}[10pt]{.18\textwidth}
   \begin{flushleft}
     \bfseries\large Supervisor:\par \emph{Lars Duggen} \par \emph{Davi Goncalves Accioli} \end{flushleft}
 \end{minipage}
@@ -58,11 +63,9 @@
 
 \include{introduction/background.tex}
 \include{introduction/problem_statement.tex}
-
-\section{Design and manufacturing of quadrotor}
-%\insert{design/}
-
-\section{Software prototyping}
+\include{software/github.tex}
+\include{design/Drone_body.tex}
+\include{control/plant_equations.tex}
 \include{software/embeded.tex}
 \include{software/quickpid.tex}
 \include{software/logging.tex}
@@ -70,5 +73,5 @@
 \bibliographystyle{plain}
 \bibliography{references}
 \appendix
-
+\include{control/thrust_experiments.tex}
 \end{document}

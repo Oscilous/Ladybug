@@ -8,39 +8,11 @@ This iterative method makes it easier to identify ideal PID parameter combinatio
 The Seeduino XIAO nRF52840 lacks an inbuilt EEPROM (Electrically Erasable Programmable Read-Only Memory). The nRF52840 SoC has 1 MB of inbuilt Flash memory, and the XIAO board has 2MB of onboard flash memory for storing data. The choice was based on the following benefits of adopting flash memory:
 \begin{itemize}
     \item
-        Faster Read and Write Operations: Flash memory generally offers faster read and write speeds compared to EEPROM. This will be advantageous in the iteration process when there is a need to access data quickly or update it frequently.
+        Faster Read and Write Operations: Flash memory generally offers faster read and write speeds compared to EEPROM.\cite{Sandeep} This will be advantageous in the iteration process when there is a need to access data quickly or update it frequently.
     \item
-    	Endurance and Lifetime: Flash memory typically has a higher endurance level than EEPROM. It can withstand a larger number of read and write cycles before it starts to degrade. This endurance is particularly important when you need to update or modify the contents of the memory frequently.
+    	Endurance and Lifetime: Flash memory typically has a higher endurance level than EEPROM. It can withstand a larger number of read and write cycles before it starts to degrade.\cite{Sandeep} This endurance is particularly important when you need to update or modify the contents of the memory frequently.
     \item
     	Cost and Space Efficiency: Since the nRF52840 chip already integrates Flash memory, using it eliminates the need for an additional EEPROM chip. This reduces the component count, simplifies the PCB layout, and potentially lowers the overall cost and space requirements of your design.
 \end{itemize}
 NanoBLEFlashPrefs is a Arduino library, which is a substitute for missing EEPROM storage on Arduino Nano 33 BLE and 33 BLE Sense (not for Nano 33 IoT or other Nano boards). \cite{FlashPrefs}
 As the Seeduino XIAO nRF52840 Sense uses the same SoC chip as the Arduino Nano 33 BLE Sense, it can be easily used for the project. \cite{Nano33} \cite{wikiSeeed}
-
-\begin{code}[]
-    \documentclass[10pt]{article}
-    \usepackage{xcolor}
-    \usepackage{pgf,tikz}
-    \usepackage{tkzexample} 
-    \colorlet{codeonlybackground}{red!10}% sets background for tkzltxexample
-    \begin{document}
-typedef struct flashStruct
-{
-  int time[DURATION / LOG_PERIOD];
-  signed char phi[DURATION / LOG_PERIOD];
-  signed char theta[DURATION / LOG_PERIOD];
-} flashPrefs;
-NanoBLEFlashPrefs myFlashPrefs;
-flashPrefs prefs;
-
-int rc = myFlashPrefs.readPrefs(&prefs, sizeof(prefs));
-
-// Prepare preference record for writing
-prefs.time = millis();
-prefs.someNumber = Complimentary[0];
-prefs.anotherNumber = Complimentary[1];
-
-// Write it to flash memory
-myFlashPrefs.writePrefs(&prefs, sizeof(prefs));
-
-\end{code}

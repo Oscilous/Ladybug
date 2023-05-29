@@ -1,24 +1,12 @@
-\documentclass[12pt]{article}
-\usepackage{graphicx}
-\usepackage{parskip}
-\usepackage{url}
-\usepackage{float}
-\usepackage{setspace}
-\graphicspath{ {./pictures/} }
-\onehalfspacing
-\usepackage{subfig}
-
-\begin{document}
-
-\section{Designing the drone}
+\section{Design and manufacturing of quadrotor}
 
 The main body of the drone is created as a PCB, in order for the body to host both the structural element and the electrical connections of the drone. Since the project formulation’s main goals dictates the drones size and mechanical properties, the drones size was chosen to be $100 mm^2$, so that the PCB could accommodate all the needed components of the drone. The PCB shape itself was designed in Siemens NX as a simple outline with holes for the motor mounts. This outline was exported in a DXF format into Autodesk Eagle were the actual PCB was designed from the needed electrical circuit. The electrical schematic was created in Eagle’s schematic designer and then automatically converted to a PCB board with the auto-router feature. The trace width of the PCB is specifically chosen to be 30 mills so it can supply the needed 1.72 amps \cite{PCBTracewidth} for the motors at maximum rpm. The microcontroller of the drone is mounted by pin headers, the motors by the motor mounts and the remaining components by soldering onto the top layer. The position of the microcontroller is offset from the center, in order to ensure that the In-built IMU is centered to the exact middle of the PCB.
 
 \begin{figure}[H]%
     \centering
-    \subfloat[\centering CAD View]{{\includegraphics[width=5cm]{DroneCAD.png} }}%
+    \subfloat[\centering CAD View]{{\includegraphics[width=5cm]{design/DroneCAD.png} }}%
     \qquad
-    \subfloat[\centering PCB View]{{\includegraphics[width=5cm]{PCBpicture.png} }}%
+    \subfloat[\centering PCB View]{{\includegraphics[width=5cm]{design/PCBpicture.png} }}%
     \caption{Drone model}%
     \label{fig:example}%
 \end{figure}
@@ -29,7 +17,7 @@ As a less power consuning simple and lighter option, a single N-channel mosfet w
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale=0.7]{Mosfet_Control}
+    \includegraphics[scale=0.7]{design/Mosfet_Control}
     \end{center}
     \caption{Motor control with MOSFET.}
     \label{fig:Mosfet_Control}
@@ -52,7 +40,7 @@ the battery is not alone capable of supplying the current.
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale=0.7]{Continuous_Current}
+    \includegraphics[scale=0.7]{design/Continuous_Current}
     \end{center}
     \caption{Current flow during continuous operation.}
     \label{fig:Continuous_Current}
@@ -60,7 +48,7 @@ the battery is not alone capable of supplying the current.
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale=0.7]{Surge_Current}
+    \includegraphics[scale=0.7]{design/Surge_Current}
     \end{center}
     \caption{Potential current flow due to surge current.}
     \label{fig:Surge_Current}
@@ -72,7 +60,7 @@ configuration.
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale=0.7]{Diode_Protection}
+    \includegraphics[scale=0.7]{design/Diode_Protection}
     \end{center}
     \caption{Diode added to prevent reverse current flow from MCU.}
     \label{fig:Diode_Protection}
@@ -84,7 +72,7 @@ and the MCU BAT+ and BAT- pins.
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale=0.7]{Diode_Protection_&_decoupling_capacitors}
+    \includegraphics[scale=0.7]{design/Diode_Protection_&_decoupling_capacitors}
     \end{center}
     \caption{Example of decoupling capacitor for stable voltage to MCU.}
     \label{fig:Diode_Protection_&_decoupling_capacitors}
@@ -102,11 +90,11 @@ With the combination of the CAD-outline and the electrical schematic, PCB Gerber
 
 \begin{figure}[H]%
     \centering
-    \subfloat[\centering Motor Mount]{{\includegraphics[width=3cm]{Droneleg.png} }}%
+    \subfloat[\centering Motor Mount]{{\includegraphics[width=3cm]{design/Droneleg.png} }}%
     \qquad
-    \subfloat[\centering Mounted Motor]{{\includegraphics[width=3cm]{Dronepressfit.png} }}%
+    \subfloat[\centering Mounted Motor]{{\includegraphics[width=3cm]{design/Dronepressfit.png} }}%
     \qquad
-    \subfloat[\centering Prop Guard]{{\includegraphics[width=3cm]{Dronepropguard.png} }}%
+    \subfloat[\centering Prop Guard]{{\includegraphics[width=3cm]{design/Dronepropguard.png} }}%
     \caption{3D-Printed drone parts}%
     \label{fig:example}%
 \end{figure}
@@ -115,7 +103,7 @@ The project formulation states that the “Stress of the drone’s structural sy
 
 \begin{figure}[H]%
     \centering
-    \subfloat{{\includegraphics[width=10cm]{Ansys1.png} }}%
+    \subfloat{{\includegraphics[width=10cm]{design/Ansys1.png} }}%
     \caption{Initial Ansys Simulation}%
     \label{fig:example}%
 \end{figure}
@@ -124,7 +112,7 @@ Although it was clear that the drone body would be strong enough to operate unde
 
 \begin{figure}[H]%
     \centering
-    \subfloat{{\includegraphics[width=10cm]{Ansys2.png} }}%
+    \subfloat{{\includegraphics[width=10cm]{design/Ansys2.png} }}%
     \caption{Final Ansys Simulation}%
     \label{fig:example}%
 \end{figure}
@@ -133,15 +121,9 @@ To power the drone a single cell Turnigy Li-Po battery is used, at 3.7 - 4.2 V a
 
 \begin{figure}[H]%
     \centering
-    \subfloat[\centering Turnigy Battery]{{\includegraphics[width=5cm]{battery.jpeg} }}%
+    \subfloat[\centering Turnigy Battery]{{\includegraphics[width=5cm]{design/battery.jpeg} }}%
     \qquad
-    \subfloat[\centering 8520 DC-motor]{{\includegraphics[width=5cm]{8520.jpg} }}%
+    \subfloat[\centering 8520 DC-motor]{{\includegraphics[width=5cm]{design/8520.jpg} }}%
     \caption{Motor and Battery used on the drone}%
     \label{fig:example}%
 \end{figure}
-
-
-\bibliographystyle{plain}
-\bibliography{Sources}
-
-\end{document}

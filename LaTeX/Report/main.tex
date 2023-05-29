@@ -2,6 +2,7 @@
 \usepackage{graphicx} % Required for inserting images
 \usepackage{float}
 \usepackage{url}
+\usepackage{tkzexample}
 \usepackage{booktabs}
 \usepackage{geometry}
 \usepackage{ragged2e}
@@ -54,11 +55,13 @@
 \Large Year \the\year
 \end{titlepage}
 
-%Introduction
+
 \include{introduction/background.tex}
 \include{introduction/problem_statement.tex}
 
-%Software prototyping
+\section{Design and manufacturing of quadrotor}
+%\insert{design/}
+
 \section{Software prototyping}
 \include{software/embeded.tex}
 \include{software/quickpid.tex}

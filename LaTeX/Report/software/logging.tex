@@ -17,3 +17,30 @@ The Seeduino XIAO nRF52840 lacks an inbuilt EEPROM (Electrically Erasable Progra
 NanoBLEFlashPrefs is a Arduino library, which is a substitute for missing EEPROM storage on Arduino Nano 33 BLE and 33 BLE Sense (not for Nano 33 IoT or other Nano boards). \cite{FlashPrefs}
 As the Seeduino XIAO nRF52840 Sense uses the same SoC chip as the Arduino Nano 33 BLE Sense, it can be easily used for the project. \cite{Nano33} \cite{wikiSeeed}
 
+\begin{code}[]
+    \documentclass[10pt]{article}
+    \usepackage{xcolor}
+    \usepackage{pgf,tikz}
+    \usepackage{tkzexample} 
+    \colorlet{codeonlybackground}{red!10}% sets background for tkzltxexample
+    \begin{document}
+typedef struct flashStruct
+{
+  int time[DURATION / LOG_PERIOD];
+  signed char phi[DURATION / LOG_PERIOD];
+  signed char theta[DURATION / LOG_PERIOD];
+} flashPrefs;
+NanoBLEFlashPrefs myFlashPrefs;
+flashPrefs prefs;
+
+int rc = myFlashPrefs.readPrefs(&prefs, sizeof(prefs));
+
+// Prepare preference record for writing
+prefs.time = millis();
+prefs.someNumber = Complimentary[0];
+prefs.anotherNumber = Complimentary[1];
+
+// Write it to flash memory
+myFlashPrefs.writePrefs(&prefs, sizeof(prefs));
+
+\end{code}

@@ -2,9 +2,31 @@
 
 \bibitem{Nano33}
 Arduino® nano 33 ble sense, product reference manual, sku: Abx00031.
+\newblock \url{https://docs.arduino.cc/static/c78bcba85187bcd88d447f50050b4e89/ABX00031-datasheet.pdf}.
+
+\bibitem{DecouplingCap}
+{Autodesk} what are decoupling capacitors?
+\newblock \url{https://www.autodesk.com/products/fusion-360/blog/what-are-decoupling-capacitors/}.
 
 \bibitem{FlashPrefs}
 Dirk-/nanobleflashprefs: Substitute for the missing eeprom storage on arduino nano 33 ble and ble sense.
+\newblock \url{https://github.com/Dirk-/NanoBLEFlashPrefs/tree/main}.
+
+\bibitem{FDD8896}
+{Fairchild Semiconductor} fdd8896 datasheet.
+\newblock \url{https://pdf1.alldatasheet.com/datasheet-pdf/view/85382/FAIRCHILD/FDD8896.html}.
+
+\bibitem{FR4}
+{Matweb} fr4 material properties.
+\newblock \url{https://www.matweb.com/search/DataSheet.aspx?MatGUID=3c5f252f235844fb9ffec6d1856ba0e3&ckck=1}.
+
+\bibitem{PCBTracewidth}
+{Millenium Circuits Limited} pcb trace width.
+\newblock \url{https://www.mclpcb.com/blog/pcb-trace-width-vs-current-table/ }.
+
+\bibitem{1N5818}
+{Motorola} 1n5818 datasheet.
+\newblock \url{https://pdf1.alldatasheet.com/datasheet-pdf/view/2817/MOTOROLA/1N5818.html}.
 
 \bibitem{MotorConstants}
 Wikipedia motor constants.
@@ -38,6 +60,7 @@ Benjamin Cabé.
 \bibitem{QuickPID}
 Dlloydev.
 \newblock Dlloydev/quickpid: A fast pid controller with multiple options. various integral anti-windup, proportional, derivative and timer control modes.
+\newblock \url{https://github.com/Dlloydev/QuickPID}.
 
 \bibitem{Droner}
 Trafikstyrelsen Droner.
@@ -73,6 +96,7 @@ micro ROS.
 \bibitem{PIDlog}
 Dennis Nash.
 \newblock How to access data for optimal controller tuning | rockwell automation.
+\newblock \url{https://www.rockwellautomation.com/en-us/company/news/the-journal/access-live-historical-data-for-optimal-PID-controller-tuning.html}.
 
 \bibitem{Niculescu2021}
 Vlad Niculescu, Lorenzo Lamberti, Francesco Conti, Luca Benini, and Daniele Palossi.

@@ -1,0 +1,67 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: introduction/background.aux
+A level-1 auxiliary file: introduction/problem_statement.aux
+A level-1 auxiliary file: design/Drone_body.aux
+A level-1 auxiliary file: control/plant_equations.aux
+A level-1 auxiliary file: software/embeded.aux
+A level-1 auxiliary file: software/quickpid.aux
+A level-1 auxiliary file: software/logging.aux
+The style file: plain.bst
+A level-1 auxiliary file: control/thrust_experiments.aux
+Database file #1: references.bib
+Warning--to sort, need author or key in PCBTracewidth
+Warning--to sort, need author or key in FDD8896
+Warning--to sort, need author or key in 1N5818
+Warning--to sort, need author or key in DecouplingCap
+Warning--to sort, need author or key in FR4
+Warning--to sort, need author or key in MotorConstants
+Warning--to sort, need author or key in FlashPrefs
+Warning--to sort, need author or key in Nano33
+Warning--empty author in Nano33
+Warning--empty journal in Nano33
+Warning--empty year in Nano33
+Warning--empty journal in loggingProof
+You've used 29 entries,
+            2118 wiz_defined-function locations,
+            670 strings with 9729 characters,
+and the built_in function-call counts, 6406 in all, are:
+= -- 596
+> -- 215
+< -- 2
++ -- 96
+- -- 64
+* -- 277
+:= -- 997
+add.period$ -- 80
+call.type$ -- 29
+change.case$ -- 119
+chr.to.int$ -- 0
+cite$ -- 41
+duplicate$ -- 242
+empty$ -- 653
+format.name$ -- 64
+if$ -- 1411
+int.to.chr$ -- 0
+int.to.str$ -- 29
+missing$ -- 7
+newline$ -- 141
+num.names$ -- 42
+pop$ -- 244
+preamble$ -- 1
+purify$ -- 90
+quote$ -- 0
+skip$ -- 220
+stack$ -- 0
+substring$ -- 227
+swap$ -- 41
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 116
+warning$ -- 12
+while$ -- 48
+width$ -- 31
+write$ -- 269
+(There were 12 warnings)

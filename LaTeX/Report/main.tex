@@ -6,7 +6,9 @@
 %\usepackage{minted}
 \usepackage{booktabs}
 \usepackage{geometry}
+\usepackage{parskip}
 \usepackage{ragged2e}
+\usepackage{subfig}
 \usepackage{cite}
 \usepackage[svgnames]{xcolor}
 \usepackage{makecell, tabularx}
@@ -20,6 +22,7 @@
 \usepackage{enumitem}\usepackage{tabularx}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\graphicspath{ {./pictures/} }
 \onehalfspacing
 
 \begin{document}
@@ -40,7 +43,7 @@
 
 \vskip1.4in
 
-\begin{minipage}{.35\textwidth}
+\begin{minipage}{.18\textwidth}
   \begin{flushleft}
     \bfseries\large Supervisor:\par \emph{Lars Duggen} \par \emph{Davi Goncalves Accioli} \end{flushleft}
 \end{minipage}
@@ -60,11 +63,8 @@
 
 \include{introduction/background.tex}
 \include{introduction/problem_statement.tex}
-\section{Design and manufacturing of quadrotor}
 \include{design/Drone_body.tex}
-\section{Control prototyping}
 \include{control/plant_equations.tex}
-\section{Software prototyping}
 \include{software/embeded.tex}
 \include{software/quickpid.tex}
 \include{software/logging.tex}

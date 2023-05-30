@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.29)  30 MAY 2023 14:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.29)  30 MAY 2023 15:08
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -599,63 +599,68 @@ Package pdftex.def Info: pictures/control/pidexample.jpeg  used on input line 26
 \openout2 = `control/simulationofpid.aux'.
 
  (./control/simulationofpid.tex
-<pictures/control/simpidvalues.png, id=180, 289.58188pt x 113.42375pt>
+<pictures/control/posc.png, id=180, 557.58313pt x 109.91063pt>
+File: pictures/control/posc.png Graphic file (type png)
+<use pictures/control/posc.png>
+Package pdftex.def Info: pictures/control/posc.png  used on input line 5.
+(pdftex.def)             Requested size: 418.18633pt x 82.43275pt.
+<pictures/control/simpidvalues.png, id=181, 289.58188pt x 113.42375pt>
 File: pictures/control/simpidvalues.png Graphic file (type png)
 <use pictures/control/simpidvalues.png>
-Package pdftex.def Info: pictures/control/simpidvalues.png  used on input line 5.
+Package pdftex.def Info: pictures/control/simpidvalues.png  used on input line 13.
 (pdftex.def)             Requested size: 202.70592pt x 79.39607pt.
-<pictures/control/zpidnonoise.png, id=181, 581.67313pt x 218.31563pt>
+<pictures/control/zpidnonoise.png, id=182, 581.67313pt x 218.31563pt>
 File: pictures/control/zpidnonoise.png Graphic file (type png)
 <use pictures/control/zpidnonoise.png>
-Package pdftex.def Info: pictures/control/zpidnonoise.png  used on input line 13.
+Package pdftex.def Info: pictures/control/zpidnonoise.png  used on input line 21.
 (pdftex.def)             Requested size: 407.16841pt x 152.81989pt.
-<pictures/control/zpidnoise.png, id=182, 411.03563pt x 171.64125pt>
+<pictures/control/zpidnoise.png, id=183, 411.03563pt x 171.64125pt>
 File: pictures/control/zpidnoise.png Graphic file (type png)
 <use pictures/control/zpidnoise.png>
-Package pdftex.def Info: pictures/control/zpidnoise.png  used on input line 21.
+Package pdftex.def Info: pictures/control/zpidnoise.png  used on input line 29.
 (pdftex.def)             Requested size: 411.03462pt x 171.64081pt.
 ) [35
 
 
 
- <./pictures/control/simpidvalues.PNG> <./pictures/control/zpidnonoise.PNG> <./pictures/control/zpidnoise.PNG>]
+ <./pictures/control/posc.PNG> <./pictures/control/simpidvalues.PNG> <./pictures/control/zpidnonoise.PNG>] [36 <./pictures/control/zpidnoise.PNG>]
 \openout2 = `software/embeded.aux'.
 
  (./software/embeded.tex
-<pictures/iot_os.PNG, id=189, 669.09975pt x 364.36125pt>
+<pictures/iot_os.PNG, id=195, 669.09975pt x 364.36125pt>
 File: pictures/iot_os.PNG Graphic file (type png)
 <use pictures/iot_os.PNG>
 Package pdftex.def Info: pictures/iot_os.PNG  used on input line 11.
 (pdftex.def)             Requested size: 334.54906pt x 182.18018pt.
- [36
+ [37
 
 
 
- <./pictures/iot_os.PNG>] [37]
+ <./pictures/iot_os.PNG>] [38]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 68.
  (c:/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
-) [38]
-<pictures/serial_monitor.png, id=202, 584.1825pt x 224.63925pt>
+) [39]
+<pictures/serial_monitor.png, id=207, 584.1825pt x 224.63925pt>
 File: pictures/serial_monitor.png Graphic file (type png)
 <use pictures/serial_monitor.png>
 Package pdftex.def Info: pictures/serial_monitor.png  used on input line 85.
 (pdftex.def)             Requested size: 408.92496pt x 157.24638pt.
-) [39 <./pictures/serial_monitor.png>]
+) [40 <./pictures/serial_monitor.png>]
 \openout2 = `software/quickpid.aux'.
 
- (./software/quickpid.tex) [40
+ (./software/quickpid.tex) [41
 
 
 
 ]
 \openout2 = `software/logging.aux'.
 
- (./software/logging.tex) [41
+ (./software/logging.tex) [42
 
 
 
-] [42] (./main.bbl
+] [43] (./main.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--6
 []\T1/cmr/m/n/12 Arduino\TS1/cmr/m/n/12 ® \T1/cmr/m/n/12 nano 33 ble sense, prod-uct ref-er-ence man-
  []
@@ -705,7 +710,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--48
 \T1/cmtt/m/n/12 domains / civil-[]drones / drones-[]regulatory-[]framework-[]background /
  []
 
-[43
+[44
 
 
 ]
@@ -748,7 +753,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--63
 \T1/cmtt/m/n/12 difference-[]between-[]eeprom-[]and-[]flash-[]with-[]table / ?utm _ content =
  []
 
-[44]
+[45]
 Underfull \hbox (badness 10000) in paragraph at lines 106--109
 []\T1/cmr/m/n/12 Connected In-dus-try.  Freer-tos vs threadx vs zephyr:
  []
@@ -803,7 +808,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--141
 \T1/cmtt/m/n/12 access-[]live-[]historical-[]data-[]for-[]optimal-[]PID-[]controller-[]tuning .
  []
 
-[45]
+[46]
 Underfull \hbox (badness 1394) in paragraph at lines 143--146
 []\T1/cmr/m/n/12 Chris Red-ding-ton Clay Nel-son.  How github ac-cel-er-ates de-vel-op-ment
  []
@@ -843,29 +848,29 @@ Underfull \hbox (badness 3536) in paragraph at lines 193--196
 []\T1/cmr/m/n/12 Oleksandr Zozu-lia.  Freer-tos vs. zephyr project for em-bed-ded iot
  []
 
-[46]) [47]
+[47]) [48]
 \openout2 = `control/thrust_experiments.aux'.
 
  (./control/thrust_experiments.tex
-<pictures/control/Motor thrust 1.jpg, id=234, 312.56775pt x 239.09325pt>
+<pictures/control/Motor thrust 1.jpg, id=240, 312.56775pt x 239.09325pt>
 File: pictures/control/Motor thrust 1.jpg Graphic file (type jpg)
 <use pictures/control/Motor thrust 1.jpg>
 Package pdftex.def Info: pictures/control/Motor thrust 1.jpg  used on input line 22.
 (pdftex.def)             Requested size: 418.25368pt x 319.93819pt.
- [48
+ [49
 
-] [49 <./pictures/control/Motor thrust 1.JPG>]
-<pictures/control/Motor thrust 2.jpg, id=243, 284.262pt x 288.47775pt>
+] [50 <./pictures/control/Motor thrust 1.JPG>]
+<pictures/control/Motor thrust 2.jpg, id=248, 284.262pt x 288.47775pt>
 File: pictures/control/Motor thrust 2.jpg Graphic file (type jpg)
 <use pictures/control/Motor thrust 2.jpg>
 Package pdftex.def Info: pictures/control/Motor thrust 2.jpg  used on input line 35.
 (pdftex.def)             Requested size: 418.25368pt x 424.47096pt.
-<pictures/control/Graph Thrust.jpg, id=244, 317.988pt x 251.13824pt>
+<pictures/control/Graph Thrust.jpg, id=249, 317.988pt x 251.13824pt>
 File: pictures/control/Graph Thrust.jpg Graphic file (type jpg)
 <use pictures/control/Graph Thrust.jpg>
 Package pdftex.def Info: pictures/control/Graph Thrust.jpg  used on input line 47.
 (pdftex.def)             Requested size: 418.25368pt x 330.34239pt.
- [50] [51 <./pictures/control/Motor thrust 2.JPG>] [52 <./pictures/control/Graph Thrust.JPG>] (./main.aux (./introduction/background.aux) (./introduction/problem_statement.aux) (./introduction/risk_assesment.aux) (./software/github.aux) (./design/Drone_body.aux) (./control/plant_equations.aux) (./control/uavtoolbox.aux) (./control/theoryofpid.aux) (./control/simulationofpid.aux) (./software/embeded.aux) (./software/quickpid.aux) (./software/logging.aux) (./control/thrust_experiments.aux))
+ [51] [52 <./pictures/control/Motor thrust 2.JPG>] [53 <./pictures/control/Graph Thrust.JPG>] (./main.aux (./introduction/background.aux) (./introduction/problem_statement.aux) (./introduction/risk_assesment.aux) (./software/github.aux) (./design/Drone_body.aux) (./control/plant_equations.aux) (./control/uavtoolbox.aux) (./control/theoryofpid.aux) (./control/simulationofpid.aux) (./software/embeded.aux) (./software/quickpid.aux) (./software/logging.aux) (./control/thrust_experiments.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -874,18 +879,18 @@ LaTeX Warning: There were multiply-defined labels.
 (\end occurred when \ifx on line 84 was incomplete)
 (\end occurred when \ifnum on line 84 was incomplete) 
 Here is how much of TeX's memory you used:
- 7251 strings out of 476037
- 138400 string characters out of 5794152
+ 7264 strings out of 476037
+ 138753 string characters out of 5794152
  1864779 words of memory out of 5000000
- 27447 multiletter control sequences out of 15000+600000
+ 27459 multiletter control sequences out of 15000+600000
  526381 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,12n,79p,1311b,431s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbi1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbi2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfxc2074.pfb>
-Output written on main.pdf (53 pages, 3241694 bytes).
+Output written on main.pdf (54 pages, 3257451 bytes).
 PDF statistics:
- 329 PDF objects out of 1000 (max. 8388607)
- 174 compressed objects within 2 object streams
+ 334 PDF objects out of 1000 (max. 8388607)
+ 176 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 221 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 226 words of extra memory for PDF output out of 10000 (max. 10000000)
 

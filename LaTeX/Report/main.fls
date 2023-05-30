@@ -465,6 +465,10 @@ INPUT ./control/simulationofpid.tex
 INPUT ./control/simulationofpid.tex
 INPUT control/simulationofpid.tex
 INPUT control/simulationofpid.tex
+INPUT ./pictures/control/posc.PNG
+INPUT pictures/control/posc.PNG
+INPUT ./pictures/control/posc.PNG
+INPUT ./pictures/control/posc.PNG
 INPUT ./pictures/control/simpidvalues.PNG
 INPUT pictures/control/simpidvalues.PNG
 INPUT ./pictures/control/simpidvalues.PNG

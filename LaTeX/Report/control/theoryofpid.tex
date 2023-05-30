@@ -1,0 +1,35 @@
+\subsection{The theory of PID}
+
+\subsection{Principles of PID Control}
+
+PID (Proportional-Integral-Derivative) control is a widely used feedback control algorithm that plays a crucial role in various control systems. 
+
+PID control is based on three components: proportional, integral, and derivative. The proportional term provides control action based on the current error between the desired setpoint and the measured process variable. The integral term accumulates the past error over time to eliminate steady-state errors and enhance system stability. The derivative term calculates the rate of change of the error and helps dampen rapid changes, improving the response time and reducing overshoot.
+
+\subsection{PID Control Loop}
+
+The PID control loop consists of four main elements: the process or plant being controlled, in our case roll and pitch. A sensor or measurement device. The PID controller and the actuator. The IMU measures the process variable (angle), which is then compared to the desired setpoint. The PID controller calculates the control signal based on the error, and the actuator adjusts the system accordingly. This closed-loop feedback system continuously adjusts the control signal to maintain the process variable close to the setpoint.
+
+\subsection{Benefits of PID Control}
+
+PID control is a versatile and widely used control algorithm that provides effective control in a range of applications. There are other options, for example model predictive control, but those are less common and thus have smaller community.
+
+\paragraph{Stability}PID control helps maintain system stability by continuously adjusting the control signal based on the error feedback. The proportional, integral, and derivative terms work together to provide a balance between stability and responsiveness.
+\paragraph{Robustness}PID control is robust and effective in handling disturbances, noise, and external factors that may affect the system's performance. The integral term, in particular, helps eliminate steady-state errors caused by external disturbances.
+\paragraph{Adaptability}PID control can be tuned and adjusted to optimize performance based on specific system requirements. The controller gains can be modified to enhance stability, reduce overshoot, or improve response time.
+\paragraph{Simplicity}PID control is relatively easy to implement and understand. It offers a straightforward approach to control systems without requiring complex mathematical models or extensive computational resources.
+
+\subsection{Implementation}
+The performance of a PID controller depends on appropriate tuning to match the characteristics of the controlled system. Tuning involves adjusting the proportional, integral, and derivative gains to achieve the desired response. Various tuning methods, such as manual tuning, Ziegler-Nichols method, or model-based optimization, can be employed to find the optimal parameters for the specific system.
+
+For the drone PID was used Ziegler-Nichols method, as it is compromise between complexity and time.
+
+\subsection{One-axis setup}
+Making PID for both roll and pitch at the same time is not ideal, as there are more variable introduced, therefore a rig to fix movement to one axis was constructed. 
+
+Ziegler-Nichols method for PID controller requires coefficient P value and period of an stable oscillation with purely proportional gain. From those are calculated coefficient with help of constants using the following formulas: $$K_p = 0.6K_u$$ $$K_i = 1.2K_u / T_u$$ $$K_d = 0.075K_uT_u$$ Where 'u' denotes ultimate as in limit value before unstable oscillation.
+
+Value for the drone were found out to be ...
+
+
+\end{document}

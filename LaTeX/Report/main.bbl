@@ -16,6 +16,10 @@ Dirk-/nanobleflashprefs: Substitute for the missing eeprom storage on arduino na
 {Fairchild Semiconductor} fdd8896 datasheet.
 \newblock \url{https://pdf1.alldatasheet.com/datasheet-pdf/view/85382/FAIRCHILD/FDD8896.html}.
 
+\bibitem{MbedWiki}
+Filesystem - api references and tutorials | mbed os 6 documentation.
+\newblock \url{https://os.mbed.com/docs/mbed-os/v6.16/apis/filesystem.html}.
+
 \bibitem{FR4}
 {Matweb} fr4 material properties.
 \newblock \url{https://www.matweb.com/search/DataSheet.aspx?MatGUID=3c5f252f235844fb9ffec6d1856ba0e3&ckck=1}.
@@ -81,6 +85,7 @@ MAIA ESTRERA.
 Muhammet Gul, Suleyman Mete, Faruk Serin, and Erkan Celik.
 \newblock Fine–kinney occupational risk assessment method and its extensions by fuzzy sets: A state-of-the-art review.
 \newblock {\em Studies in Fuzziness and Soft Computing}, 398:1--11, 2021.
+\newblock \url{https://link.springer.com/chapter/10.1007/978-3-030-52148-6_1}.
 
 \bibitem{Hassanalian2017}
 M.~Hassanalian and A.~Abdelkefi.
@@ -147,6 +152,11 @@ Nordic Semiconductor.
 Seeed Studio.
 \newblock Getting started with seeed studio xiao nrf52840 (sense) | seeed studio wiki, 2023.
 \newblock \url{https://wiki.seeedstudio.com/XIAO_BLE/}.
+
+\bibitem{MbedNano}
+Karl Söderby.
+\newblock Installing mbed os nano boards | arduino documentation, 5 2023.
+\newblock \url{https://docs.arduino.cc/software/ide-v1/tutorials/getting-started/cores/arduino-mbed_nano}.
 
 \bibitem{loggingProof}
 Jasper~J. van Beers and Coen~C. de~Visser.

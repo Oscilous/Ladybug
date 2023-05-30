@@ -172,6 +172,9 @@ INPUT design/Drone_body.aux
 INPUT ./control/plant_equations.aux
 INPUT control/plant_equations.aux
 INPUT control/plant_equations.aux
+INPUT ./control/uavtoolbox.aux
+INPUT control/uavtoolbox.aux
+INPUT control/uavtoolbox.aux
 INPUT ./software/embeded.aux
 INPUT software/embeded.aux
 INPUT software/embeded.aux
@@ -430,6 +433,12 @@ INPUT ./pictures/control/Plant overview.png
 INPUT pictures/control/Plant overview.png
 INPUT ./pictures/control/Plant overview.png
 INPUT ./pictures/control/Plant overview.png
+INPUT ./control/uavtoolbox.tex
+OUTPUT control/uavtoolbox.aux
+INPUT ./control/uavtoolbox.tex
+INPUT ./control/uavtoolbox.tex
+INPUT control/uavtoolbox.tex
+INPUT control/uavtoolbox.tex
 INPUT ./software/embeded.tex
 OUTPUT software/embeded.aux
 INPUT ./software/embeded.tex
@@ -509,6 +518,9 @@ INPUT design/Drone_body.aux
 INPUT ./control/plant_equations.aux
 INPUT control/plant_equations.aux
 INPUT control/plant_equations.aux
+INPUT ./control/uavtoolbox.aux
+INPUT control/uavtoolbox.aux
+INPUT control/uavtoolbox.aux
 INPUT ./software/embeded.aux
 INPUT software/embeded.aux
 INPUT software/embeded.aux

@@ -51,6 +51,11 @@ Cavoukian Ann.
 \newblock Privacy and drones: Unmanned aerial vehicles, 2012.
 \newblock \url{http://www.ipc.on.ca/English/Resources/Discussion-Papers/}.
 
+\bibitem{LibrePID}
+James Bennett, Ajay Bhasin, Jamila Grant, and Wen~Chung Lim.
+\newblock Pid tuning via classical methods - engineering libretexts.
+\newblock \url{https://eng.libretexts.org/Bookshelves/Industrial_and_Systems_Engineering/Chemical_Process_Dynamics_and_Controls_(Woolf)/09%3A_Proportional-Integral-Derivative_(PID)_Control/9.03%3A_PID_Tuning_via_Classical_Methods}.
+
 \bibitem{Sandeep}
 Sandeep Bhandari.
 \newblock Difference between eeprom and flash.
@@ -75,6 +80,11 @@ Dlloydev.
 Trafikstyrelsen Droner.
 \newblock Flying drones in denmark, 2022.
 \newblock \url{https://www.droneregler.dk/english}.
+
+\bibitem{Efheij2019}
+Hafed Efheij, Abdulgani Albagul, and Nabela~Ammar Albraiki.
+\newblock Comparison of model predictive control and pid controller in real time process control system.
+\newblock {\em 19th International Conference on Sciences and Techniques of Automatic Control and Computer Engineering, STA 2019}, pages 64--69, 5 2019.
 
 \bibitem{WhoGithub}
 MAIA ESTRERA.
@@ -103,10 +113,21 @@ Joe Jaworski.
 \newblock {\em Copyright © 2023 T and L Publications}, 2019.
 \newblock \url{https://www.nutsvolts.com/magazine/article/a-real-time-operating-system-for-the-arduino}.
 
+\bibitem{PIDbook}
+Michael~A Johnson and Mohammad~H Moradi.
+\newblock Pid control: New identification and design methods.
+\newblock {\em © Springer-Verlag London Limited 2005}.
+
 \bibitem{Platform}
 PlatformIO Labs.
 \newblock A professional collaborative platform for embedded development · platformio.
 \newblock \url{https://platformio.org/}.
+
+\bibitem{ZNPID}
+P.~M. Meshram and Rohit~G. Kanojiya.
+\newblock Tuning of pid controller using ziegler-nichols method for speed control of dc motor.
+\newblock pages 117--122, 2012.
+\newblock \url{https://ieeexplore.ieee.org/abstract/document/6216102}.
 
 \bibitem{Comparison}
 micro ROS.

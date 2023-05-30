@@ -13,6 +13,7 @@ A level-1 auxiliary file: control/simulationofpid.aux
 A level-1 auxiliary file: software/embeded.aux
 A level-1 auxiliary file: software/quickpid.aux
 A level-1 auxiliary file: software/logging.aux
+A level-1 auxiliary file: software/flow.aux
 The style file: plain.bst
 A level-1 auxiliary file: control/thrust_experiments.aux
 Database file #1: references.bib
@@ -35,7 +36,7 @@ Warning--empty journal in ZNPID
 Warning--empty journal in loggingProof
 You've used 40 entries,
             2118 wiz_defined-function locations,
-            740 strings with 12418 characters,
+            741 strings with 12435 characters,
 and the built_in function-call counts, 9319 in all, are:
 = -- 870
 > -- 341

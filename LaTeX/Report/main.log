@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.29)  30 MAY 2023 15:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.29)  30 MAY 2023 16:44
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -230,7 +230,7 @@ LaTeX Warning: Label `fig:example' multiply defined.
 
 LaTeX Warning: Label `fig:example' multiply defined.
 
-) (./control/plant_equations.aux) (./control/uavtoolbox.aux) (./control/theoryofpid.aux) (./control/simulationofpid.aux) (./software/embeded.aux) (./software/quickpid.aux) (./software/logging.aux) (./control/thrust_experiments.aux
+) (./control/plant_equations.aux) (./control/uavtoolbox.aux) (./control/theoryofpid.aux) (./control/simulationofpid.aux) (./software/embeded.aux) (./software/quickpid.aux) (./software/logging.aux) (./software/flow.aux) (./control/thrust_experiments.aux
 
 LaTeX Warning: Label `fig:Final Thrust Setup' multiply defined.
 
@@ -660,7 +660,20 @@ Package pdftex.def Info: pictures/serial_monitor.png  used on input line 85.
 
 
 
-] [43] (./main.bbl
+] [43]
+\openout2 = `software/flow.aux'.
+
+ (./software/flow.tex
+<pictures/flowchart.jpg, id=222, 1281.78876pt x 648.4225pt>
+File: pictures/flowchart.jpg Graphic file (type jpg)
+<use pictures/flowchart.jpg>
+Package pdftex.def Info: pictures/flowchart.jpg  used on input line 5.
+(pdftex.def)             Requested size: 410.18079pt x 207.49944pt.
+) [44
+
+
+
+ <./pictures/flowchart.jpg>] (./main.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--6
 []\T1/cmr/m/n/12 Arduino\TS1/cmr/m/n/12 ® \T1/cmr/m/n/12 nano 33 ble sense, prod-uct ref-er-ence man-
  []
@@ -710,7 +723,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--48
 \T1/cmtt/m/n/12 domains / civil-[]drones / drones-[]regulatory-[]framework-[]background /
  []
 
-[44
+[45
 
 
 ]
@@ -753,7 +766,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--63
 \T1/cmtt/m/n/12 difference-[]between-[]eeprom-[]and-[]flash-[]with-[]table / ?utm _ content =
  []
 
-[45]
+[46]
 Underfull \hbox (badness 10000) in paragraph at lines 106--109
 []\T1/cmr/m/n/12 Connected In-dus-try.  Freer-tos vs threadx vs zephyr:
  []
@@ -808,7 +821,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--141
 \T1/cmtt/m/n/12 access-[]live-[]historical-[]data-[]for-[]optimal-[]PID-[]controller-[]tuning .
  []
 
-[46]
+[47]
 Underfull \hbox (badness 1394) in paragraph at lines 143--146
 []\T1/cmr/m/n/12 Chris Red-ding-ton Clay Nel-son.  How github ac-cel-er-ates de-vel-op-ment
  []
@@ -848,49 +861,49 @@ Underfull \hbox (badness 3536) in paragraph at lines 193--196
 []\T1/cmr/m/n/12 Oleksandr Zozu-lia.  Freer-tos vs. zephyr project for em-bed-ded iot
  []
 
-[47]) [48]
+[48]) [49]
 \openout2 = `control/thrust_experiments.aux'.
 
  (./control/thrust_experiments.tex
-<pictures/control/Motor thrust 1.jpg, id=240, 312.56775pt x 239.09325pt>
+<pictures/control/Motor thrust 1.jpg, id=245, 312.56775pt x 239.09325pt>
 File: pictures/control/Motor thrust 1.jpg Graphic file (type jpg)
 <use pictures/control/Motor thrust 1.jpg>
 Package pdftex.def Info: pictures/control/Motor thrust 1.jpg  used on input line 22.
 (pdftex.def)             Requested size: 418.25368pt x 319.93819pt.
- [49
+ [50
 
-] [50 <./pictures/control/Motor thrust 1.JPG>]
-<pictures/control/Motor thrust 2.jpg, id=248, 284.262pt x 288.47775pt>
+] [51 <./pictures/control/Motor thrust 1.JPG>]
+<pictures/control/Motor thrust 2.jpg, id=252, 284.262pt x 288.47775pt>
 File: pictures/control/Motor thrust 2.jpg Graphic file (type jpg)
 <use pictures/control/Motor thrust 2.jpg>
 Package pdftex.def Info: pictures/control/Motor thrust 2.jpg  used on input line 35.
 (pdftex.def)             Requested size: 418.25368pt x 424.47096pt.
-<pictures/control/Graph Thrust.jpg, id=249, 317.988pt x 251.13824pt>
+<pictures/control/Graph Thrust.jpg, id=253, 317.988pt x 251.13824pt>
 File: pictures/control/Graph Thrust.jpg Graphic file (type jpg)
 <use pictures/control/Graph Thrust.jpg>
 Package pdftex.def Info: pictures/control/Graph Thrust.jpg  used on input line 47.
 (pdftex.def)             Requested size: 418.25368pt x 330.34239pt.
- [51] [52 <./pictures/control/Motor thrust 2.JPG>] [53 <./pictures/control/Graph Thrust.JPG>] (./main.aux (./introduction/background.aux) (./introduction/problem_statement.aux) (./introduction/risk_assesment.aux) (./software/github.aux) (./design/Drone_body.aux) (./control/plant_equations.aux) (./control/uavtoolbox.aux) (./control/theoryofpid.aux) (./control/simulationofpid.aux) (./software/embeded.aux) (./software/quickpid.aux) (./software/logging.aux) (./control/thrust_experiments.aux))
+ [52] [53 <./pictures/control/Motor thrust 2.JPG>] [54 <./pictures/control/Graph Thrust.JPG>] (./main.aux (./introduction/background.aux) (./introduction/problem_statement.aux) (./introduction/risk_assesment.aux) (./software/github.aux) (./design/Drone_body.aux) (./control/plant_equations.aux) (./control/uavtoolbox.aux) (./control/theoryofpid.aux) (./control/simulationofpid.aux) (./software/embeded.aux) (./software/quickpid.aux) (./software/logging.aux) (./software/flow.aux) (./control/thrust_experiments.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) )
-(\end occurred when \iftrue on line 84 was incomplete)
-(\end occurred when \ifx on line 84 was incomplete)
-(\end occurred when \ifnum on line 84 was incomplete) 
+(\end occurred when \iftrue on line 85 was incomplete)
+(\end occurred when \ifx on line 85 was incomplete)
+(\end occurred when \ifnum on line 85 was incomplete) 
 Here is how much of TeX's memory you used:
- 7264 strings out of 476037
- 138753 string characters out of 5794152
+ 7311 strings out of 476037
+ 140109 string characters out of 5794152
  1864779 words of memory out of 5000000
- 27459 multiletter control sequences out of 15000+600000
+ 27497 multiletter control sequences out of 15000+600000
  526381 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,12n,79p,1311b,431s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbi1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbi2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfxc2074.pfb>
-Output written on main.pdf (54 pages, 3257451 bytes).
+Output written on main.pdf (55 pages, 3327686 bytes).
 PDF statistics:
- 334 PDF objects out of 1000 (max. 8388607)
- 176 compressed objects within 2 object streams
+ 339 PDF objects out of 1000 (max. 8388607)
+ 179 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 226 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 231 words of extra memory for PDF output out of 10000 (max. 10000000)
 

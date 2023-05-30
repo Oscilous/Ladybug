@@ -190,6 +190,9 @@ INPUT software/quickpid.aux
 INPUT ./software/logging.aux
 INPUT software/logging.aux
 INPUT software/logging.aux
+INPUT ./software/flow.aux
+INPUT software/flow.aux
+INPUT software/flow.aux
 INPUT ./control/thrust_experiments.aux
 INPUT control/thrust_experiments.aux
 INPUT control/thrust_experiments.aux
@@ -514,6 +517,16 @@ INPUT ./software/logging.tex
 INPUT ./software/logging.tex
 INPUT software/logging.tex
 INPUT software/logging.tex
+INPUT ./software/flow.tex
+OUTPUT software/flow.aux
+INPUT ./software/flow.tex
+INPUT ./software/flow.tex
+INPUT software/flow.tex
+INPUT software/flow.tex
+INPUT ./pictures/flowchart.jpg
+INPUT pictures/flowchart.jpg
+INPUT ./pictures/flowchart.jpg
+INPUT ./pictures/flowchart.jpg
 INPUT ./main.bbl
 INPUT main.bbl
 INPUT ./main.bbl
@@ -578,6 +591,9 @@ INPUT software/quickpid.aux
 INPUT ./software/logging.aux
 INPUT software/logging.aux
 INPUT software/logging.aux
+INPUT ./software/flow.aux
+INPUT software/flow.aux
+INPUT software/flow.aux
 INPUT ./control/thrust_experiments.aux
 INPUT control/thrust_experiments.aux
 INPUT control/thrust_experiments.aux

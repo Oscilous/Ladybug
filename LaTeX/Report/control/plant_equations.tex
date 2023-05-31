@@ -117,7 +117,7 @@ The constants/coefficients are calculated around 3.0V inputs, which is the volta
 \subsubsection{Environmental Forces}
 The drone is very small, weighing only approximately 55grams as per requirement and with little surface area. Because of this, aerodynamic effects have been neglected for the modelling. Environmental forces mainly include but are not limited to wind resistance and liftoff turbulence.
 
-\subsection{Plant Model Equations}
+\subsubsection{Generating Plant Model Equations}
 Now with the all the states and parameter defined, plant model equations can be generated. 
 First, we will look at how the motors should operate together to move the quadcopter in the desired direction. A quadcopter can move in x and y directions using pitch and roll. When the quadcopter rotates around one of its axis, all the rotor blades will generate thrust at an angle, moving the drone in a direction. It is important to control the individual motors so the drone won’t tilt too much, causing it to flip in the air. On the picture below the different cases of directional movement for the quadcopter can be seen.  
 
@@ -159,7 +159,7 @@ Body gyroscopic effects from changes in the quadcopter orientation.
 Propeller gyroscopic effects from propeller rotation and angle/orientation
 Actuation action forces produced by the rotors/propellers.
 
-\subsection{SIMULINK/Matlab Implementation}
+\subsubsection{SIMULINK/Matlab Implementation}
 To make the Simulink model the thrust equations must be transferred into the program using the angular speed as inputs and the motor parameters. Below we see the thrust equations in Simulink with the inputs on the left and outputs on the right. (The outputs are U1, U2, U3, and U4, as well as Omega) In SIMULINK the math is done using “blocks”, the addition and subtraction is performed first, and then the next blocks take the product. Essentially the math is converted using blocks in SIMULINK.
 
 \begin{figure}[H]

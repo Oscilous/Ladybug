@@ -652,7 +652,12 @@ INPUT ./software/logging.tex
 INPUT ./software/logging.tex
 INPUT software/logging.tex
 INPUT software/logging.tex
+INPUT ./software/Wireless.tex
 OUTPUT software/Wireless.aux
+INPUT ./software/Wireless.tex
+INPUT ./software/Wireless.tex
+INPUT software/Wireless.tex
+INPUT software/Wireless.tex
 INPUT ./software/flow.tex
 OUTPUT software/flow.aux
 INPUT ./software/flow.tex

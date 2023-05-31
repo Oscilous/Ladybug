@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.29)  31 MAY 2023 10:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.29)  31 MAY 2023 11:32
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -210,10 +210,74 @@ Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@posthook=\toks25
 ) (c:/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (c:/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip72
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2023/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (c:/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks26
+\ex@=\dimen182
+)) (c:/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen183
+) (c:/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count281
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count282
+\leftroot@=\count283
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count284
+\DOTSCASE@=\count285
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box56
+\strutbox@=\box57
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen184
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count286
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count287
+\dotsspace@=\muskip17
+\c@parentequation=\count288
+\dspbrk@lvl=\count289
+\tag@help=\toks27
+\row@=\count290
+\column@=\count291
+\maxfields@=\count292
+\andhelp@=\toks28
+\eqnshift@=\dimen185
+\alignsep@=\dimen186
+\tagshift@=\dimen187
+\tagwidth@=\dimen188
+\totwidth@=\dimen189
+\lineht@=\dimen190
+\@envbody=\toks29
+\multlinegap=\skip73
+\multlinetaggap=\skip74
+\mathdisplay@stack=\toks30
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
 ) (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count281
-\l__pdf_internal_box=\box56
+\l__color_backend_stack_int=\count293
+\l__pdf_internal_box=\box58
 ) (./main.aux (./introduction/background.aux) (./introduction/problem_statement.aux) (./introduction/morpho.aux) (./introduction/evaluation.aux) (./introduction/risk_assesment.aux) (./software/github.aux) (./design/Drone_body.aux
 
 LaTeX Warning: Label `fig:Mosfet_Control' multiply defined.
@@ -230,7 +294,7 @@ LaTeX Warning: Label `fig:example' multiply defined.
 
 LaTeX Warning: Label `fig:example' multiply defined.
 
-) (./control/plant_equations.aux) (./control/uavtoolbox.aux) (./control/theoryofpid.aux) (./control/simulationofpid.aux) (./software/embeded.aux) (./software/quickpid.aux) (./software/logging.aux) (./software/flow.aux) (./control/thrust_experiments.aux
+) (./control/plant_equations.aux) (./control/uavtoolbox.aux) (./control/theoryofpid.aux) (./control/linearization.aux) (./control/simulationofpid.aux) (./software/embeded.aux) (./software/quickpid.aux) (./software/logging.aux) (./software/flow.aux) (./control/thrust_experiments.aux
 
 LaTeX Warning: Label `fig:Final Thrust Setup' multiply defined.
 
@@ -253,17 +317,17 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
  (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count282
-\scratchdimen=\dimen182
-\scratchbox=\box57
-\nofMPsegments=\count283
-\nofMParguments=\count284
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count285
-\MPscratchDim=\dimen183
-\MPnumerator=\count286
-\makeMPintoPDFobject=\count287
-\everyMPtoPDFconversion=\toks27
+\scratchcounter=\count294
+\scratchdimen=\dimen191
+\scratchbox=\box59
+\nofMPsegments=\count295
+\nofMParguments=\count296
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count297
+\MPscratchDim=\dimen192
+\MPnumerator=\count298
+\makeMPintoPDFobject=\count299
+\everyMPtoPDFconversion=\toks32
 ) (c:/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
  (c:/texlive/2023/texmf-dist/tex/generic/infwarerr/infwarerr.sty
@@ -327,12 +391,6 @@ Overfull \hbox (2.92676pt too wide) in paragraph at lines 50--50
 \T1/cmr/bx/n/14.4 Supervisor:  
  []
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 51.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 51.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 51.
 [1
 
 {c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
@@ -622,91 +680,99 @@ File: pictures/control/pidexample.jpeg Graphic file (type jpg)
 Package pdftex.def Info: pictures/control/pidexample.jpeg  used on input line 26.
 (pdftex.def)             Requested size: 397.68303pt x 200.24675pt.
  [35]) [36 <./pictures/control/pidexample.jpeg>]
+\openout2 = `control/linearization.aux'.
+
+ (./control/linearization.tex) [37
+
+
+
+]
 \openout2 = `control/simulationofpid.aux'.
 
  (./control/simulationofpid.tex
-<pictures/control/posc.png, id=191, 557.58313pt x 109.91063pt>
+<pictures/control/posc.png, id=194, 557.58313pt x 109.91063pt>
 File: pictures/control/posc.png Graphic file (type png)
 <use pictures/control/posc.png>
 Package pdftex.def Info: pictures/control/posc.png  used on input line 7.
 (pdftex.def)             Requested size: 418.18633pt x 82.43275pt.
-<pictures/control/simpidvalues.png, id=192, 628.3475pt x 113.42375pt>
+<pictures/control/simpidvalues.png, id=195, 628.3475pt x 113.42375pt>
 File: pictures/control/simpidvalues.png Graphic file (type png)
 <use pictures/control/simpidvalues.png>
 Package pdftex.def Info: pictures/control/simpidvalues.png  used on input line 18.
 (pdftex.def)             Requested size: 408.42104pt x 73.72455pt.
-<pictures/control/zpidnonoise.png, id=193, 564.60938pt x 135.50626pt>
+<pictures/control/zpidnonoise.png, id=196, 564.60938pt x 135.50626pt>
 File: pictures/control/zpidnonoise.png Graphic file (type png)
 <use pictures/control/zpidnonoise.png>
-Package pdftex.def Info: pictures/control/zpidnonoise.png  used on input line 27.
+Package pdftex.def Info: pictures/control/zpidnonoise.png  used on input line 28.
 (pdftex.def)             Requested size: 395.22386pt x 94.85371pt.
- [37
+ [38
 
 
 
  <./pictures/control/posc.PNG> <./pictures/control/simpidvalues.PNG>]
-<pictures/control/zpidnoise.png, id=199, 573.14125pt x 204.26312pt>
+<pictures/control/zpidnoise.png, id=202, 573.14125pt x 204.26312pt>
 File: pictures/control/zpidnoise.png Graphic file (type png)
 <use pictures/control/zpidnoise.png>
-Package pdftex.def Info: pictures/control/zpidnoise.png  used on input line 35.
+Package pdftex.def Info: pictures/control/zpidnoise.png  used on input line 40.
 (pdftex.def)             Requested size: 401.19614pt x 142.9832pt.
-<pictures/control/phiPID.PNG, id=200, 567.62062pt x 220.825pt>
+<pictures/control/phiPID.PNG, id=203, 567.62062pt x 220.825pt>
 File: pictures/control/phiPID.PNG Graphic file (type png)
 <use pictures/control/phiPID.PNG>
-Package pdftex.def Info: pictures/control/phiPID.PNG  used on input line 43.
+Package pdftex.def Info: pictures/control/phiPID.PNG  used on input line 50.
 (pdftex.def)             Requested size: 397.33171pt x 154.57643pt.
-<pictures/control/thetaPID.PNG, id=201, 571.63562pt x 137.51375pt>
+ [39 <./pictures/control/zpidnonoise.PNG> <./pictures/control/zpidnoise.PNG>]
+<pictures/control/thetaPID.PNG, id=209, 571.63562pt x 137.51375pt>
 File: pictures/control/thetaPID.PNG Graphic file (type png)
 <use pictures/control/thetaPID.PNG>
-Package pdftex.def Info: pictures/control/thetaPID.PNG  used on input line 51.
+Package pdftex.def Info: pictures/control/thetaPID.PNG  used on input line 58.
 (pdftex.def)             Requested size: 400.1422pt x 96.25896pt.
-) [38 <./pictures/control/zpidnonoise.PNG> <./pictures/control/zpidnoise.PNG> <./pictures/control/phiPID.PNG>] [39 <./pictures/control/thetaPID.PNG>]
+) [40 <./pictures/control/phiPID.PNG> <./pictures/control/thetaPID.PNG>]
 \openout2 = `software/embeded.aux'.
 
  (./software/embeded.tex
-<pictures/iot_os.PNG, id=212, 669.09975pt x 364.36125pt>
+<pictures/iot_os.PNG, id=215, 669.09975pt x 364.36125pt>
 File: pictures/iot_os.PNG Graphic file (type png)
 <use pictures/iot_os.PNG>
 Package pdftex.def Info: pictures/iot_os.PNG  used on input line 11.
 (pdftex.def)             Requested size: 334.54906pt x 182.18018pt.
- [40
+ [41
 
 
 
- <./pictures/iot_os.PNG>] [41]
+ <./pictures/iot_os.PNG>] [42]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 68.
  (c:/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
-) [42]
-<pictures/serial_monitor.png, id=225, 584.1825pt x 224.63925pt>
+) [43]
+<pictures/serial_monitor.png, id=228, 584.1825pt x 224.63925pt>
 File: pictures/serial_monitor.png Graphic file (type png)
 <use pictures/serial_monitor.png>
 Package pdftex.def Info: pictures/serial_monitor.png  used on input line 85.
 (pdftex.def)             Requested size: 408.92496pt x 157.24638pt.
-) [43 <./pictures/serial_monitor.png>]
+) [44 <./pictures/serial_monitor.png>]
 \openout2 = `software/quickpid.aux'.
 
- (./software/quickpid.tex) [44
+ (./software/quickpid.tex) [45
 
 
 
 ]
 \openout2 = `software/logging.aux'.
 
- (./software/logging.tex) [45
+ (./software/logging.tex) [46
 
 
 
-] [46]
+] [47]
 \openout2 = `software/flow.aux'.
 
  (./software/flow.tex
-<pictures/flowchart.jpg, id=239, 1281.78876pt x 648.4225pt>
+<pictures/flowchart.jpg, id=242, 1281.78876pt x 648.4225pt>
 File: pictures/flowchart.jpg Graphic file (type jpg)
 <use pictures/flowchart.jpg>
 Package pdftex.def Info: pictures/flowchart.jpg  used on input line 5.
 (pdftex.def)             Requested size: 410.18079pt x 207.49944pt.
-) [47
+) [48
 
 
 
@@ -760,187 +826,187 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--48
 \T1/cmtt/m/n/12 domains / civil-[]drones / drones-[]regulatory-[]framework-[]background /
  []
 
-[48
+[49
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 55--58
+Underfull \hbox (badness 10000) in paragraph at lines 60--63
 []\T1/cmr/m/n/12 James Ben-nett, Ajay Bhasin, Jamila Grant, and Wen Chung
  []
 
 
-Underfull \hbox (badness 5302) in paragraph at lines 55--58
+Underfull \hbox (badness 5302) in paragraph at lines 60--63
 \T1/cmr/m/n/12 Lim.  Pid tun-ing via clas-si-cal meth-ods - en-gi-neer-ing li-bre-texts.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--58
+Underfull \hbox (badness 10000) in paragraph at lines 60--63
 \T1/cmtt/m/n/12 https : / / eng . libretexts . org / Bookshelves / Industrial _ and _ Systems _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--58
+Underfull \hbox (badness 10000) in paragraph at lines 60--63
 \T1/cmtt/m/n/12 Engineering / Chemical _ Process _ Dynamics _ and _ Controls _ (Woolf ) /09 %
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--58
+Underfull \hbox (badness 10000) in paragraph at lines 60--63
 \T1/cmtt/m/n/12 3A _ Proportional-[]Integral-[]Derivative _ (PID ) _Control / 9 . 03 % 3A _ PID _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--63
+Underfull \hbox (badness 10000) in paragraph at lines 65--68
 []\T1/cmr/m/n/12 Sandeep Bhan-dari.  Dif-fer-ence be-tween eep-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--63
+Underfull \hbox (badness 10000) in paragraph at lines 65--68
 \T1/cmr/m/n/12 rom and flash.  $\T1/cmtt/m/n/12 https : / / askanydifference . com /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--63
+Underfull \hbox (badness 10000) in paragraph at lines 65--68
 \T1/cmtt/m/n/12 difference-[]between-[]eeprom-[]and-[]flash-[]with-[]table / ?utm _ content =
  []
 
-[49]
-Underfull \hbox (badness 10000) in paragraph at lines 106--109
+[50]
+Underfull \hbox (badness 10000) in paragraph at lines 120--123
 []\T1/cmr/m/n/12 Connected In-dus-try.  Freer-tos vs threadx vs zephyr:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--109
+Underfull \hbox (badness 10000) in paragraph at lines 120--123
 \T1/cmr/m/n/12 The fight for true open source rtos, 2023.  $\T1/cmtt/m/n/12 https : / /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--109
+Underfull \hbox (badness 10000) in paragraph at lines 120--123
 \T1/cmtt/m/n/12 www . iiot-[]world . com / industrial-[]iot / connected-[]industry /
  []
 
 
-Overfull \hbox (22.10812pt too wide) in paragraph at lines 106--109
+Overfull \hbox (22.10812pt too wide) in paragraph at lines 120--123
 \T1/cmtt/m/n/12 freertos-[]vs-[]threadx-[]vs-[]zephyr-[]the-[]fight-[]for-[]true-[]open-[]source-[]rtos/$\T1/cmr/m/n/12 . 
  []
 
 
-Underfull \hbox (badness 5345) in paragraph at lines 111--115
+Underfull \hbox (badness 5345) in paragraph at lines 125--129
 []\T1/cmr/m/n/12 Joe Ja-worski.  A real-time op-er-at-ing sys-tem for the ar-duino -
  []
 
 
-Underfull \hbox (badness 5316) in paragraph at lines 111--115
+Underfull \hbox (badness 5316) in paragraph at lines 125--129
 \T1/cmr/m/n/12 nuts and volts mag-a-zine.  \T1/cmr/m/it/12 Copy-right \TS1/cmr/m/it/12 © \T1/cmr/m/it/12 2023 T and L Pub-li-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--115
+Underfull \hbox (badness 10000) in paragraph at lines 125--129
 \T1/cmr/m/it/12 ca-tions\T1/cmr/m/n/12 , 2019.  $\T1/cmtt/m/n/12 https : / / www . nutsvolts . com / magazine / article /
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 138--141
+[51]
+Underfull \hbox (badness 10000) in paragraph at lines 152--155
 []\T1/cmr/m/n/12 Dennis Nash.  How to ac-cess data for op-ti-mal con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--141
+Underfull \hbox (badness 10000) in paragraph at lines 152--155
 \T1/cmr/m/n/12 troller tun-ing | rock-well au-toma-tion.  $\T1/cmtt/m/n/12 https : / / www .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--141
+Underfull \hbox (badness 10000) in paragraph at lines 152--155
 \T1/cmtt/m/n/12 rockwellautomation . com / en-[]us / company / news / the-[]journal /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--141
+Underfull \hbox (badness 10000) in paragraph at lines 152--155
 \T1/cmtt/m/n/12 access-[]live-[]historical-[]data-[]for-[]optimal-[]PID-[]controller-[]tuning .
  []
 
-[50]
-Underfull \hbox (badness 1394) in paragraph at lines 143--146
+
+Underfull \hbox (badness 1394) in paragraph at lines 157--160
 []\T1/cmr/m/n/12 Chris Red-ding-ton Clay Nel-son.  How github ac-cel-er-ates de-vel-op-ment
  []
 
 
-Underfull \hbox (badness 3838) in paragraph at lines 143--146
+Underfull \hbox (badness 3838) in paragraph at lines 157--160
 \T1/cmr/m/n/12 for em-bed-ded sys-tems | the github blog.  $\T1/cmtt/m/n/12 https : / / github . blog /
  []
 
 
-Overfull \hbox (27.28162pt too wide) in paragraph at lines 143--146
+Overfull \hbox (27.28162pt too wide) in paragraph at lines 157--160
 \T1/cmtt/m/n/12 2023-[]03-[]09-[]how-[]github-[]accelerates-[]development-[]for-[]embedded-[]systems/$\T1/cmr/m/n/12 . 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 188--191
+[52]
+Underfull \hbox (badness 10000) in paragraph at lines 202--205
 []\T1/cmr/m/n/12 Kashyap Vyas.  A brief his-tory of drones: The re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 188--191
+Underfull \hbox (badness 10000) in paragraph at lines 202--205
 \T1/cmr/m/n/12 mote con-trolled un-manned aerial ve-hi-cles (uavs),
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 188--191
+Underfull \hbox (badness 10000) in paragraph at lines 202--205
 \T1/cmr/m/n/12 2020.  $\T1/cmtt/m/n/12 https : / / interestingengineering . com / innovation /
  []
 
 
-Overfull \hbox (90.01654pt too wide) in paragraph at lines 188--191
+Overfull \hbox (90.01654pt too wide) in paragraph at lines 202--205
 \T1/cmtt/m/n/12 a-[]brief-[]history-[]of-[]drones-[]the-[]remote-[]controlled-[]unmanned-[]aerial-[]vehicles-[]uavs$\T1/cmr/m/n/12 . 
  []
 
 
-Underfull \hbox (badness 3536) in paragraph at lines 193--196
+Underfull \hbox (badness 3536) in paragraph at lines 207--210
 []\T1/cmr/m/n/12 Oleksandr Zozu-lia.  Freer-tos vs. zephyr project for em-bed-ded iot
  []
 
-[51]) [52]
+) [53]
 \openout2 = `control/thrust_experiments.aux'.
 
  (./control/thrust_experiments.tex
-<pictures/control/Motor thrust 1.jpg, id=262, 312.56775pt x 239.09325pt>
+<pictures/control/Motor thrust 1.jpg, id=265, 312.56775pt x 239.09325pt>
 File: pictures/control/Motor thrust 1.jpg Graphic file (type jpg)
 <use pictures/control/Motor thrust 1.jpg>
 Package pdftex.def Info: pictures/control/Motor thrust 1.jpg  used on input line 22.
 (pdftex.def)             Requested size: 418.25368pt x 319.93819pt.
- [53
+ [54
 
-] [54 <./pictures/control/Motor thrust 1.JPG>]
-<pictures/control/Motor thrust 2.jpg, id=270, 284.262pt x 288.47775pt>
+] [55 <./pictures/control/Motor thrust 1.JPG>]
+<pictures/control/Motor thrust 2.jpg, id=273, 284.262pt x 288.47775pt>
 File: pictures/control/Motor thrust 2.jpg Graphic file (type jpg)
 <use pictures/control/Motor thrust 2.jpg>
 Package pdftex.def Info: pictures/control/Motor thrust 2.jpg  used on input line 35.
 (pdftex.def)             Requested size: 418.25368pt x 424.47096pt.
-<pictures/control/Graph Thrust.jpg, id=271, 317.988pt x 251.13824pt>
+<pictures/control/Graph Thrust.jpg, id=274, 317.988pt x 251.13824pt>
 File: pictures/control/Graph Thrust.jpg Graphic file (type jpg)
 <use pictures/control/Graph Thrust.jpg>
 Package pdftex.def Info: pictures/control/Graph Thrust.jpg  used on input line 47.
 (pdftex.def)             Requested size: 418.25368pt x 330.34239pt.
- [55] [56 <./pictures/control/Motor thrust 2.JPG>] [57 <./pictures/control/Graph Thrust.JPG>] (./main.aux (./introduction/background.aux) (./introduction/problem_statement.aux) (./introduction/morpho.aux) (./introduction/evaluation.aux) (./introduction/risk_assesment.aux) (./software/github.aux) (./design/Drone_body.aux) (./control/plant_equations.aux) (./control/uavtoolbox.aux) (./control/theoryofpid.aux) (./control/simulationofpid.aux) (./software/embeded.aux) (./software/quickpid.aux) (./software/logging.aux) (./software/flow.aux) (./control/thrust_experiments.aux))
+ [56] [57 <./pictures/control/Motor thrust 2.JPG>] [58 <./pictures/control/Graph Thrust.JPG>] (./main.aux (./introduction/background.aux) (./introduction/problem_statement.aux) (./introduction/morpho.aux) (./introduction/evaluation.aux) (./introduction/risk_assesment.aux) (./software/github.aux) (./design/Drone_body.aux) (./control/plant_equations.aux) (./control/uavtoolbox.aux) (./control/theoryofpid.aux) (./control/linearization.aux) (./control/simulationofpid.aux) (./software/embeded.aux) (./software/quickpid.aux) (./software/logging.aux) (./software/flow.aux) (./control/thrust_experiments.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) )
-(\end occurred when \iftrue on line 87 was incomplete)
-(\end occurred when \ifx on line 87 was incomplete)
-(\end occurred when \ifnum on line 87 was incomplete) 
+(\end occurred when \iftrue on line 88 was incomplete)
+(\end occurred when \ifx on line 88 was incomplete)
+(\end occurred when \ifnum on line 88 was incomplete) 
 Here is how much of TeX's memory you used:
- 7409 strings out of 476037
- 143671 string characters out of 5794152
+ 8166 strings out of 476037
+ 154532 string characters out of 5794152
  1864779 words of memory out of 5000000
- 27577 multiletter control sequences out of 15000+600000
- 526381 words of font info for 58 fonts, out of 8000000 for 9000
+ 28309 multiletter control sequences out of 15000+600000
+ 527055 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,12n,79p,1311b,431s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 69i,12n,79p,1311b,439s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbi1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbi2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfxc2074.pfb>
-Output written on main.pdf (58 pages, 3573340 bytes).
+Output written on main.pdf (59 pages, 3582378 bytes).
 PDF statistics:
- 356 PDF objects out of 1000 (max. 8388607)
- 185 compressed objects within 2 object streams
+ 359 PDF objects out of 1000 (max. 8388607)
+ 187 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  251 words of extra memory for PDF output out of 10000 (max. 10000000)
 

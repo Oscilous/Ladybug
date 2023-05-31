@@ -46,6 +46,11 @@ European Union Aviation~Safety Agency.
 \newblock Open category - civil drones | easa, 2023.
 \newblock \url{https://www.easa.europa.eu/en/domains/civil-drones/drones-regulatory-framework-background/open-category-civil-drones}.
 
+\bibitem{PIDLinear1}
+Tareq Aziz~Hasan AL-Qutami and Rosdiazli Ibrahim.
+\newblock (pdf) development of an advanced controller for flow process applications using fuzzy logic.
+\newblock 1 2016.
+
 \bibitem{Ann2012}
 Cavoukian Ann.
 \newblock Privacy and drones: Unmanned aerial vehicles, 2012.
@@ -97,10 +102,19 @@ Muhammet Gul, Suleyman Mete, Faruk Serin, and Erkan Celik.
 \newblock {\em Studies in Fuzziness and Soft Computing}, 398:1--11, 2021.
 \newblock \url{https://link.springer.com/chapter/10.1007/978-3-030-52148-6_1}.
 
+\bibitem{PIDLinear2}
+Johannes Günther, Elias Reichensdörfer, Patrick~M. Pilarski, and Klaus Diepold.
+\newblock Interpretable pid parameter tuning for control engineering using general dynamic neural networks: An extensive comparison.
+\newblock {\em PLoS ONE}, 15, 12 2020.
+
 \bibitem{Hassanalian2017}
 M.~Hassanalian and A.~Abdelkefi.
 \newblock Classifications, applications, and design challenges of drones: A review.
 \newblock {\em Progress in Aerospace Sciences}, 91:99--131, 5 2017.
+
+\bibitem{PIDLinear3}
+M.Sc.~Graham Hunter.
+\newblock Pid control fundamentals - hunter consulting llc, 6 2022.
 
 \bibitem{Industry}
 Connected Industry.

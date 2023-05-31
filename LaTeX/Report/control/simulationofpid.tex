@@ -1,6 +1,6 @@
 \subsection{The simulation of PID}
 
-The Ziegler-Nichols approach, as discussed in the previous chapter, was employed for calibration in the PID controller simulation. To begin, the Simulink PID blocks were adjusted to only have the gain value and then adjusted until an oscillating response was obtained, around a specified setpoint. (See figure \ref{fig:posc}) Simulink data inspector was used to viewing the output because it also included useful features, such as measuring with two cursors, which came in handy while measuring the period of the oscillation period.
+The Ziegler-Nichols approach, as discussed in the previous chapter, was employed for calibration in the Z PID controller simulation. To begin, the Simulink PID blocks were adjusted to only have the gain value and then adjusted until an oscillating response was obtained, around a specified setpoint. (See figure \ref{fig:posc}) Simulink data inspector was used to viewing the output because it also included useful features, such as measuring with two cursors, which came in handy while measuring the period of the oscillation period.
 
 \begin{figure}[H]
     \begin{center}
@@ -21,7 +21,8 @@ The final values for an adjusted PID system where as follows, where red indicate
     \label{fig:simpidvalues}
 \end{figure}
 
-After tuning the PID, the output response was
+After tuning the PID, the output response was ideal. (See figure \ref{fig:zpidnonoise})
+
 \begin{figure}[H]
     \begin{center}
     \includegraphics[scale=0.7]{pictures/control/zpidnonoise}
@@ -30,6 +31,10 @@ After tuning the PID, the output response was
     \label{fig:zpidnonoise}
 \end{figure}
 
+Unfortunately, this is the plant's response when there is no noise, thus when noise is introduced, the response drifts. (See figure \ref{fig:zpidnoise})
+This was caused by the integral term summarizing all noise-induced errors. This was a clear indication that more than one sensor was required for accurate Z-axis calibration.
+Thus, instead of using the IMU Z acceleration as input, an IR sensor was added to the real system and used as input.
+
 \begin{figure}[H]
     \begin{center}
     \includegraphics[scale=0.7]{pictures/control/zpidnoise}
@@ -37,6 +42,8 @@ After tuning the PID, the output response was
     \caption{Example of a system tuned using the Ziegler-Nichols method\cite{LibrePID}}
     \label{fig:zpidnoise}
 \end{figure}
+
+
 
 \begin{figure}[H]
     \begin{center}

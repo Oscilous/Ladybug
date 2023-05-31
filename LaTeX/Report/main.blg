@@ -22,6 +22,7 @@ A level-1 auxiliary file: software/Wireless.aux
 A level-1 auxiliary file: software/flow.aux
 The style file: plain.bst
 A level-1 auxiliary file: control/thrust_experiments.aux
+A level-1 auxiliary file: control/Motor_Testing.aux
 A level-1 auxiliary file: introduction/Budget.aux
 Database file #1: references.bib
 Warning--entry type for "MbedWiki" isn't style-file defined
@@ -44,7 +45,7 @@ Warning--empty journal in ZNPID
 Warning--empty journal in loggingProof
 You've used 43 entries,
             2118 wiz_defined-function locations,
-            765 strings with 13112 characters,
+            766 strings with 13137 characters,
 and the built_in function-call counts, 10067 in all, are:
 = -- 937
 > -- 384

@@ -1,8 +1,8 @@
-PWD c:/Users/Artis/Desktop/Ladybug/LaTeX/Report
+PWD c:/Users/thoru/Documents/GitHub/Ladybug/LaTeX/Report
 INPUT c:/texlive/2023/texmf.cnf
 INPUT c:/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/Artis/Desktop/Ladybug/LaTeX/Report/main.tex
+INPUT c:/Users/thoru/Documents/GitHub/Ladybug/LaTeX/Report/main.tex
 OUTPUT main.log
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
@@ -234,6 +234,9 @@ INPUT software/flow.aux
 INPUT ./control/thrust_experiments.aux
 INPUT control/thrust_experiments.aux
 INPUT control/thrust_experiments.aux
+INPUT ./control/Motor_Testing.aux
+INPUT control/Motor_Testing.aux
+INPUT control/Motor_Testing.aux
 INPUT ./introduction/Budget.aux
 INPUT introduction/Budget.aux
 INPUT introduction/Budget.aux
@@ -709,6 +712,25 @@ INPUT ./pictures/control/Graph Thrust.JPG
 INPUT pictures/control/Graph Thrust.JPG
 INPUT ./pictures/control/Graph Thrust.JPG
 INPUT ./pictures/control/Graph Thrust.JPG
+INPUT ./control/Motor_Testing.tex
+OUTPUT control/Motor_Testing.aux
+INPUT ./control/Motor_Testing.tex
+INPUT ./control/Motor_Testing.tex
+INPUT control/Motor_Testing.tex
+INPUT control/Motor_Testing.tex
+INPUT ./pictures/control/Motor constants theory.png
+INPUT ./pictures/control/Motor constants theory.png
+INPUT pictures/control/Motor constants theory.png
+INPUT ./pictures/control/Motor constants theory.png
+INPUT ./pictures/control/BigData.png
+INPUT ./pictures/control/BigData.png
+INPUT pictures/control/BigData.png
+INPUT ./pictures/control/BigData.png
+INPUT ./pictures/control/BigData.png
+INPUT ./pictures/control/Motor constants calc.png
+INPUT ./pictures/control/Motor constants calc.png
+INPUT pictures/control/Motor constants calc.png
+INPUT ./pictures/control/Motor constants calc.png
 INPUT ./introduction/Budget.tex
 OUTPUT introduction/Budget.aux
 INPUT ./introduction/Budget.tex
@@ -781,6 +803,9 @@ INPUT software/flow.aux
 INPUT ./control/thrust_experiments.aux
 INPUT control/thrust_experiments.aux
 INPUT control/thrust_experiments.aux
+INPUT ./control/Motor_Testing.aux
+INPUT control/Motor_Testing.aux
+INPUT control/Motor_Testing.aux
 INPUT ./introduction/Budget.aux
 INPUT introduction/Budget.aux
 INPUT introduction/Budget.aux

@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.29)  31 MAY 2023 15:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.29)  31 MAY 2023 17:14
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Artis/Desktop/Ladybug/LaTeX/Report/main.tex
-(c:/Users/Artis/Desktop/Ladybug/LaTeX/Report/main.tex
+**c:/Users/thoru/Documents/GitHub/Ladybug/LaTeX/Report/main.tex
+(c:/Users/thoru/Documents/GitHub/Ladybug/LaTeX/Report/main.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-05-22> (c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -298,7 +298,7 @@ LaTeX Warning: Label `fig:example' multiply defined.
 
 LaTeX Warning: Label `fig:Final Thrust Setup' multiply defined.
 
-) (./introduction/Budget.aux
+) (./control/Motor_Testing.aux) (./introduction/Budget.aux
 
 LaTeX Warning: Label `fig:Surge_Current' multiply defined.
 
@@ -1114,36 +1114,72 @@ File: pictures/control/Graph Thrust.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/control/Graph Thrust.jpg  used on input line 47.
 (pdftex.def)             Requested size: 418.25368pt x 330.34239pt.
 ) [67] [68 <./pictures/control/Motor thrust 2.JPG>] [69 <./pictures/control/Graph Thrust.JPG>]
+\openout2 = `control/Motor_Testing.aux'.
+
+ (./control/Motor_Testing.tex
+Underfull \hbox (badness 10000) in paragraph at lines 15--17
+
+ []
+
+[70
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+File: pictures/control/Motor constants theory.png Graphic file (type png)
+<use pictures/control/Motor constants theory.png>
+Package pdftex.def Info: pictures/control/Motor constants theory.png  used on input line 27.
+(pdftex.def)             Requested size: 343.88391pt x 65.04283pt.
+[71]
+<pictures/control/BigData.png, id=345, 452.892pt x 314.3745pt>
+File: pictures/control/BigData.png Graphic file (type png)
+<use pictures/control/BigData.png>
+Package pdftex.def Info: pictures/control/BigData.png  used on input line 40.
+(pdftex.def)             Requested size: 362.31409pt x 251.49992pt.
+File: pictures/control/Motor constants calc.png Graphic file (type png)
+<use pictures/control/Motor constants calc.png>
+Package pdftex.def Info: pictures/control/Motor constants calc.png  used on input line 49.
+(pdftex.def)             Requested size: 198.13974pt x 65.04283pt.
+) [72 <./pictures/control/BigData.png>]
 \openout2 = `introduction/Budget.aux'.
 
  (./introduction/Budget.tex
-<pictures/Budget.png, id=339, 373.395pt x 386.04225pt>
+<pictures/Budget.png, id=351, 373.395pt x 386.04225pt>
 File: pictures/Budget.png Graphic file (type png)
 <use pictures/Budget.png>
 Package pdftex.def Info: pictures/Budget.png  used on input line 7.
 (pdftex.def)             Requested size: 261.37471pt x 270.22772pt.
-) [70
+) [73
 
 
 
- <./pictures/Budget.png>] (./main.aux (./introduction/background.aux) (./introduction/problem_statement.aux) (./introduction/morpho.aux) (./introduction/evaluation.aux) (./introduction/risk_assesment.aux) (./software/github.aux) (./design/Drone_body.aux) (./control/plant_equations.aux) (./control/Controller.aux) (./control/uavtoolbox.aux) (./control/theoryofpid.aux) (./control/linearization.aux) (./control/simulationofpid.aux) (./control/pid.aux) (./software/embeded.aux) (./software/quickpid.aux) (./software/logging.aux) (./software/Wireless.aux) (./software/flow.aux) (./control/thrust_experiments.aux) (./introduction/Budget.aux))
+ <./pictures/Budget.png>] (./main.aux (./introduction/background.aux) (./introduction/problem_statement.aux) (./introduction/morpho.aux) (./introduction/evaluation.aux) (./introduction/risk_assesment.aux) (./software/github.aux) (./design/Drone_body.aux) (./control/plant_equations.aux) (./control/Controller.aux) (./control/uavtoolbox.aux) (./control/theoryofpid.aux) (./control/linearization.aux) (./control/simulationofpid.aux) (./control/pid.aux) (./software/embeded.aux) (./software/quickpid.aux) (./software/logging.aux) (./software/Wireless.aux) (./software/flow.aux) (./control/thrust_experiments.aux) (./control/Motor_Testing.aux) (./introduction/Budget.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8409 strings out of 476037
- 162404 string characters out of 5794152
+ 8449 strings out of 476038
+ 163905 string characters out of 5794173
  1864779 words of memory out of 5000000
- 28513 multiletter control sequences out of 15000+600000
+ 28544 multiletter control sequences out of 15000+600000
  527055 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,12n,79p,1470b,439s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 69i,12n,79p,1479b,439s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbi1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbi2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfxc2074.pfb>
-Output written on main.pdf (71 pages, 8105144 bytes).
+Output written on main.pdf (74 pages, 8308769 bytes).
 PDF statistics:
- 420 PDF objects out of 1000 (max. 8388607)
- 213 compressed objects within 3 object streams
+ 433 PDF objects out of 1000 (max. 8388607)
+ 221 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 311 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 316 words of extra memory for PDF output out of 10000 (max. 10000000)
 

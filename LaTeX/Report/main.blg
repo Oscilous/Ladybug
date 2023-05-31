@@ -1,0 +1,82 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: introduction/background.aux
+A level-1 auxiliary file: introduction/problem_statement.aux
+A level-1 auxiliary file: introduction/morpho.aux
+A level-1 auxiliary file: introduction/evaluation.aux
+A level-1 auxiliary file: introduction/risk_assesment.aux
+A level-1 auxiliary file: software/github.aux
+A level-1 auxiliary file: design/Drone_body.aux
+A level-1 auxiliary file: control/plant_equations.aux
+A level-1 auxiliary file: control/uavtoolbox.aux
+A level-1 auxiliary file: control/theoryofpid.aux
+A level-1 auxiliary file: control/linearization.aux
+A level-1 auxiliary file: control/simulationofpid.aux
+A level-1 auxiliary file: software/embeded.aux
+A level-1 auxiliary file: software/quickpid.aux
+A level-1 auxiliary file: software/logging.aux
+A level-1 auxiliary file: software/flow.aux
+The style file: plain.bst
+A level-1 auxiliary file: control/thrust_experiments.aux
+Database file #1: references.bib
+Warning--entry type for "MbedWiki" isn't style-file defined
+--line 563 of file references.bib
+Warning--to sort, need author or key in PCBTracewidth
+Warning--to sort, need author or key in FDD8896
+Warning--to sort, need author or key in 1N5818
+Warning--to sort, need author or key in DecouplingCap
+Warning--to sort, need author or key in FR4
+Warning--to sort, need author or key in MotorConstants
+Warning--to sort, need author or key in FlashPrefs
+Warning--to sort, need author or key in Nano33
+Warning--to sort, need author or key in MbedWiki
+Warning--empty author in Nano33
+Warning--empty journal in Nano33
+Warning--empty year in Nano33
+Warning--empty journal in PIDLinear1
+Warning--empty year in PIDbook
+Warning--empty journal in ZNPID
+Warning--empty journal in loggingProof
+You've used 43 entries,
+            2118 wiz_defined-function locations,
+            761 strings with 13031 characters,
+and the built_in function-call counts, 10067 in all, are:
+= -- 937
+> -- 384
+< -- 4
++ -- 164
+- -- 118
+* -- 468
+:= -- 1598
+add.period$ -- 122
+call.type$ -- 43
+change.case$ -- 188
+chr.to.int$ -- 0
+cite$ -- 59
+duplicate$ -- 377
+empty$ -- 965
+format.name$ -- 118
+if$ -- 2192
+int.to.chr$ -- 0
+int.to.str$ -- 43
+missing$ -- 13
+newline$ -- 211
+num.names$ -- 68
+pop$ -- 364
+preamble$ -- 1
+purify$ -- 145
+quote$ -- 0
+skip$ -- 338
+stack$ -- 0
+substring$ -- 357
+swap$ -- 69
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 172
+warning$ -- 16
+while$ -- 79
+width$ -- 45
+write$ -- 405
+(There were 17 warnings)

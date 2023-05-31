@@ -1,0 +1,10 @@
+PWD c:/Users/Artis/Desktop/Ladybug/LaTeX/Report/control
+INPUT c:/texlive/2023/texmf.cnf
+INPUT c:/texlive/2023/texmf-dist/web2c/texmf.cnf
+INPUT c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT c:/Users/Artis/Desktop/Ladybug/LaTeX/Report/control/pid.tex
+OUTPUT pid.log
+INPUT c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+OUTPUT pid.pdf
+INPUT c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map

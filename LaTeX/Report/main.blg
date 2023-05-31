@@ -13,12 +13,15 @@ A level-1 auxiliary file: control/uavtoolbox.aux
 A level-1 auxiliary file: control/theoryofpid.aux
 A level-1 auxiliary file: control/linearization.aux
 A level-1 auxiliary file: control/simulationofpid.aux
+A level-1 auxiliary file: control/pid.aux
 A level-1 auxiliary file: software/embeded.aux
 A level-1 auxiliary file: software/quickpid.aux
 A level-1 auxiliary file: software/logging.aux
+A level-1 auxiliary file: software/Wireless.aux
 A level-1 auxiliary file: software/flow.aux
 The style file: plain.bst
 A level-1 auxiliary file: control/thrust_experiments.aux
+A level-1 auxiliary file: introduction/Budget.aux
 Database file #1: references.bib
 Warning--entry type for "MbedWiki" isn't style-file defined
 --line 563 of file references.bib
@@ -40,7 +43,7 @@ Warning--empty journal in ZNPID
 Warning--empty journal in loggingProof
 You've used 43 entries,
             2118 wiz_defined-function locations,
-            761 strings with 13031 characters,
+            764 strings with 13090 characters,
 and the built_in function-call counts, 10067 in all, are:
 = -- 937
 > -- 384

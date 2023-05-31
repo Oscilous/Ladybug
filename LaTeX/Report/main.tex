@@ -1,0 +1,94 @@
+\documentclass[titlepage,a4paper,12pt,]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{float}
+\usepackage{setspace}
+\usepackage{url}
+%\usepackage{minted}
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{parskip}
+\usepackage{ragged2e}
+\usepackage{subfig}
+\usepackage{cite}
+\usepackage[svgnames]{xcolor}
+\usepackage{makecell, tabularx}
+    \setcellgapes{2pt}
+    \makeatletter
+    \newcommand*{\compress}{\@minipagetrue}
+    \makeatother
+    \newcolumntype{I}{ >{\RaggedRight\compress\itemize}X<{\enditemize}}
+    \newcommand*{\mcl}[1]{\multicolumn{1}{l|}{#1}}
+\usepackage[skip=1ex]{caption}
+\usepackage{enumitem}\usepackage{tabularx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+
+\graphicspath{ {./pictures/} }
+\onehalfspacing
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+  \bfseries
+  \huge UNIVERSITY OF SOUTHERN DENMARK
+  \vskip.1in
+  \textsc{\LARGE Faculty of engineering}
+  \vskip.1in
+  \large BEng Mechatronics
+  \vskip.1in
+  \Large Mechatronics Semester Project 4
+  \vskip0.1in
+  \emph{\huge Ladybug}
+\end{center}
+
+\vskip0.7in
+
+\begin{minipage}[10pt]{.18\textwidth}
+  \begin{flushleft}
+    \bfseries\large Supervisor:\par \emph{Lars Duggen} \par \emph{Davi Goncalves Accioli} \end{flushleft}
+\end{minipage}
+\hskip.4\textwidth
+\begin{minipage}{.4\textwidth}
+  \begin{flushleft}
+    \bfseries\large Group: 7 \par \emph{Tobias Blaabjerg Karlsen} \par \emph{Artis Fils} \par \emph{Thor Uerkvitz} \par \emph{Choyon Mainul Hasan} \par \emph{Johan Paul} \par \emph{Ruta Miglava}
+  \end{flushleft}
+\end{minipage}
+
+\vfill
+\centering
+\bfseries
+\Large Year \the\year
+\end{titlepage}
+
+
+\include{introduction/background.tex}
+\include{introduction/problem_statement.tex}
+\include{introduction/morpho.tex}
+\include{introduction/evaluation.tex}
+\include{introduction/risk_assesment.tex}
+
+\include{software/github.tex}
+\include{design/Drone_body.tex}
+\include{control/plant_equations.tex}
+\include{control/Controller.tex}
+\include{control/uavtoolbox.tex}
+\include{control/theoryofpid.tex}
+\include{control/linearization.tex}
+\include{control/simulationofpid.tex}
+\include{control/pid.tex}
+
+\include{software/embeded.tex}
+\include{software/quickpid.tex}
+\include{software/logging.tex}
+\include{software/Wireless.tex}
+\include{software/flow.tex}
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\appendix
+\include{control/thrust_experiments.tex}       
+\include{introduction/Budget.tex}
+\end{document}

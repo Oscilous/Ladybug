@@ -1,0 +1,20 @@
+\subsection{NanoBLEFlashPrefs}\label{flash}
+Data logging has evolved as a significant approach for overcoming the issues of the PID tuning process. \cite{PIDlog}
+During quadrotor operation, data logging entails recording numerous flying characteristics, sensor measurements, control inputs, and system responses.
+Engineers and researchers can obtain useful insights into the quadrotor's behavior and make informed judgments to fine-tune PID controller parameters by collecting this comprehensive set of data. \cite{loggingProof}
+Data logging also allows for the comparison and evaluation of various PID tuning strategies or algorithms. 
+Thru analysis, the influence of each adjustment on the system's behavior by methodically changing PID controller parameters can be observed in the quadrotor's response.
+This iterative method makes it easier to identify ideal PID parameter combinations that produce the required flight characteristics.
+The Seeduino XIAO nRF52840 lacks an inbuilt EEPROM (Electrically Erasable Programmable Read-Only Memory). The nRF52840 SoC has 1 MB of inbuilt Flash memory, and the XIAO board has 2MB of onboard flash memory for storing data. The choice was based on the following benefits of adopting flash memory:
+\begin{itemize}
+    \item
+        Faster Read and Write Operations: Flash memory generally offers faster read and write speeds compared to EEPROM.\cite{Sandeep} This will be advantageous in the iteration process when there is a need to access data quickly or update it frequently.
+    \item
+    	Endurance and Lifetime: Flash memory typically has a higher endurance level than EEPROM. It can withstand a larger number of read and write cycles before it starts to degrade.\cite{Sandeep} This endurance is particularly important when you need to update or modify the contents of the memory frequently.
+    \item
+    	Cost and Space Efficiency: Since the nRF52840 chip already integrates Flash memory, using it eliminates the need for an additional EEPROM chip. This reduces the component count, simplifies the PCB layout, and potentially lowers the overall cost and space requirements of your design.
+\end{itemize}
+NanoBLEFlashPrefs is a Arduino library, which is a substitute for missing EEPROM storage on Arduino Nano 33 BLE and 33 BLE Sense (not for Nano 33 IoT or other Nano boards). \cite{FlashPrefs}
+As the Seeduino XIAO nRF52840 Sense uses the same SoC chip as the Arduino Nano 33 BLE Sense, it can be easily used for the project. \cite{Nano33} \cite{wikiSeeed}
+Unfortunately, the library requires Mbed OS; nonetheless, due to its design principles and development architecture, it is frequently regarded as easier to use than other Real-Time Operating Systems (RTOS). Furthermore, it is tightly integrated with the Arduino IDE,\cite{MbedNano}, which is utilized as the IDE of choice for writing code to the quadrotor. Because it supports filesystems and storage APIs, Mbed OS is necessary. Mbed OS features lightweight filesystems like FAT and LittleFS that make it easier to read, write, and manage data on flash memory. \cite{MbedWiki}
+These filesystems abstract away the complexity of direct flash memory access, allowing for more ordered data storage and retrieval. Furthermore, because Mbed is a simple RTOS, it can be easily adopted for Bluetooth logging, which could be necessary in the future. As it does not have memory constraints, but would be limited in processing power, allowing an additional thread to be used.

@@ -1,0 +1,11 @@
+\subsection{QuickPID}
+For implementing the PID controller on the MCU, the QuickPID library was chosen. QuickPID is an updated implementation of the Arduino PID library with additional features for PID control. \cite{QuickPID} It was chosen due to the following reasons:
+\begin{itemize}
+    \item
+        Advanced Anti-Windup Mode: When compared to the normal PID implementation, the library features a more robust anti-windup mode. Integral windup can occur when the controller's integral term accumulates error during periods of saturation or when the actuator cannot keep up with the needed control effort, and anti-windup approaches help prevent this. \cite{QuickPID} The QuickPID library can lessen integral windup, reduce overshoot, and improve stability during transient situations by adding an advanced anti-windup mode.
+    \item
+    	Timer-Based Control: QuickPID is a timer-based control option that lets you use external timers or Interrupt Service Routines (ISRs) for precise timing control. \cite{QuickPID} This functionality is especially beneficial in systems with strict timing requirements or when employing external devices or sensors that are synced with the control loop. In this situation, if issues with the IMU or the controller develop, the timer-based technique can simply remedy them.
+    \item
+    	Compatibility with Arduino IDE: updated implementation of the Arduino PID library. As the Arduino ecosystem was chosen over Zephyr RTOS using the QuickPID library provides a seamless integration.
+\end{itemize}
+When utilizing the library, the PID compute sample time, default = 100000 µs, was changed to 2500 µs to match the IMU 400 Hz measuring frequency. Matching the PID sample frequency with the IMU measuring frequency ensures synchronization, consistent data availability, and accurate control in quadrotor systems. It enables the PID controller to operate based on up-to-date sensor measurements, respond effectively to dynamic changes, simplify system identification and tuning, and optimize computational efficiency. Additionally, the output limits of the PID (0-255 by default), were changed to (-255) – (255), as a negative error can be achieved in the quadrotor system.

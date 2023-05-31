@@ -11,6 +11,7 @@
 \usepackage{subfig}
 \usepackage{cite}
 \usepackage[svgnames]{xcolor}
+\usepackage{tikz}   
 \usepackage{makecell, tabularx}
     \setcellgapes{2pt}
     \makeatletter
@@ -24,42 +25,70 @@
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
 
+
 \graphicspath{ {./pictures/} }
 \onehalfspacing
 
 \begin{document}
 
 \begin{titlepage}
+
+\begin{tikzpicture}[remember picture,overlay]
+   \node[anchor=south east,inner sep=20pt] at (current page.south east)
+              {\includegraphics[scale=0.3]{pictures/sdulogo.jpg}};
+\end{tikzpicture}
+
+
 \begin{center}
-  \bfseries
-  \huge UNIVERSITY OF SOUTHERN DENMARK
-  \vskip.1in
-  \textsc{\LARGE Faculty of engineering}
-  \vskip.1in
-  \large BEng Mechatronics
-  \vskip.1in
-  \Large Mechatronics Semester Project 4
-  \vskip0.1in
-  \emph{\huge Ladybug}
+
+
+\noindent \textbf{BEng Mechatronics}
+
+\noindent \textbf{University of Southern Denmark Sønderborg}
+
+\Huge \bfseries{Semester Project 4 - Ladybug}
+
 \end{center}
 
-\vskip0.7in
+\begin{center}
 
-\begin{minipage}[10pt]{.18\textwidth}
-  \begin{flushleft}
-    \bfseries\large Supervisor:\par \emph{Lars Duggen} \par \emph{Davi Goncalves Accioli} \end{flushleft}
-\end{minipage}
-\hskip.4\textwidth
-\begin{minipage}{.4\textwidth}
-  \begin{flushleft}
-    \bfseries\large Group: 7 \par \emph{Tobias Blaabjerg Karlsen} \par \emph{Artis Fils} \par \emph{Thor Uerkvitz} \par \emph{Choyon Mainul Hasan} \par \emph{Johan Paul} \par \emph{Ruta Miglava}
-  \end{flushleft}
-\end{minipage}
 
-\vfill
-\centering
-\bfseries
-\Large Year \the\year
+\vspace*{0.1cm}
+
+
+	\includegraphics[width = 10 cm]{pictures/FPP.png}
+
+	\noindent \textbf{Ruta Miglava, }
+	\noindent \textbf{Johan Paul, }
+	\noindent \textbf{Choyon Mainul Hasan, }
+	\noindent \textbf{Thor Uerkvitz, }
+	\noindent \textbf{Artis Fils, }
+	\noindent \textbf{Tobias Blaabjerg Karlsen}
+
+	\vspace*{2cm}
+
+
+
+\end{center}
+
+
+\begin{center}
+
+	\noindent \textbf{Supervised}
+	\noindent \textbf{By}
+	\vspace*{0.1cm}
+
+	\noindent \textbf{Lars Duggen}
+
+	\noindent \textbf{Davi Goncalves Accioli}
+
+	\vspace*{1.5cm}
+
+	\noindent \textbf{June 2023}	
+
+
+\end{center}
+
 \end{titlepage}
 
 

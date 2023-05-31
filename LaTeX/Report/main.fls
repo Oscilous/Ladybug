@@ -1,8 +1,8 @@
-PWD c:/Users/thoru/Documents/GitHub/Ladybug/LaTeX/Report
+PWD c:/Users/Artis/Desktop/Ladybug/LaTeX/Report
 INPUT c:/texlive/2023/texmf.cnf
 INPUT c:/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/thoru/Documents/GitHub/Ladybug/LaTeX/Report/main.tex
+INPUT c:/Users/Artis/Desktop/Ladybug/LaTeX/Report/main.tex
 OUTPUT main.log
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/article.cls

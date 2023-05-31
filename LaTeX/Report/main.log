@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.29)  31 MAY 2023 11:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.29)  31 MAY 2023 12:23
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -690,43 +690,43 @@ Package pdftex.def Info: pictures/control/pidexample.jpeg  used on input line 26
 \openout2 = `control/simulationofpid.aux'.
 
  (./control/simulationofpid.tex
-<pictures/control/posc.png, id=194, 557.58313pt x 109.91063pt>
-File: pictures/control/posc.png Graphic file (type png)
-<use pictures/control/posc.png>
-Package pdftex.def Info: pictures/control/posc.png  used on input line 7.
-(pdftex.def)             Requested size: 418.18633pt x 82.43275pt.
-<pictures/control/simpidvalues.png, id=195, 628.3475pt x 113.42375pt>
-File: pictures/control/simpidvalues.png Graphic file (type png)
-<use pictures/control/simpidvalues.png>
-Package pdftex.def Info: pictures/control/simpidvalues.png  used on input line 18.
-(pdftex.def)             Requested size: 408.42104pt x 73.72455pt.
-<pictures/control/zpidnonoise.png, id=196, 564.60938pt x 135.50626pt>
-File: pictures/control/zpidnonoise.png Graphic file (type png)
-<use pictures/control/zpidnonoise.png>
-Package pdftex.def Info: pictures/control/zpidnonoise.png  used on input line 28.
-(pdftex.def)             Requested size: 395.22386pt x 94.85371pt.
+<pictures/control/phiPID.PNG, id=194, 567.62062pt x 220.825pt>
+File: pictures/control/phiPID.PNG Graphic file (type png)
+<use pictures/control/phiPID.PNG>
+Package pdftex.def Info: pictures/control/phiPID.PNG  used on input line 12.
+(pdftex.def)             Requested size: 397.33171pt x 154.57643pt.
+<pictures/control/thetaPID.PNG, id=195, 571.63562pt x 137.51375pt>
+File: pictures/control/thetaPID.PNG Graphic file (type png)
+<use pictures/control/thetaPID.PNG>
+Package pdftex.def Info: pictures/control/thetaPID.PNG  used on input line 20.
+(pdftex.def)             Requested size: 400.1422pt x 96.25896pt.
  [38
 
 
 
- <./pictures/control/posc.PNG> <./pictures/control/simpidvalues.PNG>]
-<pictures/control/zpidnoise.png, id=202, 573.14125pt x 204.26312pt>
+ <./pictures/control/phiPID.PNG>]
+<pictures/control/posc.png, id=200, 557.58313pt x 109.91063pt>
+File: pictures/control/posc.png Graphic file (type png)
+<use pictures/control/posc.png>
+Package pdftex.def Info: pictures/control/posc.png  used on input line 32.
+(pdftex.def)             Requested size: 418.18633pt x 82.43275pt.
+<pictures/control/simpidvalues.png, id=201, 628.3475pt x 113.42375pt>
+File: pictures/control/simpidvalues.png Graphic file (type png)
+<use pictures/control/simpidvalues.png>
+Package pdftex.def Info: pictures/control/simpidvalues.png  used on input line 43.
+(pdftex.def)             Requested size: 408.42104pt x 73.72455pt.
+ [39 <./pictures/control/thetaPID.PNG> <./pictures/control/posc.PNG>]
+<pictures/control/zpidnonoise.png, id=207, 564.60938pt x 135.50626pt>
+File: pictures/control/zpidnonoise.png Graphic file (type png)
+<use pictures/control/zpidnonoise.png>
+Package pdftex.def Info: pictures/control/zpidnonoise.png  used on input line 53.
+(pdftex.def)             Requested size: 395.22386pt x 94.85371pt.
+<pictures/control/zpidnoise.png, id=208, 573.14125pt x 204.26312pt>
 File: pictures/control/zpidnoise.png Graphic file (type png)
 <use pictures/control/zpidnoise.png>
-Package pdftex.def Info: pictures/control/zpidnoise.png  used on input line 40.
+Package pdftex.def Info: pictures/control/zpidnoise.png  used on input line 65.
 (pdftex.def)             Requested size: 401.19614pt x 142.9832pt.
-<pictures/control/phiPID.PNG, id=203, 567.62062pt x 220.825pt>
-File: pictures/control/phiPID.PNG Graphic file (type png)
-<use pictures/control/phiPID.PNG>
-Package pdftex.def Info: pictures/control/phiPID.PNG  used on input line 50.
-(pdftex.def)             Requested size: 397.33171pt x 154.57643pt.
- [39 <./pictures/control/zpidnonoise.PNG> <./pictures/control/zpidnoise.PNG>]
-<pictures/control/thetaPID.PNG, id=209, 571.63562pt x 137.51375pt>
-File: pictures/control/thetaPID.PNG Graphic file (type png)
-<use pictures/control/thetaPID.PNG>
-Package pdftex.def Info: pictures/control/thetaPID.PNG  used on input line 58.
-(pdftex.def)             Requested size: 400.1422pt x 96.25896pt.
-) [40 <./pictures/control/phiPID.PNG> <./pictures/control/thetaPID.PNG>]
+) [40 <./pictures/control/simpidvalues.PNG> <./pictures/control/zpidnonoise.PNG> <./pictures/control/zpidnoise.PNG>]
 \openout2 = `software/embeded.aux'.
 
  (./software/embeded.tex
@@ -1003,7 +1003,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  69i,12n,79p,1311b,439s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbi1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbi2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfxc2074.pfb>
-Output written on main.pdf (59 pages, 3582378 bytes).
+Output written on main.pdf (59 pages, 3583813 bytes).
 PDF statistics:
  359 PDF objects out of 1000 (max. 8388607)
  187 compressed objects within 2 object streams

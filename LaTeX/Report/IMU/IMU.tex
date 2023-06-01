@@ -197,7 +197,7 @@ For the accelerometer this can be done by taking all linear motion acceleration 
     \label{fig:my_label}
 \end{figure}
 
-For steady-level flight it can be assumed that angular velocities are the same in body and NED reference frames so we do not need to perform rotational transformation on these values. Therefore the angular velocity output can  be used($\dot{\Phi}, \dot{\Theta}, \dot{\Psi}$,) from the drone plant as the input for the gyroscope plant. 
+For steady-level flight it can be assumed that angular velocities are the same in body and NED reference frames \site{AircraftDynamics} so we do not need to perform rotational transformation on these values. Therefore the angular velocity output can  be used($\dot{\Phi}, \dot{\Theta}, \dot{\Psi}$,) from the drone plant as the input for the gyroscope plant. 
 
 In the simulation both accelerometer and the gyroscope plants are reading the ideal values from the drone plant, however in the physical model there would be noise present therefore it is needed to generate noise by adding a random number generator on the incoming signals. In the physical IMU there is also a bias on the readings, which can be measured and simulated in the readings.
 

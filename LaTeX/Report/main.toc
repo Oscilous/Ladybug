@@ -16,7 +16,7 @@
 \contentsline {section}{\numberline {4}Design and manufacturing of quadrotor}{11}{}%
 \contentsline {section}{\numberline {5}Control prototyping}{16}{}%
 \contentsline {subsection}{\numberline {5.1}Plant Model Equations}{16}{}%
-\contentsline {subsubsection}{\numberline {5.1.1}State Equations}{17}{}%
+\contentsline {subsubsection}{\numberline {5.1.1}State Equations}{16}{}%
 \contentsline {subsubsection}{\numberline {5.1.2}Inertia Moments}{19}{}%
 \contentsline {subsubsection}{\numberline {5.1.3}Characterization of Motor}{20}{}%
 \contentsline {subsubsection}{\numberline {5.1.4}Thrust testing}{21}{}%
@@ -43,7 +43,7 @@
 \contentsline {subsubsection}{\numberline {5.7.1}One-axis setup}{36}{}%
 \contentsline {subsubsection}{\numberline {5.7.2}Diagonal setup}{38}{}%
 \contentsline {subsubsection}{\numberline {5.7.3}String setup}{39}{}%
-\contentsline {subsubsection}{\numberline {5.7.4}Conclusion of PID testing}{40}{}%
+\contentsline {subsubsection}{\numberline {5.7.4}Conclusion of PID testing}{39}{}%
 \contentsline {section}{\numberline {6}Software prototyping}{41}{}%
 \contentsline {subsection}{\numberline {6.1}Embedded development environment}{41}{}%
 \contentsline {subsection}{\numberline {6.2}QuickPID}{43}{}%

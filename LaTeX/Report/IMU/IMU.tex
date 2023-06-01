@@ -1,9 +1,3 @@
-\usepackage{graphicx} % Required for inserting images
-\usepackage{float}
-
-\begin{document}
-
-
 \subsection{IMU theory}
 
 Inertial Measurement Unit is a key component of the drone control as it provides feedback about the position in time which is crucial for adjusting the control input signal.
@@ -87,8 +81,10 @@ Any object rotation can be described by multiplying a rotational matrix with the
     \label{fig:my_label}
 \end{figure}
 
+
 The complete rotation matrix for moving from the NED frame to the body frame is achieved by first performing Yaw then Pitch then Roll resulting in the following rotation matrix
-($R(\left(\Phi \right , \left\Theta \right , \left\Psi \right )):$
+
+$R(\Phi, \Theta, \Psi):$
 \newline
 \newline
 $\left(\begin{array}{ccc}
@@ -96,51 +92,59 @@ $\left(\begin{array}{ccc}
 \cos \left(\Phi \right)\,\sin \left(\Psi \right)+\cos \left(\Psi \right)\,\sin \left(\Phi \right)\,\sin \left(\Theta \right) & \cos \left(\Phi \right)\,\cos \left(\Psi \right)-\sin \left(\Phi \right)\,\sin \left(\Psi \right)\,\sin \left(\Theta \right) & -\cos \left(\Theta \right)\,\sin \left(\Phi \right)\\
 \sin \left(\Phi \right)\,\sin \left(\Psi \right)-\cos \left(\Phi \right)\,\cos \left(\Psi \right)\,\sin \left(\Theta \right) & \cos \left(\Psi \right)\,\sin \left(\Phi \right)+\cos \left(\Phi \right)\,\sin \left(\Psi \right)\,\sin \left(\Theta \right) & \cos \left(\Phi \right)\,\cos \left(\Theta \right)
 \end{array}\right)$\newline  
-\end{flushleft}
 
-
-To transition from body reference frame to NED, we need to perform the rotations in opposite order - Roll, then Pitch, then Yaw from negative angles ($R( -\left\Psi \right, -\left\Theta \right ,-\left\Phi \right )):$ \newline
+To transition from body reference frame to NED, we need to perform the rotations in opposite order - Roll, then Pitch, then Yaw from negative angles
+ $R( -\Psi, -\Theta ,-\Phi):$ \newline
 \newline
-$\left(\begin{array}{ccc}
+\begin[scale = 0.5]{displaymath}
+\left(\begin{array}{ccc}
 \cos \left(\Psi \right)\,\cos \left(\Theta \right) & \cos \left(\Phi \right)\,\sin \left(\Psi \right)+\cos \left(\Psi \right)\,\sin \left(\Phi \right)\,\sin \left(\Theta \right) & \sin \left(\Phi \right)\,\sin \left(\Psi \right)-\cos \left(\Phi \right)\,\cos \left(\Psi \right)\,\sin \left(\Theta \right)\\
 -\cos \left(\Theta \right)\,\sin \left(\Psi \right) & \cos \left(\Phi \right)\,\cos \left(\Psi \right)-\sin \left(\Phi \right)\,\sin \left(\Psi \right)\,\sin \left(\Theta \right) & \cos \left(\Psi \right)\,\sin \left(\Phi \right)+\cos \left(\Phi \right)\,\sin \left(\Psi \right)\,\sin \left(\Theta \right)\\
 \sin \left(\Theta \right) & -\cos \left(\Theta \right)\,\sin \left(\Phi \right) & \cos \left(\Phi \right)\,\cos \left(\Theta \right)
-\end{array}\right)$\newline
+\end{array}\right)
+\end{displaymath}
 
 \subsection{Sensor fusion}
 Now that we have established two methods of obtaining angular position, we must take into account the deficiencies related to each of the methods. The accelerometer gives good accuracy when the drone is not accelerating and the only acceleration we are reading is from gravity.
 The gyroscope can read quick movements but since the readings are being integrated, any error in the measurements is repeatedly added to the calculated position thereby leading to a drifting signal.
 
-The solution is to introduce either a filter or an observer to fuse the measurements from accelerometer and gyroscope. For our project we have implemented a complimentary filter consisting of a low pass filter on the accelerometer and a high pass filter on gyroscope and summing the filtered signals. \newline
-The transfer functions of low pass and high pass filters in s domain are given below (where $\tau$ is the time constant and $\omega _o$ is the angular cut-off frequency in $rad/s$):\newline 
-
-\center $H(s) = \frac{V_o_u_t(s)}{V_i_n(s)} = \frac{\omega_0}{(s+\omega_0)}= \frac{1}{\tau s+1}$
-\center $H(s) = \frac{V_o_u_t(s)}{V_i_n(s)} = \frac{s}{(s+\omega_0)}= \frac{\tau s}{\tau s+1}$
-
-\begin{flushleft}
-Cut-off frequency in Hz:
-\end{flushleft}
-$f_c=\frac{\omega _o}{2\pi}$
+The solution is to introduce either a filter or an observer to fuse the measurements from accelerometer and gyroscope. For our project we have implemented a complimentary filter consisting of a low pass filter on the accelerometer and a high pass filter on gyroscope and summing the filtered signals.
 \newline
-\begin{flushleft}
+The transfer functions of low pass and high pass filters in s domain are given below (where $\tau$ is the time constant and $\omega _o$ is the angular cut-off frequency in $rad/s$):\newline 
+\begin{displaymath}
+H(s) = \frac{V_{out}(s)}{V_{in}(s)} = \frac{\omega_0}{(s+\omega_0)}= \frac{1}{\tau s+1}
+\end{displaymath}
+\begin{displaymath}
+H(s) = \frac{V_{out}(s)}{V_{in}(s)} = \frac{s}{(s+\omega_0)}= \frac{\tau s}{\tau s+1}
+\end{displaymath}
+
+Cut-off frequency in Hz:
+\begin{displaymath}
+    f_c=\frac{\omega _o}{2\pi}
+\end{displaymath}
+\newline
+
 Since the filter will be digital, the real time transfer function needs to be discretized by moving to z domain. This can be done with the help of Bilinear transform (Tustin's method), with the following substitution (where $T_s$ is the sampling time):
-\end{flushleft}
-$s=\frac{T_s}{2}\frac{1-z^-^1}{1+z^-1}$
+\begin{displaymath}
+    s=\frac{T_s}{2}\frac{1-z^{-1}}{1+z^{-1}}
+\end{displaymath}
 
-\begin{flushleft}
+
  This results in discrete transfer function: 
-\end{flushleft}
 
-$H(z)= \frac{\omega _o}{\frac{T_s}{2}\frac{1-z^-^1}{1+z^-1} + \omega _o}=\frac{b_o + b_1z^-^1}{1-a_1z^-^1}$
 
-\begin{flushleft}
+
+\begin{displaymath}
+    H(z)= \frac{\omega _o}{\frac{T_s}{2}\frac{1-z^{-1}}{1+z^{-1}} + \omega _o}=\frac{b_o + b_1z^{-1}}{1-a_1z^{-1}}
+\end{displaymath}
+
 Giving us discrete time implementation of:  
-\end{flushleft}
-$y(t)=a_o y_n_-_1+b_ox_n+b_1x_n_-_1  $
+\begin{displaymath}
+    y(t)=a_o y_{n-1}+b_ox_n+b_1x_{n-1}
+\end{displaymath}
 
-\begin{flushleft}
 To calculate the coefficients $a_o, b_o, b_1$ we can use Matlab Transfer function $tf()$ and Continuous to discrete time function $c2d() $
-\end{flushleft}
+
 
 \begin{figure}[H]
     \begin{center}
@@ -151,12 +155,12 @@ To calculate the coefficients $a_o, b_o, b_1$ we can use Matlab Transfer functio
 \end{figure}
 
 
-\begin{flushleft}
+
 The sampling time $T_s$ used in calculations is the loop time of the code we run for the drone control.
 
 
 After the calculated angles are passed through their respective filters, the values can be summed up resulting in a complimentary filter (as shown in the visual below):
-\end{flushleft}
+
 
 \begin{figure}[H]
     \begin{center}
@@ -167,10 +171,11 @@ After the calculated angles are passed through their respective filters, the val
 \end{figure}
 
 \subsection{Simulink}
-\begin{flushleft}
+
 To simulate the IMU readings as feedback in Simulink we first need to consider what input variables will be handled by the gyroscope and the accelerometer plants. The drone plant in the simulation is operating in NED reference frame, therefore any outputs coming from it are also in NED. However the physical IMU sensor will be handling measurements in body reference frame, therefore we need to create a function block to transform the drone output values into body reference frame values. 
 
 For the accelerometer this can be done by taking all linear motion acceleration outputs from drone plant in the form of a column vector $Acc=($X'', Y'', Z''$)$ and multiplying it with the rotational matrix for moving from NED to body. This equation requires knowing the Euler angles to be used in the rotational matrices. Luckily these values can also be taken from the drone plant.
+
 
 \begin{figure}[H]
     \begin{center}
@@ -200,7 +205,7 @@ In the simulation both accelerometer and the gyroscope plants are reading the id
     \label{fig:my_label}
 \end{figure}
 
-The IMU readings are then passed through the Complimentary filter plant, where gyroscope readings are used to calculate positional angles via integration and passed through a high pass filter and the angles calculated from accelerometer readings are passed through a low pass filter. For the high pass filter the transfer function used is $\frac{T_h_i_g_h*s}{T_h_i_g_h*s+1}$ where $T_h_i_g_h$ is the period of the cutoff frequency of the filter $T_h_i_g_h=\frac{1}{f_c}$
+The IMU readings are then passed through the Complimentary filter plant, where gyroscope readings are used to calculate positional angles via integration and passed through a high pass filter and the angles calculated from accelerometer readings are passed through a low pass filter. For the high pass filter the transfer function used is $\frac{T_{high}*s}{T_{high}*s+1}$ where $T_{high}$ is the period of the cutoff frequency of the filter $T_{high}=\frac{1}{f_c}$
 
 \begin{figure}[H]
     \begin{center}
@@ -221,11 +226,9 @@ The filtered values are then converted back to NED reference frame by using calc
     \label{fig:my_label}
 \end{figure}
 
-\end{flushleft}
-
 \section{IMU code}
 
-\begin{flushleft}
+
 To obtain the IMU readings from our sensor we first need to establish connection with the micro-controller board and luckily using Arduino IDE makes this simple by offering Seeed Studio XIAO nRF52840 (Sense) board package. Additionally we need to include several libraries, such as math.h and LSM6DS3.h. 
 
 The LSM6DS3.h pre-defines the I2C address as 0x6B but can be overwritten in code - as in our case the address is in fact 0x6A. 
@@ -241,13 +244,13 @@ By default the maximum range is selected for both sensors - 16g for Acceleromete
     \label{fig:my_label}
 \end{figure}
 
-\begin{flushleft}
+
 The IMU offers inbuilt analog Low Pass and High pass filters, however we have chosen not to use them and to only rely on the digital filters implemented by us.
 
 There are two important additional sensor initiation steps that are not covered by the library - removing sensor bias and aligning the internal axis of the Gyro and Accelerometer units. 
 
 To calibrate the sensor, we use a simple $for$ loop that runs 10 000 iterations reading the sensor output and averages the values. Since we know that when the sensor is sitting still, we should be reading 0 angular velocity, we can subtract these average readings from every future reading, thus creating the ReadGyro() function. 
-\end{flushleft}
+
 
 \begin{figure}[H]
     \begin{center}
@@ -261,11 +264,11 @@ To calibrate the sensor, we use a simple $for$ loop that runs 10 000 iterations 
     \begin{center}
     \includegraphics[scale = 0.85]{pictures/IMU/read_gyro_f.png}
     \end{center}
-    \caption{read_gyro_f() function}
+    \caption{$read_gyro_f()$ function}
     \label{fig:my_label}
 \end{figure}
 
-\begin{flushleft}
+
 To calibrate the accelerometer, we need to change the orientation of the sensor between each $for$ loop to have each of the positive and negative axis pointing downwards. As per instructions in the Data sheet the full range of readings on each axis should be 2$g$. 
 
 The second initialization step is to align the axis for gyroscope and accelerometer before using the readings for any further calculations.
@@ -279,6 +282,7 @@ All sensor readings are stored in arrays of 3 float elements - one for each axis
 $CalcAngleGyroF():$\newline
 Calculates the Euler angles by "integrating" the gyroscope readings. It takes the last known angle of attitude and adds the current angular velocity times the time step of the full control loop. We can use this method since the drone will be launched from horizontal position therefore we can assume the inital conditions to be 0.
 
+
 \begin{figure}[H]
     \begin{center}
     \includegraphics[scale = 0.85]{pictures/IMU/calc_angle_gyro.png}
@@ -287,7 +291,7 @@ Calculates the Euler angles by "integrating" the gyroscope readings. It takes th
     \label{fig:my_label}
 \end{figure}
 
-\begin{flushleft}
+
 $UnfiltAngleGyroF(), UnfiltAngleGyroPrevF():$\newline
 Needed for the digital filter - calculates unfiltered attitude angles based on current and previous gyroscope readings.
 
@@ -302,15 +306,15 @@ Calculates Phi and Theta from Accelerometer readings interpreting full range of 
     \label{fig:my_label}
 \end{figure}
 
-\begin{flushleft}
+
 $HPFGyroAngleF(), LPFAccAngleF():$\newline
 
 Calculates the values filtered via digital filters. Based on the following discrete time implementation of high pass/ low filters explained earlier in the document:
-\end{flushleft}
-$y(t)=a_o y_n_-_1+b_ox_n+b_1x_n_-_1  $
 
-\begin{flushleft}
-We can create a function to carry out this calculation, where $y_n_-_1$ is the previous filtered value, $x_n$ is the unfiltered value based on current readings and $x_n_-_1$ is the unfiltered value based on previous readings. The structure of both high pass and low pass filters is the same, however the coefficients calculated by the Bilinear transform differ. Most notably - the 
+$y(t)=a_o y_{n-1}+b_ox_n+b_1x_{n-1}  $
+
+
+We can create a function to carry out this calculation, where $y_{n-1}$ is the previous filtered value, $x_n$ is the unfiltered value based on current readings and $x_{n-1}$ is the unfiltered value based on previous readings. The structure of both high pass and low pass filters is the same, however the coefficients calculated by the Bilinear transform differ. Most notably - the 
 $b1$ coefficient for High pass filter is negative.
 
 \begin{figure}[H]
@@ -329,11 +333,15 @@ $b1$ coefficient for High pass filter is negative.
     \label{fig:my_label}
 \end{figure}
 
-\begin{flushleft}
-$ComplimentaryF():$\newline
-Combines high pass and low pass filter output.
 
-For the time of flight sensor we need to include the Adafruit_VL53L0X.h library and then the vertical distance can be measured with the help of measure.RangeMilliMeter() function. However we need to remember that the drone could be pitched and rolled therefor to get an accurate hight, we need to triangulate the reading based on the Roll and Pitch angles. This can be done with the help of rotational matrix as follows:
+$ComplimentaryF()$
+\newline
+
+Combines high pass and low pass filter output.
+For the time of flight sensor we need to include the $Adafruit_VL53L0X.h$ library and then the vertical distance can be measured with the help of measure.RangeMilliMeter function.
+However we need to remember that the drone could be pitched and rolled therefor to get an accurate hight, we need to triangulate the reading based on the Roll and Pitch angles.
+This can be done with the help of rotational matrix as follows:
+
 
 \begin{figure}[H]
     \begin{center}
@@ -344,9 +352,9 @@ For the time of flight sensor we need to include the Adafruit_VL53L0X.h library 
 \end{figure}
 
 
-\begin{flushleft}
+
     To choose optimal cut-off frequencies for the digital filters, we can print Complimentary filter output alongside the unfiltered Euler angles from gyroscope and accelerometer to see how much the filtered signal is attenuated and observe the phase shift. 
-\end{flushleft}
+
 
 \begin{figure}[H]
     \begin{center}
@@ -355,4 +363,3 @@ For the time of flight sensor we need to include the Adafruit_VL53L0X.h library 
     \caption{Complimentary filter output vs unfiltered values}
     \label{fig:my_label}
 \end{figure}
-\end{document}

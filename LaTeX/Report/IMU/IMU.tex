@@ -16,7 +16,7 @@ data and an accelerometer providing axial acceleration data.
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale = 0.5]{Gyro.png}
+    \includegraphics[scale = 0.5]{pictures/IMU/Gyro.png}
     \end{center}
     \caption{Gyroscope and Accelerometer internal axis}
     \label{fig:my_label}
@@ -27,7 +27,7 @@ Each gyroscope channel measures the rate of rotation around one of the internal 
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale = 0.4]{gyro_calculation.png}
+    \includegraphics[scale = 0.4]{pictures/IMU/gyro_calculation.png}
     \end{center}
     \caption{Integration of gyroscope readings}
     \label{fig:my_label}
@@ -39,7 +39,7 @@ To better understand the accelerometer readings we can imagine a box with a ball
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale = 0.5]{Accel_0grav.png}
+    \includegraphics[scale = 0.5]{pictures/IMU/Accel_0grav.png}
     \end{center}
     \caption{Accelerometer, zero gravity and motion on X axis }
     \label{fig:my_label}
@@ -51,7 +51,7 @@ Similarly we can now imagine that when the box is sitting still in gravitational
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale = 0.7]{Accel_angles.png}
+    \includegraphics[scale = 0.7]{pictures/IMU/Accel_angles.png}
     \end{center}
     \caption{Positional angle calculation   }
     \label{fig:my_label}
@@ -63,7 +63,7 @@ For our model we have chosen to work with NED (north-east-down) coordinate syste
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale = 0.5]{NED_sys.png}
+    \includegraphics[scale = 0.5]{pictures/IMU/NED_sys.png}
     \end{center}
     \caption{NED coordinate system}
     \label{fig:my_label}
@@ -73,7 +73,7 @@ In order to relate sensor readings from body reference frame to NED, we are usin
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale = 0.5]{Euler_angles.png}
+    \includegraphics[scale = 0.5]{pictures/IMU/Euler_angles.png}
     \end{center}
     \caption{Euler angles}
     \label{fig:my_label}
@@ -82,7 +82,7 @@ In order to relate sensor readings from body reference frame to NED, we are usin
 Any object rotation can be described by multiplying a rotational matrix with the original position vector. Any rotation matrix R can be decomposed as a product of three elemental rotation matrices - Roll, Yaw and Pitch.\newline
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale = 0.7]{rotational_matrixes.png}
+    \includegraphics[scale = 0.7]{pictures/IMU/rotational_matrixes.png}
     \end{center}
     \caption{Rotational matrixes}
     \label{fig:my_label}
@@ -145,7 +145,7 @@ To calculate the coefficients $a_o, b_o, b_1$ we can use Matlab Transfer functio
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale = 0.5]{filters_matlab.png}
+    \includegraphics[scale = 0.5]{pictures/IMU/filters_matlab.png}
     \end{center}
     \caption{Bilinear transform in Matlab}
     \label{fig:my_label}
@@ -161,7 +161,7 @@ After the calculated angles are passed through their respective filters, the val
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale = 0.5]{complementary.png}
+    \includegraphics[scale = 0.5]{pictures/IMU/complementary.png}
     \end{center}
     \caption{Complimentary filter implementation in discrete time}
     \label{fig:my_label}
@@ -175,7 +175,7 @@ For the accelerometer this can be done by taking all linear motion acceleration 
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale = 0.5]{NED_to_body_acc.png}
+    \includegraphics[scale = 0.5]{pictures/IMU/NED_to_body_acc.png}
     \end{center}
     \caption{Rotational transformation from NED to body ref. frame, Matlab}
     \label{fig:my_label}
@@ -183,7 +183,7 @@ For the accelerometer this can be done by taking all linear motion acceleration 
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale = 0.5]{NED_to_bidy_function_block.png}
+    \includegraphics[scale = 0.5]{pictures/IMU/NED_to_bidy_function_block.png}
     \end{center}
     \caption{NED to body transformation function block, Simulink}
     \label{fig:my_label}
@@ -195,7 +195,7 @@ In the simulation both accelerometer and the gyroscope plants are reading the id
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale = 0.45]{gyro_plant_nr_genrator.png}
+    \includegraphics[scale = 0.45]{pictures/IMU/gyro_plant_nr_genrator.png}
     \end{center}
     \caption{Gyroscope plant in Simulink}
     \label{fig:my_label}
@@ -205,7 +205,7 @@ The IMU readings are then passed through the Complimentary filter plant, where g
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale = 0.55]{Complimentary_filter_plant.png}
+    \includegraphics[scale = 0.55]{pictures/IMU/Complimentary_filter_plant.png}
     \end{center}
     \caption{Complimentary filter plant in Simulink}
     \label{fig:my_label}
@@ -216,7 +216,7 @@ The filtered values are then converted back to NED reference frame by using calc
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale = 0.55]{IMU_plant.png}
+    \includegraphics[scale = 0.55]{pictures/IMU/IMU_plant.png}
     \end{center}
     \caption{IMU plant in Simulink}
     \label{fig:my_label}
@@ -236,7 +236,7 @@ By default the maximum range is selected for both sensors - 16g for Acceleromete
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale = 0.55]{Library_settings.png}
+    \includegraphics[scale = 0.55]{pictures/IMU/Library_settings.png}
     \end{center}
     \caption{Default settings in LSM6DS3.h library}
     \label{fig:my_label}
@@ -252,7 +252,7 @@ To calibrate the sensor, we use a simple $for$ loop that runs 10 000 iterations 
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale = 0.85]{gyro_calibrate.png}
+    \includegraphics[scale = 0.85]{pictures/IMU/gyro_calibrate.png}
     \end{center}
     \caption{Gyro calibration}
     \label{fig:my_label}
@@ -260,7 +260,7 @@ To calibrate the sensor, we use a simple $for$ loop that runs 10 000 iterations 
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale = 0.85]{read_gyro_f.png}
+    \includegraphics[scale = 0.85]{pictures/IMU/read_gyro_f.png}
     \end{center}
     \caption{read_gyro_f() function}
     \label{fig:my_label}
@@ -282,7 +282,7 @@ Calculates the Euler angles by "integrating" the gyroscope readings. It takes th
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale = 0.85]{calc_angle_gyro.png}
+    \includegraphics[scale = 0.85]{pictures/IMU/calc_angle_gyro.png}
     \end{center}
     \caption{CalcAngleGyroF() function}
     \label{fig:my_label}
@@ -297,7 +297,7 @@ Calculates Phi and Theta from Accelerometer readings interpreting full range of 
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale = 0.85]{calc_angle_theta.png}
+    \includegraphics[scale = 0.85]{pictures/IMU/calc_angle_theta.png}
     \end{center}
     \caption{CalcThetaAccF() function}
     \label{fig:my_label}
@@ -316,7 +316,7 @@ $b1$ coefficient for High pass filter is negative.
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale = 0.85]{HPF_gyro.png}
+    \includegraphics[scale = 0.85]{pictures/IMU/HPF_gyro.png}
     \end{center}
     \caption{HPFGyroAngleF() function}
     \label{fig:my_label}
@@ -324,7 +324,7 @@ $b1$ coefficient for High pass filter is negative.
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale = 0.85]{HPF_LPF_coefff.png}
+    \includegraphics[scale = 0.85]{pictures/IMU/HPF_LPF_coefff.png}
     \end{center}
     \caption{Digital filter Bilinear transform coefficients}
     \label{fig:my_label}
@@ -338,7 +338,7 @@ For the time of flight sensor we need to include the Adafruit_VL53L0X.h library 
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale = 0.85]{Z_actual_trinagulation.png}
+    \includegraphics[scale = 0.85]{pictures/IMU/Z_actual_trinagulation.png}
     \end{center}
     \caption{Calculating Z position from time of flight sensor}
     \label{fig:my_label}
@@ -351,7 +351,7 @@ For the time of flight sensor we need to include the Adafruit_VL53L0X.h library 
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale = 0.65]{M5.png}
+    \includegraphics[scale = 0.65]{pictures/IMU/M5.png}
     \end{center}
     \caption{Complimentary filter output vs unfiltered values}
     \label{fig:my_label}

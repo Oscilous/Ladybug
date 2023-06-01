@@ -16,14 +16,14 @@ data and an accelerometer providing axial acceleration data.
 \end{figure}
 
 
-Each gyroscope channel measures the rate of rotation around one of the internal axes in degrees per second (as our gyroscope has an inbuilt ADC unit, the actual output will be in bits that can be re-interpreted as degrees per second). With these readings, the angular position can be calculated by integrating the gyroscope measurements over time. If the angular velocity is denoted by $\dot{\Theta}$, the angle of rotation can be calculated as follows \site{Complementary_Filters}:
+Each gyroscope channel measures the rate of rotation around one of the internal axes in degrees per second (as our gyroscope has an inbuilt ADC unit, the actual output will be in bits that can be re-interpreted as degrees per second). With these readings, the angular position can be calculated by integrating the gyroscope measurements over time. If the angular velocity is denoted by $\dot{\Theta}$, the angle of rotation can be calculated as follows in  \ref{fig:Gyro_calc} \site{Complementary_Filters}:
 
 \begin{figure}[H]
     \begin{center}
     \includegraphics[scale = 0.4]{pictures/IMU/gyro_calculation.png}
     \end{center}
     \caption{Integration of gyroscope readings}
-    \label{fig:my_label}
+    \label{fig:Gyro_calc}
 \end{figure}
 
 
@@ -40,14 +40,14 @@ To better understand the accelerometer readings we can imagine a box with a ball
 
 If the box was moved in positive X axis direction with acceleration of $9.81 m/s^2$, the ball would hit the wall of the box in negative X axis direction and register force of $1g$. From this we can note that accelerometer is reading a force in the opposite direction of the motion. 
 
-Similarly we can now imagine that when the box is sitting still in gravitational field of the Earth, we would get a reading of $1g$ in the downwards Z axis direction. If the IMU was rotated in respect to Earth surface, the reading of 1g would be split into x, y and z components on the accelerometer internal axis. We can use these readings to calculate the positional angles with respect to earth surface with the help of the following formula \site{Rotation}.
+Similarly we can now imagine that when the box is sitting still in gravitational field of the Earth, we would get a reading of $1g$ in the downwards Z axis direction. If the IMU was rotated in respect to Earth surface, the reading of 1g would be split into x, y and z components on the accelerometer internal axis. We can use these readings to calculate the positional angles with respect to earth surface with the help of the following formula (in \ref{fig:acc_calc}) \site{Rotation}.
 
 \begin{figure}[H]
     \begin{center}
     \includegraphics[scale = 0.7]{pictures/IMU/Accel_angles.png}
     \end{center}
     \caption{Positional angle calculation   }
-    \label{fig:my_label}
+    \label{fig:acc_calc}
 \end{figure}
 
 It is important to note that all measurements on accelorometer are read in the IMU body frame. In order to relate them to Earth's surface we need to choose a reference coordinate system and transform the measurements from the body reference frame to the chosen coordinate system.
@@ -163,7 +163,7 @@ To calculate the coefficients $a_o, b_o, b_1$ we can use Matlab Transfer functio
 The sampling time $T_s$ used in calculations is the loop time of the code we run for the drone control.
 
 
-After the calculated angles are passed through their respective filters, the values can be summed up resulting in a complimentary filter (as shown in the visual below):
+After the calculated angles are passed through their respective filters, the values can be summed up resulting in a complimentary filter (as shown in \ref{fig:compl_filt}):
 
 
 \begin{figure}[H]
@@ -171,7 +171,7 @@ After the calculated angles are passed through their respective filters, the val
     \includegraphics[scale = 0.5]{pictures/IMU/complementary.png}
     \end{center}
     \caption{Complimentary filter implementation in discrete time \site{Complementary_Filters}}
-    \label{fig:my_label}
+    \label{fig:compl_filt}
 \end{figure}
 
 \subsection{Simulink}
@@ -343,7 +343,7 @@ $ComplimentaryF()$
 Combines high pass and low pass filter output.
 For the time of flight sensor it is needed to include the $Adafruit_VL53L0X.h$ library \site{VL53L0XV2} which then allows the vertical distance to be measured with the help of measure.RangeMilliMeter function.
 However it is needed to remember that the drone could be pitched and rolled therefor to get an accurate hight, we need to triangulate the reading based on the Roll and Pitch angles.
-This can be done with the help of rotational matrix as follows:
+This can be done with the help of rotational matrix as follows in \ref{fig:calc_z}:
 
 
 \begin{figure}[H]
@@ -351,18 +351,18 @@ This can be done with the help of rotational matrix as follows:
     \includegraphics[scale = 0.85]{pictures/IMU/Z_actual_trinagulation.png}
     \end{center}
     \caption{Calculating Z position from time of flight sensor}
-    \label{fig:my_label}
+    \label{fig:calc_z}
 \end{figure}
 
 
 
-To choose optimal cut-off frequencies for the digital filters, the Complimentary filter output can be printed alongside the unfiltered Euler angles from gyroscope and accelerometer to see how much the filtered signal is attenuated and observe the phase shift. 
+To choose optimal cut-off frequencies for the digital filters, the Complimentary filter output can be printed on Serial Plotter alongside the unfiltered Euler angles from gyroscope and accelerometer to see how much the filtered signal is attenuated and observe the phase shift. It can be seen in \ref{fig:serial_plot} that the gyroscope calculation has drifted in time and the Complimentary filter output has smoothed out some of the acclerometer readings noise, however there is a slight delay in time between the signals.
 
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale = 0.65]{pictures/IMU/M5.png}
+    \includegraphics[scale = 0.65]{pictures/IMU/Serial_monitor.png}
     \end{center}
     \caption{Complimentary filter output vs unfiltered values}
-    \label{fig:my_label}
+    \label{fig:serial_plot}
 \end{figure}

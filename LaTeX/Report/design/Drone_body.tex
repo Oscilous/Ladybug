@@ -17,7 +17,7 @@ As a less power consuning simple and lighter option, a single N-channel mosfet w
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale=0.7]{design/Mosfet_Control}
+    \includegraphics[width=5cm]{design/Mosfet_Control}
     \end{center}
     \caption{Motor control with MOSFET.}
     \label{fig:Mosfet_Control}
@@ -38,21 +38,16 @@ against overcurrent being drawn from the microcontroller. When the motors are sw
 a surge current arises which can result in additional overcurrent being pulled from the microcontroller if 
 the battery is not alone capable of supplying the current. 
 
-\begin{figure}[H]
-    \begin{center}
-    \includegraphics[scale=0.7]{design/Continuous_Current}
-    \end{center}
-    \caption{Current flow during continuous operation.}
-    \label{fig:Continuous_Current}
+
+\begin{figure}[H]%
+    \centering
+    \subfloat[\centering Continuous Current]{{\includegraphics[width=5cm]{design/Continuous_Current} }}%
+    \qquad
+    \subfloat[\centering Potential Surge current]{{\includegraphics[width=5cm]{design/Surge_Current} }}%
+    \caption{Current flows}%
+    \label{fig:example}%
 \end{figure}
 
-\begin{figure}[H]
-    \begin{center}
-    \includegraphics[scale=0.7]{design/Surge_Current}
-    \end{center}
-    \caption{Potential current flow due to surge current.}
-    \label{fig:Surge_Current}
-\end{figure}
 
 In order to prevent reverse current from the MCU, 
 during a surge, one of the potential options to utilise would be a diode placed in the following 
@@ -60,7 +55,7 @@ configuration.
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale=0.7]{design/Diode_Protection}
+    \includegraphics[width=5cm]{design/Diode_Protection}
     \end{center}
     \caption{Diode added to prevent reverse current flow from MCU.}
     \label{fig:Diode_Protection}
@@ -90,11 +85,11 @@ With the combination of the CAD-outline and the electrical schematic, PCB Gerber
 
 \begin{figure}[H]%
     \centering
-    \subfloat[\centering Motor Mount]{{\includegraphics[width=3cm]{design/Droneleg.png} }}%
+    \subfloat[\centering Motor Mount]{{\includegraphics[width=3.5cm]{design/Droneleg.png} }}%
     \qquad
-    \subfloat[\centering Mounted Motor]{{\includegraphics[width=3cm]{design/Dronepressfit.png} }}%
+    \subfloat[\centering Mounted Motor]{{\includegraphics[width=3.5cm]{design/Dronepressfit.png} }}%
     \qquad
-    \subfloat[\centering Prop Guard]{{\includegraphics[width=3cm]{design/Dronepropguard.png} }}%
+    \subfloat[\centering Prop Guard]{{\includegraphics[width=3.5cm]{design/Dronepropguard.png} }}%
     \caption{3D-Printed drone parts}%
     \label{fig:example}%
 \end{figure}
@@ -129,3 +124,15 @@ To power the drone a single cell Turnigy Li-Po battery is used, at 3.7 - 4.2 V a
 \end{figure}
 
 After assembly of the drone including all the parts, it became apparent that the initial weight estimation of the drone was too low. After weighing the final physical setup it weighed 70 grams, XX grams over the intital estimation. This of course meant that the drones motors had less excess thrust than initially expected, meaning less control authority. In an attempt to mitigate this, the option of 3-bladed propellers were explored since they in theory would be able to provide extra thrust. The 3-bladed propellers were printed with SLA in the Tough 2000 resin on a Form 3 machine. Testing the new propellers in the same thrust setup used to characterize the motors using the 2-bladed propellers, it showed that the 3-bladed propellers produced 12 grams total extra (combining 4 motors), but also pulled a total of 4 amps extra. Since the battery used does not have the sufficient continous amp supply this option was not further explored, instead lightweighting options was used to reduce the total weight to 60 grams. In order to have an alitude feedback a GY-VL53L0XV2 ToF sensor was emplyed on the underside of the drone, to measure the drone-to-ground distance. In development a budget was created to ensure that the possibilty of achieving the project goals was always possible, the budget for the project can be found in appendix \ref{appendix_budget}.
+
+
+\begin{figure}[H]%
+    \centering
+    \subfloat[\centering Motor Mount]{{\includegraphics[width=3cm]{design/dronescale.jpg} }}%
+    \qquad
+    \subfloat[\centering Mounted Motor]{{\includegraphics[width=3cm]{design/dronebottom.jpg} }}%
+    \qquad
+    \subfloat[\centering Prop Guard]{{\includegraphics[width=3cm]{design/propthree.jpg} }}%
+    \caption{3D-Printed drone parts}%
+    \label{fig:example}%
+\end{figure}

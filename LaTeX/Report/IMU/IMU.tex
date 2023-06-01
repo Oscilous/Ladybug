@@ -87,21 +87,25 @@ The complete rotation matrix for moving from the NED frame to the body frame is 
 $R(\Phi, \Theta, \Psi):$
 \newline
 \newline
+\begin{displaymath}
+\resizebox{1.0\textwidth}{!}{
 $\left(\begin{array}{ccc}
 \cos \left(\Psi \right)\,\cos \left(\Theta \right) & -\cos \left(\Theta \right)\,\sin \left(\Psi \right) & \sin \left(\Theta \right)\\
 \cos \left(\Phi \right)\,\sin \left(\Psi \right)+\cos \left(\Psi \right)\,\sin \left(\Phi \right)\,\sin \left(\Theta \right) & \cos \left(\Phi \right)\,\cos \left(\Psi \right)-\sin \left(\Phi \right)\,\sin \left(\Psi \right)\,\sin \left(\Theta \right) & -\cos \left(\Theta \right)\,\sin \left(\Phi \right)\\
 \sin \left(\Phi \right)\,\sin \left(\Psi \right)-\cos \left(\Phi \right)\,\cos \left(\Psi \right)\,\sin \left(\Theta \right) & \cos \left(\Psi \right)\,\sin \left(\Phi \right)+\cos \left(\Phi \right)\,\sin \left(\Psi \right)\,\sin \left(\Theta \right) & \cos \left(\Phi \right)\,\cos \left(\Theta \right)
-\end{array}\right)$\newline  
+\end{array}\right)$}
+\end{displaymath}
 
 To transition from body reference frame to NED, we need to perform the rotations in opposite order - Roll, then Pitch, then Yaw from negative angles
- $R( -\Psi, -\Theta ,-\Phi):$ \newline
-\newline
-\begin[scale = 0.5]{displaymath}
-\left(\begin{array}{ccc}
+ $R( -\Psi, -\Theta ,-\Phi):$ 
+
+\begin{displaymath}
+\resizebox{1.0\textwidth}{!}{
+$\left(\begin{array}{ccc}
 \cos \left(\Psi \right)\,\cos \left(\Theta \right) & \cos \left(\Phi \right)\,\sin \left(\Psi \right)+\cos \left(\Psi \right)\,\sin \left(\Phi \right)\,\sin \left(\Theta \right) & \sin \left(\Phi \right)\,\sin \left(\Psi \right)-\cos \left(\Phi \right)\,\cos \left(\Psi \right)\,\sin \left(\Theta \right)\\
 -\cos \left(\Theta \right)\,\sin \left(\Psi \right) & \cos \left(\Phi \right)\,\cos \left(\Psi \right)-\sin \left(\Phi \right)\,\sin \left(\Psi \right)\,\sin \left(\Theta \right) & \cos \left(\Psi \right)\,\sin \left(\Phi \right)+\cos \left(\Phi \right)\,\sin \left(\Psi \right)\,\sin \left(\Theta \right)\\
 \sin \left(\Theta \right) & -\cos \left(\Theta \right)\,\sin \left(\Phi \right) & \cos \left(\Phi \right)\,\cos \left(\Theta \right)
-\end{array}\right)
+\end{array}\right)$}
 \end{displaymath}
 
 \subsection{Sensor fusion}

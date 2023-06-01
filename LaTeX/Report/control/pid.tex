@@ -78,20 +78,19 @@ The same procedure of axial testing was repeated for the diagonal rig and is des
 
 \newpage
 \subsubsection{String setup}
-The final testing rig was chosen to be the string rig (figure \ref{fig:string_rig}). A halo was attached to the top of the drone, so that the string attached to the drone would be put through, thus resulting in the strings not colliding with the propellers in different angles.
-
-\begin{figure}[h]
+\begin{wrapfigure}{r}{0.4\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{pictures/String_rig.jpg}
+    \includegraphics[width=0.4\textwidth]{pictures/String_rig.jpg}
     \caption{String rig}
     \label{fig:string_rig}
-\end{figure}
+\end{wrapfigure}
+The final testing rig was chosen to be the string rig (figure \ref{fig:string_rig}). A halo was attached to the top of the drone, so that the string attached to the drone would be put through, thus resulting in the strings not colliding with the propellers in different angles.
 
 This provides the closest possible resemblance to flight that could achieved. It may adversely effect the flight characteristics, as the string pulls the drone to the center, which may result in tilt while flying away from the anchor point, but the other option was a gimbal, which introduced large friction.
 
 The values from previous test runs were used at the start, but were found to be insufficient to compensate. Post testing, the ideal values were found to be 10 times the P and 5 times the D compared to the ones used in the diagonal rig. With these values $\phi$ was stable, however $\theta$ was oscillating between stability and instability, as it was initially stable, then became unstable, then became stable again. This was accounted for with higher PID constants for theta.
 
-\begin{figure}[h!]
+\begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{pictures/graphs/ZN10P5DT4The5.png}
     \caption{Plot of angles in string setup with calibrated PID values}

@@ -16,7 +16,7 @@ data and an accelerometer providing axial acceleration data.
 \end{figure}
 
 
-Each gyroscope channel measures the rate of rotation around one of the internal axes in degrees per second (as our gyroscope has an inbuilt ADC unit, the actual output will be in bits that can be re-interpreted as degrees per second). With these readings, the angular position can be calculated by integrating the gyroscope measurements over time. If the angular velocity is denoted by $\dot{\Theta}$, the angle of rotation can be calculated as follows:
+Each gyroscope channel measures the rate of rotation around one of the internal axes in degrees per second (as our gyroscope has an inbuilt ADC unit, the actual output will be in bits that can be re-interpreted as degrees per second). With these readings, the angular position can be calculated by integrating the gyroscope measurements over time. If the angular velocity is denoted by $\dot{\Theta}$, the angle of rotation can be calculated as follows \site{Complementary_Filters}:
 
 \begin{figure}[H]
     \begin{center}
@@ -40,7 +40,7 @@ To better understand the accelerometer readings we can imagine a box with a ball
 
 If the box was moved in positive X axis direction with acceleration of $9.81 m/s^2$, the ball would hit the wall of the box in negative X axis direction and register force of $1g$. From this we can note that accelerometer is reading a force in the opposite direction of the motion. 
 
-Similarly we can now imagine that when the box is sitting still in gravitational field of the Earth, we would get a reading of $1g$ in the downwards Z axis direction. If the IMU was rotated in respect to Earth surface, the reading of 1g would be split into x, y and z components on the accelerometer internal axis. We can use these readings to calculate the positional angles with respect to earth surface with the help of the following formula.
+Similarly we can now imagine that when the box is sitting still in gravitational field of the Earth, we would get a reading of $1g$ in the downwards Z axis direction. If the IMU was rotated in respect to Earth surface, the reading of 1g would be split into x, y and z components on the accelerometer internal axis. We can use these readings to calculate the positional angles with respect to earth surface with the help of the following formula \site{Rotation}.
 
 \begin{figure}[H]
     \begin{center}
@@ -170,7 +170,7 @@ After the calculated angles are passed through their respective filters, the val
     \begin{center}
     \includegraphics[scale = 0.5]{pictures/IMU/complementary.png}
     \end{center}
-    \caption{Complimentary filter implementation in discrete time}
+    \caption{Complimentary filter implementation in discrete time \site{Complementary_Filters}}
     \label{fig:my_label}
 \end{figure}
 

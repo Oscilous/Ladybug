@@ -209,7 +209,7 @@ In the simulation both accelerometer and the gyroscope plants are reading the id
     \label{fig:my_label}
 \end{figure}
 
-The IMU readings are then passed through the Complimentary filter plant, where gyroscope readings are used to calculate positional angles via integration and passed through a high pass filter and the angles calculated from accelerometer readings are passed through a low pass filter. For the high pass filter the transfer function used is $\frac{T_{high}*s}{T_{high}*s+1}$ where $T_{high}$ is the period of the cutoff frequency of the filter $T_{high}=\frac{1}{f_c}$
+The IMU readings are then passed through the Complimentary filter plant, where gyroscope readings are used to calculate positional angles via integration and passed through a high pass filter and the angles calculated from accelerometer readings are passed through a low pass filter. For the high pass filter the transfer function used is $\frac{T_{high}*s}{T_{high}*s+1}$. For the low-pass filter transfer function is $\frac{1}{T_{low}*s+1}$  where $T_{high}$ is the period of the cutoff frequency of the filter $T_{high}=\frac{1}{f_c}$
 
 \begin{figure}[H]
     \begin{center}
@@ -267,7 +267,7 @@ To calibrate the sensor, a simple $for$ loop is used that runs 10 000 iterations
     \begin{center}
     \includegraphics[scale = 0.85]{pictures/IMU/read_gyro_f.png}
     \end{center}
-    \caption{$read_gyro_f()$ function}
+    \caption{$readGyroF()$ function}
     \label{fig:my_label}
 \end{figure}
 
@@ -356,7 +356,7 @@ This can be done with the help of rotational matrix as follows in \ref{fig:calc_
 
 
 
-To choose optimal cut-off frequencies for the digital filters, the Complimentary filter output can be printed on Serial Plotter alongside the unfiltered Euler angles from gyroscope and accelerometer to see how much the filtered signal is attenuated and observe the phase shift. It can be seen in \ref{fig:serial_plot} that the gyroscope calculation has drifted in time and the Complimentary filter output has smoothed out some of the acclerometer readings noise, however there is a slight delay in time between the signals.
+To choose optimal cut-off frequencies for the digital filters, the Complimentary filter output can be printed on Serial Plotter alongside the unfiltered Euler angles from gyroscope and accelerometer to see how much the filtered signal is attenuated and observe the phase shift. It can be seen in \ref{fig:serial_plot} that with Low pass cut-off frequency 10Hz and High pass cut-off frequency 15Hz the gyroscope calculation has drifted in time and the Complimentary filter output has smoothed out some of the acclerometer reading noise, however there is a slight delay in time between the signals.
 
 
 \begin{figure}[H]

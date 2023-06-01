@@ -6,7 +6,7 @@ The plant model is a series of equations with multiple variables, which uses inp
 For this project, the plant model is designed to take a height input the drone should hover at, paired with the inputs from the sensors, to achieve the desired hover height and stability.
 
 \subsubsection{State Equations}
-The drone possesses 6 degrees of freedom, enabling it to navigate in various directions and perform rotations. It can move along the X, Y, and Z axes, while also being capable of pitch (rotation around the Y axis), roll (rotation around the X axis), and yaw (rotation around the Z axis). We can identify the precise angle and position of the drone at any time by defining the axis of rotation and its accompanying state variables.
+The drone possesses 6 degrees of freedom, enabling it to navigate in various directions and perform rotations. It can move along the X, Y, and Z axes, while also being capable of pitch (rotation around the Y axis), roll (rotation around the X axis), and yaw (rotation around the Z axis). The precise angle and position of the drone can be defined at any time by identifying the axis of rotation and its accompanying state variables.
 \cite{Ferry}
 
 \begin{figure}[H]
@@ -60,19 +60,19 @@ The next part of the report is a small summary of the tests done to determine th
 
 \subsubsection{Thrust testing}
 
-For thrust testing the motor is placed in a frame on a scale to measure the change in weight when the motor is operating. A sketch of the setup can be found in appendix \ref{appendix_thrust}2.2. The motor used had an operating voltage window of 0-4,2 volts, therefore the motor was tested between 1-4,2 volts incremented with 0,1 volts, and the weight change noted for each increment. Characterizing the motor yielded the results seen in figure \ref{fig:motorthrustgraphed}. As a general rule of thumb, provided by project supervisors, the motor's need to produce double the thrust of the total weight of the drone to operate ideally. At maximum voltage level of the battery, a single motor produces 22.2 grams of thrust. In conclusion, at maximum voltage level the drone can ideally weigh 44.4 grams in total. The battery will slowly discharge meaning that it's impossible to always have max output, so it should be a little less than 44.4 grams in practice.
+For thrust testing the motor is placed in a frame on a scale to measure the change in weight when the motor is operating. A sketch of the setup can be found in appendix \ref{appendix_thrust}2.2. The motor used had an operating voltage window of 0-4,2 volts, therefore the motor was tested between 1-4,2 volts incremented with 0,1 volts, and the weight change noted for each increment. Characterizing the motor yielded the results seen in figure \ref{motorthrustgraphed}. As a general rule of thumb, provided by project supervisors, the motor's need to produce double the thrust of the total weight of the drone to operate ideally. At maximum voltage level of the battery, a single motor produces 22.2 grams of thrust. In conclusion, at maximum voltage level the drone can ideally weigh 44.4 grams in total. The battery will slowly discharge meaning that it's impossible to always have max output, so it should be a little less than 44.4 grams in practice.
 
 \begin{figure}[H]
 \begin{center}
    \includegraphics[scale =1]{pictures/control/Graph thrust.JPG}
-   \label{motorthrustgraphed}
 \end{center}
 \caption{Motor Thrust Graphed}
+\label{motorthrustgraphed}
 \end{figure}
 
 \subsubsection{Motor Constants, and Thrust Coefficient}
 Motor constants relevant for this project include, “Motor velocity constant” ($K_v$) and “Motor torque constant” ($K_T$)
-With a simple setup the motor's RPM can be tested proportionally to PWM. The motor was tested in 20 increments, using a photo sensor to measure RPM. Using the data from the test, we get the result showin in figure \ref{fig:motorconstantscals}. \cite{MotorConstants}
+With a simple setup the motor's RPM can be tested proportionally to PWM. The motor was tested in 20 increments, using a photo sensor to measure RPM. Using the data from the test, the result is shown in figure \ref{motorconstantscals}. \cite{MotorConstants}
 
 \begin{figure}[H]
 \begin{center}
@@ -84,9 +84,9 @@ With a simple setup the motor's RPM can be tested proportionally to PWM. The mot
 \begin{figure}[H]
 \begin{center}
    \includegraphics[scale =1.5]{pictures/control/Motor constants calc.png}
-   \label{motorconstantscals}
 \end{center}
 \caption{Motor Constants}
+\label{motorconstantscals}
 \end{figure}
 
 Combining the two test data sets it is possible to determine the thrust coefficient of the motor. Using the graph from the thrust test, the thrust can be calculated by taking the voltage drop over the motor. This thrust is then divided with the angular velocity to get the thrust coefficient ($TC=3.59E-05$).
@@ -98,18 +98,18 @@ The drone is very small, weighing only approximately 60 grams with little surfac
 
 \subsubsection{Generating Plant Model Equations}
 Now with the all the states and parameters defined, plant model equations can be generated. 
-First, we will look at how the motors should operate together to move the quadcopter in the desired direction. A quadcopter can move in X and Y directions using pitch and roll. When the quadcopter rotates around one of its axis, all the rotor blades will generate thrust at an angle, moving the drone in a direction. It is important to control the individual motors so the drone won’t tilt too much, causing it to flip in the air. In figure \ref{fig:ter} below the different cases of directional movement for the quadcopter can be seen.  
+First, it is considered how the motors should operate together to move the quadcopter in the desired direction. A quadcopter can move in X and Y directions using pitch and roll. When the quadcopter rotates around one of its axis, all the rotor blades will generate thrust at an angle, moving the drone in a direction. It is important to control the individual motors so the drone won’t tilt too much, causing it to flip in the air. In figure \ref{ter} below the different cases of directional movement for the quadcopter can be seen.  
 
 
 \begin{figure}[H]
 \begin{center}
    \includegraphics[scale =1]{pictures/control/thrust equations results.png}
-   \label{ter}
 \end{center}
 \caption{Visual representation of thrust equations \cite{Ferry}}
+\label{ter}
 \end{figure}
 
-In figure \ref{fig:ter} U1 is the general thrust behaviour, providing thrust equally and symmetrically to move only the Z axis. U2 creates a roll, thrusting the drone in the Y direction. U3 creates a pitch, thrusting the drone in the X direction. U4 increases the thrust for motors turning the same direction and decreases the thrust of the motors rotating the opposite direction, allowing the drone to rotate in the Z axis e.g., yaw due to non-symmetrical rotational forces created by the moments of the motors.  \cite{Ferry}
+In figure \ref{ter} U1 is the general thrust behaviour, providing thrust equally and symmetrically to move only the Z axis. U2 creates a roll, thrusting the drone in the Y direction. U3 creates a pitch, thrusting the drone in the X direction. U4 increases the thrust for motors turning the same direction and decreases the thrust of the motors rotating the opposite direction, allowing the drone to rotate in the Z axis e.g., yaw due to non-symmetrical rotational forces created by the moments of the motors.  \cite{Ferry}
 
 Each motor's thrust is then defined as angular rotational speed to acquire the following equations.
 

@@ -2,7 +2,7 @@
 
 The Inertial Measurement Unit is a key component of the drone control as it provides feedback about the position in time which is crucial for adjusting the control input signal.
 
-As described in the morphology for our project we have chosen to use the inbuilt IMU sensor with 6DOF available on the Seeed Studio XIAO nRF52840 (Sense) micro-controller board. Since noise is a concern, it is beneficial to use an inbuilt component in an effort to reduce the interference on IMU readings.
+As described in the morphology for our project it was decided to use the inbuilt IMU sensor with 6DOF available on the Seeed Studio XIAO nRF52840 (Sense) micro-controller board. Since noise is a concern, it is beneficial to use an inbuilt component in an effort to reduce the interference on IMU readings.
 
 The IMU consists of a gyroscope that provides angular velocity
 data and an accelerometer providing axial acceleration data.
@@ -27,7 +27,7 @@ Each gyroscope channel measures the rate of rotation around one of the internal 
 \end{figure}
 
 
-To better understand the accelerometer readings we can imagine a box with a ball inside of it. In zero gravity conditions the ball would be floating in the air and no force on any of the walls would be detected.
+To better understand the accelerometer readings it can be imagined as a box with a ball inside of it. In zero gravity conditions the ball would be floating in the air and no force on any of the walls would be detected.
 
 
 \begin{figure}[H]
@@ -38,9 +38,9 @@ To better understand the accelerometer readings we can imagine a box with a ball
     \label{fig:my_label}
 \end{figure}
 
-If the box was moved in positive X axis direction with acceleration of $9.81 m/s^2$, the ball would hit the wall of the box in negative X axis direction and register force of $1g$. From this we can note that accelerometer is reading a force in the opposite direction of the motion. 
+If the box was moved in positive X axis direction with acceleration of $9.81 m/s^2$, the ball would hit the wall of the box in negative X axis direction and register force of $1g$. From this it can be noted that accelerometer is reading a force in the opposite direction of the motion. 
 
-Similarly we can now imagine that when the box is sitting still in gravitational field of the Earth, we would get a reading of $1g$ in the downwards Z axis direction. If the IMU was rotated in respect to Earth surface, the reading of 1g would be split into x, y and z components on the accelerometer internal axis. We can use these readings to calculate the positional angles with respect to earth surface with the help of the following formula (in figure \ref{fig:acc_calc}) \cite{Rotation}.
+Similarly it can now be imagined that when the box is sitting still in gravitational field of the Earth, a reading of $1g$ in the downwards Z axis direction could be observed. If the IMU was rotated in respect to Earth surface, the reading of 1g would be split into x, y and z components on the accelerometer internal axis. These readings can be used to calculate the positional angles with respect to earth surface with the help of the following formula (in figure \ref{fig:acc_calc}) \cite{Rotation}.
 
 \begin{figure}[H]
     \begin{center}
@@ -50,9 +50,9 @@ Similarly we can now imagine that when the box is sitting still in gravitational
     \label{fig:acc_calc}
 \end{figure}
 
-It is important to note that all measurements on accelorometer are read in the IMU body frame. In order to relate them to Earth's surface we need to choose a reference coordinate system and transform the measurements from the body reference frame to the chosen coordinate system.
+It is important to note that all measurements on accelorometer are read in the IMU body frame. In order to relate them to Earth's surface a reference coordinate system needs to be chosen and the measurements transformed from the body reference frame to the chosen coordinate system.
 
-For our model we have chosen to work with NED (north-east-down) coordinate system, where X axis is pointing to north, the Y‐axis to east, and the z‐axis is pointing down.
+For the project model it was decided to work with NED (north-east-down) coordinate system, where X axis is pointing to north, the Y‐axis to east, and the z‐axis is pointing down.
 
 \begin{figure}[H]
     \begin{center}
@@ -62,7 +62,7 @@ For our model we have chosen to work with NED (north-east-down) coordinate syste
     \label{fig:my_label}
 \end{figure}
 
-In order to relate sensor readings from body reference frame to NED, we are using Euler angles, which provide a way to represent the 3D orientation of an object using a combination of three rotations about different axis. Rotation about X axis is denoted by $\Phi$, rotation about Y with $\Theta$ and rotation around Z axis with $\Psi$. 
+In order to relate sensor readings from body reference frame to NED, Euler angles are used, which provide a way to represent the 3D orientation of an object using a combination of three rotations about different axis. Rotation about X axis is denoted by $\Phi$, rotation about Y with $\Theta$ and rotation around Z axis with $\Psi$. 
 
 \begin{figure}[H]
     \begin{center}
@@ -96,7 +96,7 @@ $\left(\begin{array}{ccc}
 \end{array}\right)$}
 \end{displaymath}
 
-To transition from body reference frame to NED, we need to perform the rotations in opposite order - Roll, then Pitch, then Yaw from negative angles
+To transition from body reference frame to NED, the rotations need to be performend in opposite order - Roll, then Pitch, then Yaw from negative angles
  $R( -\Psi, -\Theta ,-\Phi):$ 
 
 \begin{displaymath}
@@ -109,10 +109,10 @@ $\left(\begin{array}{ccc}
 \end{displaymath}
 
 \subsection{Sensor fusion}
-Now that we have established two methods of obtaining angular position, we must take into account the deficiencies related to each of the methods. The accelerometer has good accuracy when the drone is not accelerating and the only acceleration we are reading is from gravity.
+Now that the two methods of obtaining angular position have been estableshed, the deficiencies related to each of the methods must be taken into account. The accelerometer has good accuracy when the drone is not accelerating and the only acceleration is read from gravity.
 The gyroscope can read quick movements but since the readings are being integrated, any error in the measurements is repeatedly added to the calculated position thereby leading to a drifting signal.
 
-The solution is to introduce either a filter or an observer to fuse the measurements from accelerometer and gyroscope. For our project we have implemented a complimentary filter consisting of a low pass filter on the accelerometer and a high pass filter on gyroscope and summing the filtered signals.
+The solution is to introduce either a filter or an observer to fuse the measurements from accelerometer and gyroscope. For the project a complimentary filter has been implemented, consisting of a low pass filter on the accelerometer and a high pass filter on gyroscope and summing the filtered signals.
 \newline
 The transfer functions of low pass and high pass filters in s domain are given below (where $\tau$ is the time constant and $\omega _o$ is the angular cut-off frequency in $rad/s$):\newline 
 \begin{displaymath}
@@ -147,7 +147,7 @@ Giving us discrete time implementation of:
     y(t)=a_o y_{n-1}+b_ox_n+b_1x_{n-1}
 \end{displaymath}
 
-To calculate the coefficients $a_o, b_o, b_1$ we can use Matlab Transfer function $tf()$ and Continuous to discrete time function $c2d() $
+To calculate the coefficients $a_o, b_o, b_1$ Matlab Transfer function $tf()$ and Continuous to discrete time function $c2d() $  can be used.
 
 
 \begin{figure}[H]
@@ -160,7 +160,7 @@ To calculate the coefficients $a_o, b_o, b_1$ we can use Matlab Transfer functio
 
 
 
-The sampling time $T_s$ used in calculations is the loop time of the code we run for the drone control.
+The sampling time $T_s$ used in calculations is the loop time of the code the drone control.
 
 
 After the calculated angles are passed through their respective filters, the values can be summed up resulting in a complimentary filter (as shown in figure \ref{fig:compl_filt}):
@@ -176,7 +176,7 @@ After the calculated angles are passed through their respective filters, the val
 
 \subsection{Simulink}
 
-To simulate the IMU readings as feedback in Simulink we first need to consider what input variables will be handled by the gyroscope and the accelerometer plants. The drone plant in the simulation is operating in NED reference frame, therefore any outputs coming from it are also in NED. However the physical IMU sensor will be handling measurements in body reference frame, therefore we need to create a function block to transform the drone output values into body reference frame values. 
+To simulate the IMU readings as feedback in Simulink the input variables that will be handled by the gyroscope and the accelerometer plants need to be considered. The drone plant in the simulation is operating in NED reference frame, therefore any outputs coming from it are also in NED. However the physical IMU sensor will be handling measurements in body reference frame, therefore a function block needs to be created to transform the drone output values into body reference frame values. 
 
 For the accelerometer this can be done by taking all linear motion acceleration outputs from drone plant in the form of a column vector $Acc=($X'', Y'', Z''$)$ and multiplying it with the rotational matrix for moving from NED to body. This equation requires knowing the Euler angles to be used in the rotational matrices. These values can also be taken from the drone plant.
 
@@ -197,7 +197,7 @@ For the accelerometer this can be done by taking all linear motion acceleration 
     \label{fig:my_label}
 \end{figure}
 
-For steady-level flight it can be assumed that angular velocities are the same in body and NED reference frames \cite{AircraftDynamics} so we do not need to perform rotational transformation on these values. Therefore the angular velocity output can  be used($\dot{\Phi}, \dot{\Theta}, \dot{\Psi}$,) from the drone plant as the input for the gyroscope plant. 
+For steady-level flight it can be assumed that angular velocities are the same in body and NED reference frames \cite{AircraftDynamics} so a rotational transformation on these values isn't performed. Therefore the angular velocity output can  be used($\dot{\Phi}, \dot{\Theta}, \dot{\Psi}$,) from the drone plant as the input for the gyroscope plant. 
 
 In the simulation both accelerometer and the gyroscope plants are reading the ideal values from the drone plant, however in the physical model there would be noise present therefore it is needed to generate noise by adding a random number generator on the incoming signals. In the physical IMU there is also a bias on the readings, which can be measured and simulated in the readings.
 
@@ -219,7 +219,7 @@ The IMU readings are then passed through the Complimentary filter plant, where g
     \label{fig:my_label}
 \end{figure}
 
-The complimentary filter plant also includes calculation of vertical position $Z$ by performing double integration of the vertical acceleration reading. In the physical model the time of flight sensor is included for this measurement, however it is not modeled in the simulation as the sensor was a later addition. In ideal scenario we would also include a sensor that could be used as additional reference for the Yaw, for example, a magnometer, as only using the gyroscope reading to track this angle introduces drift. Unfortunately the drone only has an IMU with 6DOF. 
+The complimentary filter plant also includes calculation of vertical position $Z$ by performing double integration of the vertical acceleration reading. In the physical model the time of flight sensor is included for this measurement, however it is not modeled in the simulation as the sensor was a later addition. In ideal scenario it would also include a sensor that could be used as additional reference for the Yaw, for example, a magnometer, as only using the gyroscope reading to track this angle introduces drift. Unfortunately the drone only has an IMU with 6DOF. 
 The filtered values are then converted back to NED reference frame by using calculations described previously and then passed back as feedback input for the control plant.
 
 \begin{figure}[H]
@@ -252,7 +252,7 @@ The IMU offers inbuilt analog Low Pass and High pass filters, however it was cho
 
 There are two important additional sensor initiation steps that are not covered by the library - removing sensor bias and aligning the internal axis of the Gyro and Accelerometer units. 
 
-To calibrate the sensor, a simple $for$ loop is used that runs 10 000 iterations reading the sensor output and averages the values. Since we know that when the sensor is sitting still, we should be reading 0 angular velocity, these average readings can be subtracted from every future reading, thus creating the ReadGyro() function. 
+To calibrate the sensor, a simple $for$ loop is used that runs 10 000 iterations reading the sensor output and averages the values. Since it is known that when the sensor is sitting still, it should be reading 0 angular velocity, these average readings can be subtracted from every future reading, thus creating the ReadGyro() function. 
 
 
 \begin{figure}[H]
@@ -275,7 +275,7 @@ To calibrate the sensor, a simple $for$ loop is used that runs 10 000 iterations
 To calibrate the accelerometer,  the orientation of the sensor needs to be changed between each $for$ loop to have each of the positive and negative axis pointing downwards. As per instructions in the data sheet the full range of readings on each axis should be 2$g$. 
 
 The second initialization step is to align the axis for gyroscope and accelerometer before using the readings for any further calculations.
-The direction of the X,Y,Z axis is pre-set by factory, however it will not be the same for all sensors and since we are using a complimentary filter to fuse the measurements, it is crucial to make sure that the positive direction gyroscope and accelerometer axis are the same and that the positive angle of rotation matches the references used in motor control. \newline
+The direction of the X,Y,Z axis is pre-set by factory, however it will not be the same for all sensors and since they are using a complimentary filter to fuse the measurements, it is crucial to make sure that the positive direction gyroscope and accelerometer axis are the same and that the positive angle of rotation matches the references used in motor control. \newline
 During testing one of the Seeed Xiao micro-controllers was damaged and had to be swapped for a new one. It turned out that on the new micro-controller board the direction of y axis was the opposite for both sensor units and as a result was affecting the filtered sensor readings and the control algorithm. \newline
 
 Several functions needed for our positional calculations is needs to be introduced:
@@ -342,7 +342,7 @@ $ComplimentaryF()$
 
 Combines high pass and low pass filter output.
 For the time of flight sensor it is needed to include the $Adafruit_VL53L0X.h$ library \cite{VL53L0XV2} which then allows the vertical distance to be measured with the help of measure.RangeMilliMeter function.
-However it is needed to remember that the drone could be pitched and rolled therefor to get an accurate hight, we need to triangulate the reading based on the Roll and Pitch angles.
+However it is needed to remember that the drone could be pitched and rolled therefor to get an accurate hight, the reading based on the Roll and Pitch angles needs to be triangulated.
 This can be done with the help of rotational matrix as follows in figure \ref{fig:calc_z}:
 
 

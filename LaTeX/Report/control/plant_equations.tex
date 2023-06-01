@@ -55,8 +55,7 @@ For the approximation smaller electrical components were not considered, such as
 \caption{Top view of quadcoptor}
 \end{figure}
 
-A mathematical document can be found in the appendix as “SPRO4math”. Which shows the detailed process of calculation. The mathematical equations are set up in maple, allowing quick changes to values in case a part is changed or removed. This feature proved useful since the weight estimate of the drone has changed rapidly over the course of the project period, as well as new components being added, which could then easily be integrated in the calculations.
-
+A mathematical document can be found in the appendix as “SPRO4math”. Which shows the detailed process of calculation. 
 \begin{figure}[H]
 \begin{center}
    \includegraphics[scale =1]{pictures/control/Inertia moments.png}
@@ -72,16 +71,9 @@ The next part of the report is a small summary of the tests done to determine th
     \item Motor constants testing can be found in appendix "Motor Testing"
 \end{itemize}
 
-\begin{figure}[H]
-\begin{center}
-   \includegraphics[scale =1]{pictures/control/Motor thrust 2.JPG}
-\end{center}
-\caption{Thrust testing setup}
-\end{figure}
-
 \subsubsection{Thrust testing}
 
-For thrust testing the motor is placed in a frame on a scale to measure the change in weight when the motor is operating. The motor used had an operating voltage window of 0-4,2 volts, therefore the motor was tested between 1-4,2 volts incremented with 0,1 volts, and the weight change noted for each increment. Characterizing the motor yielded the results seen in the figure below.
+For thrust testing the motor is placed in a frame on a scale to measure the change in weight when the motor is operating. A sketch of the setup can be found in appendix A2,2. The motor used had an operating voltage window of 0-4,2 volts, therefore the motor was tested between 1-4,2 volts incremented with 0,1 volts, and the weight change noted for each increment. Characterizing the motor yielded the results seen in the figure below.
 As a general rule of thumb, provided by project supervisors, the motor's need to produce double the thrust of the total weight of the drone to operate ideally.
 At maximum voltage level of the battery, a single motor produces 22.2 grams of thrust. In conclusion, at maximum voltage level the drone can ideally weigh 44.4 grams in total. The battery will slowly discharge meaning that it's impossible to always have max output, so it should be a little less than 44.4 grams in practice.
 
@@ -89,7 +81,7 @@ At maximum voltage level of the battery, a single motor produces 22.2 grams of t
 \begin{center}
    \includegraphics[scale =1]{pictures/control/Graph thrust.JPG}
 \end{center}
-\caption{Thrust test data graphed}
+\caption{Motor Thrust Graphed}
 \end{figure}
 
 \subsubsection{Motor Constants, and Thrust Coefficient}

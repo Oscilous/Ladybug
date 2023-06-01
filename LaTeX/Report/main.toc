@@ -1,0 +1,63 @@
+\contentsline {section}{\numberline {1}Background}{2}{}%
+\contentsline {section}{\numberline {2}Problem statement}{4}{}%
+\contentsline {subsection}{\numberline {2.1}Primary goals }{4}{}%
+\contentsline {subsection}{\numberline {2.2}Secondary goals}{4}{}%
+\contentsline {subsection}{\numberline {2.3}Constraints}{4}{}%
+\contentsline {section}{\numberline {3}Test Specifications}{5}{}%
+\contentsline {subsection}{\numberline {3.1}Primary goals:}{5}{}%
+\contentsline {subsection}{\numberline {3.2}Secondary goals}{5}{}%
+\contentsline {subsection}{\numberline {3.3}Constraints}{6}{}%
+\contentsline {subsection}{\numberline {3.4}Morphology table}{6}{}%
+\contentsline {subsection}{\numberline {3.5}Evaluation matrix}{7}{}%
+\contentsline {subsection}{\numberline {3.6}Risk Assesment}{8}{}%
+\contentsline {subsection}{\numberline {3.7}GitHub Interaction}{10}{}%
+\contentsline {subsubsection}{\numberline {3.7.1}Advantages of Using GitHub}{10}{}%
+\contentsline {subsubsection}{\numberline {3.7.2}Usefulness Beyond the Project}{11}{}%
+\contentsline {section}{\numberline {4}Design and manufacturing of quadrotor}{12}{}%
+\contentsline {section}{\numberline {5}Control prototyping}{19}{}%
+\contentsline {subsection}{\numberline {5.1}Plant Model Equations}{19}{}%
+\contentsline {subsubsection}{\numberline {5.1.1}State Equations}{19}{}%
+\contentsline {subsubsection}{\numberline {5.1.2}Inertia Moments}{21}{}%
+\contentsline {subsubsection}{\numberline {5.1.3}Characterization of Motor}{24}{}%
+\contentsline {subsubsection}{\numberline {5.1.4}Thrust testing}{24}{}%
+\contentsline {subsubsection}{\numberline {5.1.5}Motor Constants, and Thrust Coefficient}{25}{}%
+\contentsline {subsubsection}{\numberline {5.1.6}Environmental Forces}{26}{}%
+\contentsline {subsubsection}{\numberline {5.1.7}Generating Plant Model Equations}{26}{}%
+\contentsline {subsubsection}{\numberline {5.1.8}SIMULINK/Matlab Implementation}{30}{}%
+\contentsline {subsection}{\numberline {5.2}Controller}{33}{}%
+\contentsline {subsection}{\numberline {5.3}UAV Toolbox}{35}{}%
+\contentsline {subsection}{\numberline {5.4}The theory of PID}{36}{}%
+\contentsline {subsubsection}{\numberline {5.4.1}Principles of PID Control}{36}{}%
+\contentsline {subsubsection}{\numberline {5.4.2}PID Control Loop}{36}{}%
+\contentsline {subsubsection}{\numberline {5.4.3}Benefits of PID Control}{36}{}%
+\contentsline {paragraph}{Stability}{36}{}%
+\contentsline {paragraph}{Robustness}{37}{}%
+\contentsline {paragraph}{Adaptability}{37}{}%
+\contentsline {paragraph}{Simplicity}{37}{}%
+\contentsline {subsubsection}{\numberline {5.4.4}Ziegler-Nichols method}{37}{}%
+\contentsline {subsection}{\numberline {5.5}Linearization of the plant}{39}{}%
+\contentsline {subsection}{\numberline {5.6}The simulation of PID}{40}{}%
+\contentsline {subsubsection}{\numberline {5.6.1}$\phi $ and $\theta $ hyper-tuning}{40}{}%
+\contentsline {subsubsection}{\numberline {5.6.2}Z hyper-tuning}{41}{}%
+\contentsline {subsection}{\numberline {5.7}The Implementation of PID}{43}{}%
+\contentsline {subsubsection}{\numberline {5.7.1}One-axis setup}{43}{}%
+\contentsline {subsubsection}{\numberline {5.7.2}Diagonal setup}{45}{}%
+\contentsline {subsubsection}{\numberline {5.7.3}String setup}{46}{}%
+\contentsline {subsubsection}{\numberline {5.7.4}Conclusion of PID testing}{47}{}%
+\contentsline {section}{\numberline {6}Software prototyping}{49}{}%
+\contentsline {subsection}{\numberline {6.1}Embedded development environment}{49}{}%
+\contentsline {subsection}{\numberline {6.2}QuickPID}{53}{}%
+\contentsline {subsection}{\numberline {6.3}NanoBLEFlashPrefs}{54}{}%
+\contentsline {subsection}{\numberline {6.4}Wireless communication}{55}{}%
+\contentsline {subsection}{\numberline {6.5}Operation flow}{56}{}%
+\contentsline {section}{\numberline {A}Motor Thrust Testing}{64}{}%
+\contentsline {subsection}{\numberline {A.1}Initial Assumptions}{64}{}%
+\contentsline {subsection}{\numberline {A.2}Initial Results}{64}{}%
+\contentsline {subsubsection}{\numberline {A.2.1}Final Assumptions}{64}{}%
+\contentsline {subsubsection}{\numberline {A.2.2}Final Results}{66}{}%
+\contentsline {section}{\numberline {B}Motor Testing}{69}{}%
+\contentsline {subsection}{\numberline {B.1}Test Setup}{69}{}%
+\contentsline {subsection}{\numberline {B.2}Theory}{70}{}%
+\contentsline {subsection}{\numberline {B.3}Data}{71}{}%
+\contentsline {subsection}{\numberline {B.4}Conclusion of Theory}{71}{}%
+\contentsline {section}{\numberline {C}Budget}{72}{}%

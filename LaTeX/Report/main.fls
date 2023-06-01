@@ -1,8 +1,8 @@
-PWD c:/Users/Artis/Desktop/Ladybug/LaTeX/Report
+PWD c:/Users/thoru/Documents/GitHub/Ladybug/LaTeX/Report
 INPUT c:/texlive/2023/texmf.cnf
 INPUT c:/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/Artis/Desktop/Ladybug/LaTeX/Report/main.tex
+INPUT c:/Users/thoru/Documents/GitHub/Ladybug/LaTeX/Report/main.tex
 OUTPUT main.log
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
@@ -362,14 +362,15 @@ INPUT ./pictures/FPP.png
 INPUT ./pictures/FPP.png
 INPUT c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecrm1728.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecbx1728.tfm
+OUTPUT main.toc
 INPUT ./introduction/background.tex
 OUTPUT introduction/background.aux
 INPUT ./introduction/background.tex
 INPUT ./introduction/background.tex
 INPUT introduction/background.tex
 INPUT introduction/background.tex
-INPUT c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecrm1728.tfm
-INPUT c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecbx1728.tfm
 INPUT ./pictures/classification.PNG
 INPUT ./pictures/classification.PNG
 INPUT pictures/classification.PNG
@@ -522,11 +523,6 @@ INPUT ./pictures/control/Inertia moments.png
 INPUT pictures/control/Inertia moments.png
 INPUT ./pictures/control/Inertia moments.png
 INPUT ./pictures/control/Inertia moments.png
-INPUT ./pictures/control/Motor thrust 2.JPG
-INPUT ./pictures/control/Motor thrust 2.JPG
-INPUT pictures/control/Motor thrust 2.JPG
-INPUT ./pictures/control/Motor thrust 2.JPG
-INPUT ./pictures/control/Motor thrust 2.JPG
 INPUT ./pictures/control/Graph Thrust.JPG
 INPUT ./pictures/control/Graph Thrust.JPG
 INPUT pictures/control/Graph Thrust.JPG

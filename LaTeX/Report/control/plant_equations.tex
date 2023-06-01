@@ -17,13 +17,7 @@ The drone possesses 6 degrees of freedom, enabling it to navigate in various dir
 \end{figure}
 
 The drone's states include critical physical properties like as acceleration, velocity, and position, which are all detected by sensors. A gyroscope is used to record the angular changes of the drone. An accelerometer is a device that measures acceleration along the x, y, and z axes. Since the gyroscope drifts and the accelerator has measurement spikes when subjected to high acceleration, a complementary filter will be needed, which will be discussed in the “IMU” subsection. A dedicated infrared sensor is also used to measure distances in the z-direction, allowing for exact location information.
-
-\begin{figure}[H]
-\begin{center}
-    \includegraphics[scale =1]{pictures/control/State table.png}
-\end{center}
-\caption{State table}
-\end{figure}
+A state table can be found in Appendix E.
 
 Before plant model equations can be generated, parameters for the drone need to be calculated. The parameters are what explains the drone mathematically and is an integral part of modelling the drone. The more accurate these values are the more realistic the plant model will be.
 The parameters needed can be seen in the table below:\cite{Ferry}
@@ -48,14 +42,7 @@ For the approximation smaller electrical components were not considered, such as
 \caption{Inertia moments equations}
 \end{figure}
 
-\begin{figure}[H]
-\begin{center}
-   \includegraphics[scale =1]{pictures/control/Drone view inertiacalc.png}
-\end{center}
-\caption{Top view of quadcoptor}
-\end{figure}
-
-A mathematical document can be found in the appendix as “SPRO4math”. Which shows the detailed process of calculation. 
+A mathematical document can be found in the appendix as “SPRO4math”. Which shows the detailed process of calculation.
 \begin{figure}[H]
 \begin{center}
    \includegraphics[scale =1]{pictures/control/Inertia moments.png}
@@ -132,21 +119,15 @@ Each motors thrust is then defined as angular rotational speed to acquire the fo
 \caption{Thrust equations \cite{Ferry}}
 \end{figure}
 
-The plant equations for this project were gotten from one of the sources. For a more in depth description of how the plant equations are found see \cite{Ferry}
-\begin{figure}[H]
-\begin{center}
-   \includegraphics[scale =1]{pictures/control/plant equations.png}
-\end{center}
-\caption{Summary of plant equations \cite{Ferry}}
-\end{figure}
+The plant equations for this project were gotten from source\cite{Ferry}. The source has a more in depth description of how the plant equations were found.
+A summary of all the plant equations can be found in appendix E.
 
 \begin{figure}[H]
-\begin{center}
-   \includegraphics[scale =1]{pictures/control/plant equation example.png}
-\end{center}
-\caption{Example of plant equation for phi. \cite{Ferry}}
-\end{figure}
-
+   \begin{center}
+      \includegraphics[scale =1]{pictures/control/plant equation example.png}
+   \end{center}
+   \caption{Example of plant equation for phi. \cite{Ferry}}
+   \end{figure}
 Body gyroscopic effects from changes in the quadcopter orientation.
 Propeller gyroscopic effects from propeller rotation and angle/orientation
 Actuation action forces produced by the rotors/propellers.

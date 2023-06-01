@@ -1,8 +1,8 @@
-PWD c:/Users/Artis/Desktop/Ladybug/LaTeX/Report
+PWD c:/Users/thoru/Documents/GitHub/Ladybug/LaTeX/Report
 INPUT c:/texlive/2023/texmf.cnf
 INPUT c:/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/Artis/Desktop/Ladybug/LaTeX/Report/main.tex
+INPUT c:/Users/thoru/Documents/GitHub/Ladybug/LaTeX/Report/main.tex
 OUTPUT main.log
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
@@ -320,6 +320,9 @@ INPUT introduction/Budget.aux
 INPUT ./software/zephyr.aux
 INPUT software/zephyr.aux
 INPUT software/zephyr.aux
+INPUT ./control/Plant_equations_appendix.aux
+INPUT control/Plant_equations_appendix.aux
+INPUT control/Plant_equations_appendix.aux
 OUTPUT main.aux
 INPUT c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -495,6 +498,18 @@ INPUT ./pictures/design/8520.jpg
 INPUT ./pictures/design/8520.jpg
 INPUT ./pictures/design/8520.jpg
 INPUT ./pictures/design/8520.jpg
+INPUT ./pictures/design/dronescale.jpg
+INPUT ./pictures/design/dronescale.jpg
+INPUT ./pictures/design/dronescale.jpg
+INPUT ./pictures/design/dronescale.jpg
+INPUT ./pictures/design/dronebottom.jpg
+INPUT ./pictures/design/dronebottom.jpg
+INPUT ./pictures/design/dronebottom.jpg
+INPUT ./pictures/design/dronebottom.jpg
+INPUT ./pictures/design/propthree.jpg
+INPUT ./pictures/design/propthree.jpg
+INPUT ./pictures/design/propthree.jpg
+INPUT ./pictures/design/propthree.jpg
 INPUT ./control/plant_equations.tex
 INPUT control/plant_equations.tex
 INPUT ./control/plant_equations.tex
@@ -504,11 +519,6 @@ INPUT ./pictures/control/drone directionals.png
 INPUT pictures/control/drone directionals.png
 INPUT ./pictures/control/drone directionals.png
 INPUT ./pictures/control/drone directionals.png
-INPUT ./pictures/control/State table.png
-INPUT ./pictures/control/State table.png
-INPUT pictures/control/State table.png
-INPUT ./pictures/control/State table.png
-INPUT ./pictures/control/State table.png
 INPUT ./pictures/control/parameter table.png
 INPUT ./pictures/control/parameter table.png
 INPUT pictures/control/parameter table.png
@@ -519,21 +529,11 @@ INPUT ./pictures/control/inertia tables table.png
 INPUT pictures/control/inertia tables table.png
 INPUT ./pictures/control/inertia tables table.png
 INPUT ./pictures/control/inertia tables table.png
-INPUT ./pictures/control/Drone view inertiacalc.png
-INPUT ./pictures/control/Drone view inertiacalc.png
-INPUT pictures/control/Drone view inertiacalc.png
-INPUT ./pictures/control/Drone view inertiacalc.png
-INPUT ./pictures/control/Drone view inertiacalc.png
 INPUT ./pictures/control/Inertia moments.png
 INPUT ./pictures/control/Inertia moments.png
 INPUT pictures/control/Inertia moments.png
 INPUT ./pictures/control/Inertia moments.png
 INPUT ./pictures/control/Inertia moments.png
-INPUT ./pictures/control/Motor thrust 2.JPG
-INPUT ./pictures/control/Motor thrust 2.JPG
-INPUT pictures/control/Motor thrust 2.JPG
-INPUT ./pictures/control/Motor thrust 2.JPG
-INPUT ./pictures/control/Motor thrust 2.JPG
 INPUT ./pictures/control/Graph Thrust.JPG
 INPUT ./pictures/control/Graph Thrust.JPG
 INPUT pictures/control/Graph Thrust.JPG
@@ -559,11 +559,6 @@ INPUT ./pictures/control/thrust equations.png
 INPUT pictures/control/thrust equations.png
 INPUT ./pictures/control/thrust equations.png
 INPUT ./pictures/control/thrust equations.png
-INPUT ./pictures/control/plant equations.png
-INPUT ./pictures/control/plant equations.png
-INPUT pictures/control/plant equations.png
-INPUT ./pictures/control/plant equations.png
-INPUT ./pictures/control/plant equations.png
 INPUT ./pictures/control/plant equation example.png
 INPUT ./pictures/control/plant equation example.png
 INPUT pictures/control/plant equation example.png
@@ -806,6 +801,22 @@ INPUT ./pictures/serial_monitor.png
 INPUT pictures/serial_monitor.png
 INPUT ./pictures/serial_monitor.png
 INPUT ./pictures/serial_monitor.png
+INPUT ./control/Plant_equations_appendix.tex
+OUTPUT control/Plant_equations_appendix.aux
+INPUT ./control/Plant_equations_appendix.tex
+INPUT ./control/Plant_equations_appendix.tex
+INPUT control/Plant_equations_appendix.tex
+INPUT control/Plant_equations_appendix.tex
+INPUT ./pictures/control/State table.png
+INPUT ./pictures/control/State table.png
+INPUT pictures/control/State table.png
+INPUT ./pictures/control/State table.png
+INPUT ./pictures/control/State table.png
+INPUT ./pictures/control/plant equations.png
+INPUT ./pictures/control/plant equations.png
+INPUT pictures/control/plant equations.png
+INPUT ./pictures/control/plant equations.png
+INPUT ./pictures/control/plant equations.png
 INPUT main.aux
 INPUT ./introduction/background.aux
 INPUT introduction/background.aux
@@ -828,6 +839,9 @@ INPUT introduction/Budget.aux
 INPUT ./software/zephyr.aux
 INPUT software/zephyr.aux
 INPUT software/zephyr.aux
+INPUT ./control/Plant_equations_appendix.aux
+INPUT control/Plant_equations_appendix.aux
+INPUT control/Plant_equations_appendix.aux
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb

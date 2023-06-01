@@ -234,7 +234,7 @@ The filtered values are then converted back to NED reference frame by using calc
 
 To obtain the IMU readings from our sensor a connection first needs to be established with the micro-controller board and using Arduino IDE makes this simple by offering Seeed Studio XIAO nRF52840 (Sense) board package. Additionally several libraries need to be included, such as math.h and LSM6DS3.h. 
 
-The LSM6DS3.h pre-defines the I2C address as 0x6B but can be overwritten in code - as in our case the address is 0x6A. 
+The LSM6DS3.h \sites{LSM6DS3} pre-defines the I2C address as 0x6B but can be overwritten in code - as in our case the address is 0x6A. 
 The library also pre-defines IMU settings - enables both sensors and sets Gyro and Accelerometer sampling rate as 416 Hz. This means sampling time for IMU readings of 2.4 ms, which works with the code for drone control as the sampling frequency is higher than control input calculation frequency. 
 
 By default the maximum range is selected for both sensors - 16g for Accelerometer and 2000 dps for the Gyro. The library also performs the necessary calculations and returns the measurements in gravitational constants and degrees per second and sensor readings can be accessed by using functions readFloatGyroX() and readFloatAccelX().  
@@ -341,7 +341,7 @@ $ComplimentaryF()$
 \newline
 
 Combines high pass and low pass filter output.
-For the time of flight sensor it is needed to include the $Adafruit_VL53L0X.h$ library which then allows the vertical distance to be measured with the help of measure.RangeMilliMeter function.
+For the time of flight sensor it is needed to include the $Adafruit_VL53L0X.h$ library \site{VL53L0XV2} which then allows the vertical distance to be measured with the help of measure.RangeMilliMeter function.
 However it is needed to remember that the drone could be pitched and rolled therefor to get an accurate hight, we need to triangulate the reading based on the Roll and Pitch angles.
 This can be done with the help of rotational matrix as follows:
 

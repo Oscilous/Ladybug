@@ -8,6 +8,7 @@ The style file: plain.bst
 A level-1 auxiliary file: control/thrust_experiments.aux
 A level-1 auxiliary file: control/Motor_Testing.aux
 A level-1 auxiliary file: introduction/Budget.aux
+A level-1 auxiliary file: software/zephyr.aux
 Database file #1: references.bib
 Warning--entry type for "MbedWiki" isn't style-file defined
 --line 563 of file references.bib
@@ -29,7 +30,7 @@ Warning--empty journal in ZNPID
 Warning--empty journal in loggingProof
 You've used 43 entries,
             2118 wiz_defined-function locations,
-            750 strings with 12761 characters,
+            751 strings with 12780 characters,
 and the built_in function-call counts, 10067 in all, are:
 = -- 937
 > -- 384

@@ -4,7 +4,7 @@
 Software shoud take care of the motor control, IMU output readings and remote control, this could create complications, as essentially they would interrupt each other. A way of multitasking should be introduced.
 "An RTOS (Real-Time Operating System) is a software component that lets you rapidly switch between different running sections of your code. Think of it as having several loop() functions in an Arduino sketch where they all run at the same time." \cite{Joe2019}
 
-After research, the list was narrowed to two top condenders – FreeRTOS and Zephyr. Both solutions are open source, widely used and support the Microcontroller board we have chosen. \cite{Lemberg}
+After research, the list was narrowed to two contenders – FreeRTOS and Zephyr. Both solutions are open source, widely used and support the Microcontroller board that was chosen. \cite{Lemberg}
 According to 2018 IoT Developer Survey \cite{IOT}, FreeRTOS is one of the most popular OS used and while Zephyr only received a 2.8 \% rating in 2018, it is often described as one of the fastest growing RTOS and in 2022 has become the largest open-source RTOS project by the number of commits and developers. (See Figure~\ref{fig:iot_os})
 \begin{figure}[H]
     \centering
@@ -55,7 +55,7 @@ To decide between the RTOS choice, a pros and cons table was created and evaluat
 \label{table.rtos}
 \end{table}
 
-Overall FreeRTOS is better established and would be easier to use, in case of no experience, whereas Zephyr offers more flexibility and is a fast growing solution, well suited for our application and would be a worthwile investment for building our skillset. \cite{Industry}
-After setting up a embedded environment for software development with ZephyrRTOS. (See appendix \ref{zephyr}), it was conducted, that the use of ZephyrRTOS is possible.
-After further consultation with the supervisors, it was conducted, that there is a lack of skill in RTOS, more specifically in threading. With the guidence of Davi, it was concluded, that acquiring such skills would be outside the scope of the project, as the main focus is control engineering.
-In conclusion, the choice was made to use Arduino IDE with the Arduino framework, with the chance of switching to Mbed OS, if a need arises for it.
+Overall FreeRTOS is better established and would be easier to use, in case of no experience, whereas Zephyr offers more flexibility and is a fast growing solution, well suited for the given application \cite{Industry}.
+After setting up an embedded environment for software development with ZephyrRTOS. (See appendix \ref{zephyr}), it was conducted, that the use of ZephyrRTOS is possible.
+After further consultation with the supervisors, it was conducted, that there is a lack of skill in RTOS, more specifically in threading. With the guidence of the supervisors, it was concluded, that acquiring such skills would be outside the scope of the project, as the main focus is control engineering.
+In conclusion, the choice was made to use Arduino IDE with the Arduino framework, with the chance of switching to Mbed OS, if a need would arise for it.

@@ -50,11 +50,11 @@ For tuning the $\theta$, the same testing rig was utilised and the values of the
     \label{fig:Theta_ZN}
 \end{figure}
 
-From the testing, it was evident that overshoot was common, but it was chosen as a trade-off for the aggressive transient behaviour. Additionally, the interference from the finger results in a larger deviation in angle than it would in actual free flight circumstances.
+From the testing, it was evident that overshoot was common, but it was chosen as a trade-off for the aggressive transient behaviour. Additionally, the interference from a finger results in a larger deviation in angle than it would in actual free flight circumstances.
 
 \subsubsection{Diagonal setup}
 
-Testing in the string rig after tuning values in one-axis resulted in uncontrolled oscillations of the drone with no regards to the PID values. Due to that, the diagonal rig was set up and the code was changed accordingly.
+Testing in the string rig (figure \ref{fig:string_rig}) after tuning values in one-axis resulted in uncontrolled oscillations of the drone with no regards to the PID values. Due to that, the diagonal rig was set up and the code was changed accordingly.
 The same procedure of axial testing was repeated for the diagonal rig and is described with figures \ref{fig:diagonal} and \ref{fig:ZN}.
 
 \begin{figure}[h!]
@@ -80,11 +80,11 @@ The same procedure of axial testing was repeated for the diagonal rig and is des
     \caption{String rig}
     \label{fig:string_rig}
 \end{wrapfigure}
-The final testing rig was chosen to be the string rig (figure \ref{fig:string_rig}). A halo was attached to the top of the drone, so that the string attached to the drone would be put through, thus resulting in the strings not colliding with the propellers in different angles.
+The final testing rig was chosen to be the string rig (figure \ref{fig:string_rig}). A halo was attached to the the drone, so that the string holding the drone would be put through the ring, thus preventing the strings getting caught in the propellers in different angles.
 
-This provides the closest possible resemblance to flight that could achieved. It may adversely effect the flight characteristics, as the string pulls the drone to the center, which may result in tilt while flying away from the anchor point, but the other option was a gimbal, which introduced large friction.
+This provides the closest possible resemblance to flight that could be achieved. It may adversely effect the flight characteristics, as the string pulls the drone to the center, which may result in tilt while flying away from the anchor point, but the other option was a gimbal, which introduced large friction.
 
-The values from previous test runs were used at the start, but were found to be insufficient to compensate. Post testing, the ideal values were found to be 10 times the P and 5 times the D compared to the ones used in the diagonal rig. With these values $\phi$ was stable, however $\theta$ was oscillating between stability and instability, as it was initially stable, then became unstable, then became stable again. This was accounted for with higher PID constants for theta.
+The values from previous test runs were used at the start, but were found to be insufficient to compensate oscillations. Post testing, the ideal values were found to be 10 times the P and 5 times the D compared to the ones used in the diagonal rig. With these values $\phi$ was stable, however $\theta$ was oscillating between stability and instability, as it was initially stable, then became unstable, then became stable again. This was accounted for with higher PID constants for theta.
 
 \begin{figure}[h]
     \centering
@@ -96,4 +96,4 @@ The values from previous test runs were used at the start, but were found to be 
 \subsubsection{Conclusion of PID testing}
 
 While independent flight was not achieved due to insufficient thrust, the PID system worked in a limited time frame. The instability in $\theta$ during string testing was nearly unaffected even with the 5x multiplier. This points to the possibility of the insufficient thrust affecting the authority of the PID control.
-The other sources of instability could potentially be the differences between motors in different temperatures and RPMs or IMU deviation and drift.
+The other sources of instability could potentially be the differences between motors in different temperatures and RPMs or IMU deviation and phase shift.

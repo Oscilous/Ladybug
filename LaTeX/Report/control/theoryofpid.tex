@@ -2,10 +2,10 @@
 
 \subsubsection{Principles of PID Control}
 
-PID (Proportional-Integral-Derivative) control is a popular feedback control algorithm that is utilized in a variety of control systems. PID control is made up of three parts: proportional, integral, and derivative. The proportional term controls the process based on the current difference between the desired setpoint and the measured process variable. To decrease steady-state mistakes and improve system stability, the integral term accumulates past errors over time. The derivative term computes the error's rate of change and aids in dampening quick changes, improving response time and lowering overshoot. \cite{PIDbook}
+PID (Proportional-Integral-Derivative) control is a popular feedback control algorithm that is utilized in a variety of control systems. PID control is made up of three parts: proportional, integral, and derivative components. The proportional term controls the process based on the current difference between the desired setpoint and the measured process variable. To decrease steady-state errors and improve system stability, the integral term accumulates past errors over time. The derivative term computes the error's rate of change and aids in dampening quick changes, improving response time and lowering overshoot. \cite{PIDbook}
 \subsubsection{PID Control Loop}
 
-The PID control loop is made up of four basic components: the process or plant under control, in this case roll and pitch, the process or plant under control, and the process or plant under control. A sensor or measurement device. The PID controller and the actuator. The IMU measures the process variable (angle) and compares it to the desired setpoint. The PID controller calculates the control signal based on the mistake, and the actuator alters the system accordingly. In this closed-loop feedback system, the control signal is continuously changed to keep the process variable close to the setpoint. \cite{PIDbook}
+The PID control loop is made up of basic components the process or plant under control, a sensor or measurement device, the PID controller, and the actuator. The IMU measures the process variable (angle) and compares it to the desired setpoint. The PID controller calculates the control signal based on the mistake, and the actuator alters the system accordingly. In this closed-loop feedback system, the control signal is continuously changed to keep the process variable close to the setpoint. \cite{PIDbook}
 \subsubsection{Benefits of PID Control}
 
 PID is a versatile and frequently used control algorithm that provides excellent control in a variety of applications. Other solutions exist, such as model predictive control, but they are less widespread and thus have a smaller community. \cite{Efheij2019}
@@ -17,7 +17,7 @@ PID is a versatile and frequently used control algorithm that provides excellent
 
 \subsubsection{Ziegler-Nichols method}
 The performance of a PID controller depends on appropriate tuning to match the characteristics of the controlled system. Tuning involves adjusting the proportional, integral, and derivative gains to achieve the desired response. 
-To tune the quadrotor's PID Ziegler-Nichols method was used, as it is compromise between complexity and time. \cite{ZNPID}
+To tune the quadrotor's PID The Ziegler-Nichols method was used, as it is a compromise between complexity and time. \cite{ZNPID}
 
 The value of the proportional-only gain that allows the control loop to oscillate forever at steady state is used to calculate the ultimate gain, $K_u$ . This means that the gains from the I and D controllers are set to zero in order to determine the influence of P. It evaluates the robustness of the $K_c$ value in order to optimize it for the controller. The final period is another key number related with this proportional-only control tuning approach ($P_u$). The ultimate period is the amount of time it takes to complete one entire oscillation while the system is in steady state. These two parameters, $K_u$ and $P_u$, are employed to determine the controller's loop-tuning constants (P, PI, or PID). \cite{LibrePID}
 

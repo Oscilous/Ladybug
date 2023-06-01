@@ -9,9 +9,9 @@ The motors are then updated with their respective PWM value.
 A certain flash memory logging period is declared during initialization, and after updating the motors, a check is made to see if it is time to record the values, such as current z, $\phi$/roll, and $\theta$/pitch, for data analysis. (See chapter \ref{flash}) 
 If the "set time" is exceeded, the recorded values are saved in flash memory, the motors are completely switched off, and the code terminates execution.
 
-\begin{figure}[H]
+\begin{figure}[!ht]
     \begin{center}
-    \includegraphics[scale=0.32]{pictures/flowchart}
+    \includegraphics[width=\textwidth]{pictures/flowchart_pdf.pdf}
     \end{center}
     \caption{Flowchart describing the operation flow}
     \label{fig:flowchart}

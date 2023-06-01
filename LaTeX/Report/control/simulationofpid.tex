@@ -9,7 +9,7 @@ The PID tuner app was used to hyper-tune and obtain results that could then be u
 The results were optimal. (See figure \ref{fig:phiPID} and \ref{fig:thetaPID})
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale=0.7]{pictures/control/phiPID.PNG}
+    \includegraphics[width = \textwidth]{pictures/control/phiPID.PNG}
     \end{center}
     \caption{Response of $\phi$, with hyper-tuned PID}
     \label{fig:phiPID}
@@ -17,7 +17,7 @@ The results were optimal. (See figure \ref{fig:phiPID} and \ref{fig:thetaPID})
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale=0.7]{pictures/control/thetaPID.PNG}
+    \includegraphics[width = \textwidth]{pictures/control/thetaPID.PNG}
     \end{center}
     \caption{Response of $\theta$, with hyper-tuned PID}
     \label{fig:thetaPID}
@@ -29,7 +29,7 @@ The Ziegler-Nichols approach, as discussed in the previous chapter, was employed
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale=0.75]{pictures/control/posc}
+    \includegraphics[width = \textwidth]{pictures/control/posc}
     \end{center}
     \caption{An oscillating response with only gain in Simulink}
     \label{fig:posc}
@@ -40,7 +40,7 @@ The final values for an adjusted PID system where as follows, where red indicate
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale=0.65]{pictures/control/simpidvalues}
+    \includegraphics[width = \textwidth]{pictures/control/simpidvalues}
     \end{center}
     \caption{Tuned PID controller block values}
     \label{fig:simpidvalues}
@@ -50,7 +50,7 @@ After tuning the PID, the output response was ideal. (See figure \ref{fig:zpidno
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale=0.7]{pictures/control/zpidnonoise}
+    \includegraphics[width = \textwidth]{pictures/control/zpidnonoise}
     \end{center}
     \caption{}
     \label{fig:zpidnonoise}
@@ -62,7 +62,7 @@ Thus, instead of using the IMU Z acceleration as input, an IR sensor was added t
 
 \begin{figure}[H]
     \begin{center}
-    \includegraphics[scale=0.7]{pictures/control/zpidnoise}
+    \includegraphics[width = \textwidth]{pictures/control/zpidnoise}
     \end{center}
     \caption{Z-axis response, tuned using the Ziegler-Nichols method}
     \label{fig:zpidnoise}

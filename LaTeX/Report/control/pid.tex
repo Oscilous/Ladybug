@@ -1,17 +1,13 @@
 \subsection{The Implementation of PID}
 \subsubsection{One-axis setup}
-
-Making PID for all axis is possible, but not ideal as determining the source of the problem is more difficult. Therefore, it was decided to tune one axis at a time, excluding the Z-axis which would be tuned after fully calibrating the rest, as it is non-linear.
-
-\begin{figure}[h]
+\begin{wrapfigure}{r}{0.4\textwidth}
     \centering
-    \includegraphics[width=0.5\textwidth]{pictures/Axis_rig.jpg}
+    \includegraphics[width=0.4\textwidth]{pictures/Axis_rig.jpg}
     \caption{Picture of axis rig}
     \label{fig:axis_rig}
-\end{figure}
-
+\end{wrapfigure}
+Making PID for all axis is possible, but not ideal as determining the source of the problem is more difficult. Therefore, it was decided to tune one axis at a time, excluding the Z-axis which would be tuned after fully calibrating the rest, as it is non-linear.
 The initial 'P' calculation was made from the simulation formula for maximum thrust. The value was calculated to be 0.0045, but as seen in figure \ref{fig:Phi0}, the system is stable, but for the Z-N method, systems need to be marginally stable as shown in figure \ref{fig:Phi1}. 
-
 In figure \ref{fig:Phi0}, the PWM effect of PID on motors is also shown to make sure that QuickPID works as predicted and without delay.
 To test the stability of system, it was displaced by a finger in order to mimic large turbulence.
 
@@ -55,7 +51,6 @@ For tuning the $\theta$, the same testing rig was utilised and the values of the
 \end{figure}
 
 From the testing, it was evident that overshoot was common, but it was chosen as a trade-off for the aggressive transient behaviour. Additionally, the interference from the finger results in a larger deviation in angle than it would in actual free flight circumstances.
-\newpage
 
 \subsubsection{Diagonal setup}
 
@@ -69,6 +64,8 @@ The same procedure of axial testing was repeated for the diagonal rig and is des
     \label{fig:diagonal}
 \end{figure}
 
+\newpage
+
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{pictures/graphs/ZN.png}
@@ -76,22 +73,20 @@ The same procedure of axial testing was repeated for the diagonal rig and is des
     \label{fig:ZN}
 \end{figure}
 
-\newpage
 \subsubsection{String setup}
-The final testing rig was chosen to be the string rig (figure \ref{fig:string_rig}). A halo was attached to the top of the drone, so that the string attached to the drone would be put through, thus resulting in the strings not colliding with the propellers in different angles.
-
-\begin{figure}[h]
+\begin{wrapfigure}{r}{0.4\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{pictures/String_rig.jpg}
+    \includegraphics[width=0.4\textwidth]{pictures/String_rig.jpg}
     \caption{String rig}
     \label{fig:string_rig}
-\end{figure}
+\end{wrapfigure}
+The final testing rig was chosen to be the string rig (figure \ref{fig:string_rig}). A halo was attached to the top of the drone, so that the string attached to the drone would be put through, thus resulting in the strings not colliding with the propellers in different angles.
 
 This provides the closest possible resemblance to flight that could achieved. It may adversely effect the flight characteristics, as the string pulls the drone to the center, which may result in tilt while flying away from the anchor point, but the other option was a gimbal, which introduced large friction.
 
 The values from previous test runs were used at the start, but were found to be insufficient to compensate. Post testing, the ideal values were found to be 10 times the P and 5 times the D compared to the ones used in the diagonal rig. With these values $\phi$ was stable, however $\theta$ was oscillating between stability and instability, as it was initially stable, then became unstable, then became stable again. This was accounted for with higher PID constants for theta.
 
-\begin{figure}[h!]
+\begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{pictures/graphs/ZN10P5DT4The5.png}
     \caption{Plot of angles in string setup with calibrated PID values}

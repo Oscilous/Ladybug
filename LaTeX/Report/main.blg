@@ -2,24 +2,8 @@ This is BibTeX, Version 0.99d (TeX Live 2023)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 A level-1 auxiliary file: introduction/background.aux
-A level-1 auxiliary file: introduction/problem_statement.aux
-A level-1 auxiliary file: introduction/morpho.aux
-A level-1 auxiliary file: introduction/evaluation.aux
-A level-1 auxiliary file: introduction/risk_assesment.aux
 A level-1 auxiliary file: software/github.aux
-A level-1 auxiliary file: design/Drone_body.aux
-A level-1 auxiliary file: control/plant_equations.aux
-A level-1 auxiliary file: control/Controller.aux
-A level-1 auxiliary file: control/uavtoolbox.aux
-A level-1 auxiliary file: control/theoryofpid.aux
-A level-1 auxiliary file: control/linearization.aux
-A level-1 auxiliary file: control/simulationofpid.aux
-A level-1 auxiliary file: control/pid.aux
 A level-1 auxiliary file: software/embeded.aux
-A level-1 auxiliary file: software/quickpid.aux
-A level-1 auxiliary file: software/logging.aux
-A level-1 auxiliary file: software/Wireless.aux
-A level-1 auxiliary file: software/flow.aux
 The style file: plain.bst
 A level-1 auxiliary file: control/thrust_experiments.aux
 A level-1 auxiliary file: control/Motor_Testing.aux
@@ -45,7 +29,7 @@ Warning--empty journal in ZNPID
 Warning--empty journal in loggingProof
 You've used 43 entries,
             2118 wiz_defined-function locations,
-            766 strings with 13137 characters,
+            750 strings with 12761 characters,
 and the built_in function-call counts, 10067 in all, are:
 = -- 937
 > -- 384
